@@ -1,0 +1,104 @@
+\documentclass[letterpaper]{report}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+
+
+%\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{footnote}
+\usepackage[top=2.5cm, left=3cm, right=3cm, bottom=2.5cm]{geometry}
+
+\linespread{1.5}
+
+\setlength{\parskip}{2ex}
+\parindent 3ex
+
+\usepackage[backend=biber,sorting=none]{biblatex}
+\bibliography{Bibliografia/biblio}
+
+\usepackage[linktocpage=true]{hyperref}
+
+\DeclareGraphicsExtensions{.jpg,.pdf,.png}
+
+\begin{document}	
+     
+     % Portada
+     \input{portada}
+     % Título
+     \input{titulo}
+     
+     % Copia y pega
+     % Pagina de acta final (vacio)
+     \input{acta}
+     
+     \setcounter{secnumdepth}{3}
+     \setcounter{tocdepth}{4}
+     
+     % Define encabezado numeros romanos y como se separan los captiulos y las
+     % secciones
+     \addtolength{\headheight}{3pt}
+     \pagenumbering{roman}
+%     \pagestyle{fancyplain}
+     
+     \renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter:\,\ #1}{}}
+     \renewcommand{\sectionmark}[1]{\markright{\thesection\,\ #1}}
+     
+%     \onehalfspacing
+     
+%     \lhead{}
+%     \chead{}
+%     \rhead{}
+%     \renewcommand{\headrulewidth}{0.0pt}
+%     \lfoot{}
+%     \cfoot{\fancyplain{}{\thepage}}
+%     \rfoot{}
+     
+     % Hasta aquí copié y pege
+     
+     \input{resumen}
+     
+     \tableofcontents
+     
+     % Índice de figuras
+     % Crea la lista de cuadros
+     \listoftables
+     
+     % Crea la lista de figuras
+     \listoffigures
+     
+     % Crea la lista de codigos fuentes
+     %\lstlistoflistings
+     
+     \clearpage
+     
+     % Define encabezado en numeros arabicos  
+     \pagenumbering{arabic}
+     
+     % Lista de símbolos y abreviaturas
+     \input{introduccion}
+     
+     \input{entorno}
+     
+     \input{marcoTeorico}
+     
+     \input{marcoTecnologico}
+     
+     \input{marcoMetodologico}
+     
+     \input{desarrolloDeLaAplicacion}
+     
+     \input{conclusiones}    
+     
+     \input{bibliografia}
+     
+     \input{anexos}
+    % Diagrama CU
+    % Diagrama Clases
+    % Diagrama ER-E
+    % Screenshots
+    % DAS(?)
+     
+\end{document}
