@@ -1,67 +1,159 @@
 \chapter{Desarrollo de la Aplicación}
-    \section{Primer Sprint}
-        \subsection{Objetivos}
-        Levantar los requerimientos del producto.
-        \subsection{Actividades}
+
+\section{Fase de Preparación}
+    \subsection{Primer Sprint}
+    \begin{enumerate}
+        \item Objetivos
+        \begin{enumerate}
+            \item Levantar los requerimientos del producto.
+            \item Documentación de la aplicación.
+            \item Introducción al ambiente de trabajo.
+        \end{enumerate}
+        \item Actividades
         \begin{itemize}
             \item Creación del \textit{Product Backlog}
-            \item 
-        \end{itemize}
-    \section{Segundo Sprint}
-        \subsection{Objetivos}
-        \begin{itemize}
-            \item Documentar la aplicación a realizar.
-            \item Introducción al ambiente de trabajo.
-        \end{itemize}
-        \subsection{Actividades}
-        \begin{itemize}
+            \item Documentar la aplicación.
             \item Creación del diagrama ER-E para la base de datos de la aplicación.
             \item Creación de un modelo de casos de uso de la aplicación.
             \item Descarga de las herramientas ya mencionadas en el marco tecnológico.
-            \item Creación de repositorios, tanto local como remoto, para el almacenamiento de la aplicación.
         \end{itemize}
+    \end{enumerate}
         
-    \section{Tercer Sprint}
-        \subsection{Objetivos}
+\section{Fase de Desarrollo}
+    
+    \subsection{Primer Sprint: Configuración de la aplicación}
+    \begin{enumerate}
+        \item Objetivos
+        \begin{enumerate}
+            \item Crear y configurar el ambiente de desarrollo.
+            \item Descargar y configurar las herramientas necesarias para el desarrollo.
+            \item Descargar y configurar las herramientas necesarias para la gestión del proyecto.           
+        \end{enumerate}
+        \item Actividades
         \begin{itemize}
-            \item Configuración de \textit{SPRING} e \textit{Hibernate}
+            \item Creación de las tablas en Trello para la gestión del proyecto. Las tablas de notas usadas fueron "Pendiente", "Impedido", "En desarrollo" y "Tarminado"; para referirse al estado actual de las tareas en cada una de las listas.
+            \item Creación de repositorios, tanto local como remoto, para el almacenamiento de la aplicación usando Git
+            \item Diseño de la Base de Datos. Creación del diagrama ER-E y el glosario de términos de la aplicación.
+            \item Descarga del \textit{IDE} Eclipse. 
+            \item Descarga y configuración de Spring e Hibernate. 
         \end{itemize}
-        \subsection{Actividades}
+    \end{enumerate}
+        
+        
+    \subsection{Segundo Sprint: Configuración de la aplicación}
+    \begin{enumerate}
+        \item Objetivos
+        \begin{enumerate}
+            \item Creación de clases, repositorios y servicios básicos.
+            \item Creación de controladores básicos.
+        \end{enumerate}
+        \item Actividades
+        \begin{itemize}
+            \item Crear las siguientes clases para manejo de la información:
+            \begin{itemize}
+                \item Usuario
+                \item Paciente
+                \item Doctor
+                \item Empresa
+                \item Centro de Costos
+                \item Sede
+                \item Departamento
+                \item Consulta
+                \item Nota de revisión (\textit{SoapNote}, por \textit{Subjective, Objective, Assets, Plan})
+                \item Diagnóstico
+                \item Examen
+                \item Consulta
+                \item Récipe
+                \item Medicamento
+                \item Laboratorio
+            \end{itemize}
+            \item Crear los repositorios. Interfaces que usa \textit{Spring} para manejar la conexión con la base de datos.
+            \item Crear los servicios para las clases. Los servicios están compuestos por una interfaz y su respectiva implementación por cada una de las clases mencionadas. Estos servicios se encargan de procesar la información haciendo uso de los repositorios, en caso de ser necesario, para brindar respuestas encapsuladas a los respectivos controladores.
+            \item Crear los controladores de la aplicación. En este \textit{Sprint} se crearon los controladores con operaciones básicas de gestión de cada una de las clases, dejando para futuros \textit{Sprint} la tarea de modificar los mismos para cada una de las tareas, en caso de ser necesario.
+        \end{itemize}
+    \end{enumerate}
+        
+        
+    \subsection{Tercer Sprint: Autenticación y gestión de Usuarios}
+    \begin{enumerate}
+        \item Objetivos
+        \begin{enumerate}
+            \item Configuración de \textit{SPRING} e \textit{Hibernate}
+        \end{enumerate}
+        \item Actividades
         \begin{itemize}
             \item Configuración de las características de \textit{SPRING} para trabajar con anotaciones.
             \item Descargar y configurar las librerías internas de la herramienta.
             \item Descargar la librería JSON para la comunicación con el \textit{frontend}.
             \item Descargar y configurar \textit{Hibernate} para la comunicación con la base de datos.
+        \end{itemize}   
+    \end{enumerate}
+             
+        
+    \subsection{Cuarto Sprint: Consultas de Usuarios y Vista del doctor}
+    \begin{enumerate}
+        \item Objetivos
+        \begin{itemize}
+            \item Creación de clases, repositorios y servicios básicos.
         \end{itemize}
+        \item Actividades
+    \end{enumerate}
         
-    \section{Cuarto Sprint}
-        \subsection{Objetivos}
-        \subsection{Actividades}
         
-    \section{Quinto Sprint}
-        \subsection{Objetivos}
-        \subsection{Actividades}
+    \subsection{Quinto Sprint: Consulta del Paciente}
+    \begin{enumerate}
+        \item Objetivos
+        \begin{itemize}
+            \item Creación de controladores básicos.
+        \end{itemize}
+        \item Actividades
+    \end{enumerate}
         
-    \section{Sexto Sprint}
-        \subsection{Objetivos}
-        \subsection{Actividades}
         
-    \section{Septimo Sprint}
-        \subsection{Objetivos}
-        \subsection{Actividades}
+    \subsection{Sexto Sprint: Generar informes}
+    \begin{enumerate}
+        \item Objetivos
+        \begin{itemize}
+            \item Autenticación e implementación de la autenticación basada en tokens.
+        \end{itemize}
+        \item Actividades
+    \end{enumerate}
         
-    \section{Octavo Sprint}
-        \subsection{Objetivos}
-        \subsection{Actividades}
         
-    \section{Noveno Sprint}
-        \subsection{Objetivos}
-        \subsection{Actividades}
+    \subsection{Septimo Sprint: Generar informes}
+    \begin{enumerate}
+        \item Objetivos
+        \begin{itemize}
+            \item Creación, consultas, edición y eliminación de usuarios.
+        \end{itemize}
+        \item Actividades
+    \end{enumerate}
         
-    \section{Sprint}
-        \subsection{Objetivos}
-        \subsection{Actividades}
         
-    \section{Dificultades generales encontradas}
-    \section{Resultados}
+    \subsection{Octavo Sprint: Generar informes}
+    \begin{enumerate}
+        \item Objetivos
+        \begin{itemize}
+            \item Consultas del módulo de usuarios.
+        \end{itemize}
+        \item Actividades
+    \end{enumerate}
+        
+    
+\section{Fase de Cierre}
+    \subsection{Décimo Sprint}
+    \begin{enumerate}
+        \item Objetivos
+        \item Actividades
+    \end{enumerate}
+        
+    \subsection{Sprint}
+    \begin{enumerate}
+        \item Objetivos
+        \item Actividades
+    \end{enumerate}
+        
+        
+    \subsection{Dificultades generales encontradas}
+    \subsection{Resultados}
 \pagebreak

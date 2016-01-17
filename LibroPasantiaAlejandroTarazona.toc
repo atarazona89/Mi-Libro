@@ -1,0 +1,119 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {spanish}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Introducción}{1}{chapter*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Entorno Empresarial}{2}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Antecedentes}{2}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Misión}{2}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Visión}{2}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Estructura organizacional}{2}{section.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.5}Cargo ocupado por el pasante}{2}{section.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Marco Teórico}{3}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Modelo Vista Controlador (MVC)}{3}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Arquitectura Orientada a Servicios(SOA por sus siglas en inglés, \textit {Service Oriented Architecture})}{4}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Marco Tecnológico}{6}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Herramientas para el desarrollo de la aplicación}{6}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Java}{6}{subsection.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}JSON}{6}{subsection.3.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.3}Angular JS}{7}{subsection.3.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.4}JavaScript}{7}{subsection.3.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.5}MySQL}{7}{subsection.3.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.6}SPRING}{7}{subsection.3.1.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.7}Maven}{7}{subsection.3.1.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.8}Hibernate}{7}{subsection.3.1.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.9}iText}{7}{subsection.3.1.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Herramientas para el control de versiones y planificación}{7}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Git}{8}{subsection.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}GitHub}{8}{subsection.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}Trello}{8}{subsection.3.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Marco Metodológico}{9}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Roles}{9}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Scrum Master}{9}{subsection.4.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.2}Product Owner}{9}{subsection.4.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.3}Development Team}{9}{subsection.4.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Eventos}{10}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Sprint}{10}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Sprint Planning}{10}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.3}Daily Sprint Meeting}{10}{subsection.4.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.4}Sprint Review}{10}{subsection.4.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.5}Sprint Retrospective}{10}{subsection.4.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Artefactos}{10}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Sprint Backlog}{11}{subsection.4.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}Product Backlog}{11}{subsection.4.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Desarrollo de la Aplicación}{12}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Fase de Preparación}{12}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}Primer Sprint}{12}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Fase de Desarrollo}{12}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Primer Sprint: Configuración de la aplicación}{12}{subsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Segundo Sprint: Configuración de la aplicación}{13}{subsection.5.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.3}Tercer Sprint: Autenticación y gestión de Usuarios}{14}{subsection.5.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.4}Cuarto Sprint: Consultas de Usuarios y Vista del doctor}{14}{subsection.5.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.5}Quinto Sprint: Consulta del Paciente}{14}{subsection.5.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.6}Sexto Sprint: Generar informes}{15}{subsection.5.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.7}Septimo Sprint: Generar informes}{15}{subsection.5.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.8}Octavo Sprint: Generar informes}{15}{subsection.5.2.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Fase de Cierre}{15}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.1}Décimo Sprint}{15}{subsection.5.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.2}Sprint}{15}{subsection.5.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.3}Dificultades generales encontradas}{15}{subsection.5.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.4}Resultados}{15}{subsection.5.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Conclusiones y Recomendaciones}{16}{chapter*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografía}{16}{chapter*.5}
