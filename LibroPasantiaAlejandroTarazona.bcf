@@ -2217,11 +2217,13 @@
     <bcf:citekey order="3">SOA-tesis</bcf:citekey>
     <bcf:citekey order="4">SOA-libroGartner</bcf:citekey>
     <bcf:citekey order="5">SOA-msdn</bcf:citekey>
-    <bcf:citekey order="6">JSON-yahoo</bcf:citekey>
-    <bcf:citekey order="7">JSON-jsonOrg</bcf:citekey>
-    <bcf:citekey order="8">ANGULARJS-angularjs</bcf:citekey>
-    <bcf:citekey order="9">JAVASCRIPT-wiki</bcf:citekey>
-    <bcf:citekey order="10">MYSQL-oracle</bcf:citekey>
+    <bcf:citekey order="6">ToTOKEN-tokenbasedauth</bcf:citekey>
+    <bcf:citekey order="7">JSON-yahoo</bcf:citekey>
+    <bcf:citekey order="8">JSON-jsonOrg</bcf:citekey>
+    <bcf:citekey order="9">ANGULARJS-angularjs</bcf:citekey>
+    <bcf:citekey order="10">JAVASCRIPT-wiki</bcf:citekey>
+    <bcf:citekey order="11">MYSQL-oracle</bcf:citekey>
+    <bcf:citekey order="12">ECLIPSE-eclipseorg</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none" type="entry" sortscheme="none">
   <bcf:sorting>

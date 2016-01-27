@@ -184,6 +184,22 @@
       \verb http://www.oracle.com/us/products/mysql/overview/index.html
       \endverb
     \endentry
+    \entry{ECLIPSE-eclipseorg}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=c29e9dd4709b3acadeef395a1b0997ed}{Foundation}{F\bibinitperiod}{Eclipse}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=c29e9dd4709b3acadeef395a1b0997ed}{Foundation}{F\bibinitperiod}{Eclipse}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c29e9dd4709b3acadeef395a1b0997ed}
+      \strng{fullhash}{c29e9dd4709b3acadeef395a1b0997ed}
+      \field{sortinit}{0}
+      \field{labeltitle}{Eclipse - The Eclipse Foundation}
+      \field{title}{Eclipse - The Eclipse Foundation}
+      \verb{url}
+      \verb https://eclipse.org/
+      \endverb
+    \endentry
   \endsortlist
   \sortlist{entry}{none}
     \entry{MVC-tiw}{online}{}
@@ -351,7 +367,24 @@
       \verb http://www.oracle.com/us/products/mysql/overview/index.html
       \endverb
     \endentry
+    \entry{ECLIPSE-eclipseorg}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=c29e9dd4709b3acadeef395a1b0997ed}{Foundation}{F\bibinitperiod}{Eclipse}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=c29e9dd4709b3acadeef395a1b0997ed}{Foundation}{F\bibinitperiod}{Eclipse}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c29e9dd4709b3acadeef395a1b0997ed}
+      \strng{fullhash}{c29e9dd4709b3acadeef395a1b0997ed}
+      \field{sortinit}{0}
+      \field{labeltitle}{Eclipse - The Eclipse Foundation}
+      \field{title}{Eclipse - The Eclipse Foundation}
+      \verb{url}
+      \verb https://eclipse.org/
+      \endverb
+    \endentry
   \endsortlist
+  \missing{ToTOKEN-tokenbasedauth}
 \endrefsection
 \endinput
 

@@ -2,6 +2,9 @@
 
 \section{Fase de Preparación}
     \subsection{Primer Sprint}
+    
+    En este \textit{sprint} se realizó las descargas de herramientas y la creación de los diagramas que serán la guía de desarrollo del sistema.
+    
     \begin{enumerate}
         \item Objetivos
         \begin{enumerate}
@@ -22,25 +25,57 @@
 \section{Fase de Desarrollo}
     
     \subsection{Primer Sprint: Configuración de la aplicación}
+    
+    En este \textit{sprint} se configuraron Eclipse, Apache y MySQL para crear un ambiente de desarrollo adecuado para el sistema a desarrollar.
+    
     \begin{enumerate}
         \item Objetivos
         \begin{enumerate}
-            \item Crear y configurar el ambiente de desarrollo.
-            \item Descargar y configurar las herramientas necesarias para el desarrollo.
-            \item Descargar y configurar las herramientas necesarias para la gestión del proyecto.           
+            \item Crear y configurar el ambiente de desarrollo
+            \item Descargar y configurar las herramientas necesarias para el desarrollo
+            \item Descargar y configurar las herramientas necesarias para la gestión del proyecto         
         \end{enumerate}
         \item Actividades
         \begin{itemize}
-            \item Creación de las tablas en Trello para la gestión del proyecto. Las tablas de notas usadas fueron "Pendiente", "Impedido", "En desarrollo" y "Tarminado"; para referirse al estado actual de las tareas en cada una de las listas.
-            \item Creación de repositorios, tanto local como remoto, para el almacenamiento de la aplicación usando Git
-            \item Diseño de la Base de Datos. Creación del diagrama ER-E y el glosario de términos de la aplicación.
-            \item Descarga del \textit{IDE} Eclipse. 
-            \item Descarga y configuración de Spring e Hibernate. 
+            \item Creación de las tablas en Trello para la gestión del proyecto
+            
+            Las tablas de notas usadas fueron "Pendiente", "Impedido", "En desarrollo" y "Tarminado"; para referirse al estado actual de las tareas en cada una de las listas.
+            
+            \item Creación de repositorios
+            
+            Se crearon los repositorios Git tanto local como remoto, para el almacenamiento de la aplicación usando Git y Github como sitio de almacenamiento para los repositorios remotos. Los repositorios están bajo los nombres de "ocupacional" y "proyectoAngular" en el url: \textit{www.github.com/atarazona89}.
+            
+            \item Diseño de la Base de Datos
+            
+            Creación del diagrama ER-E y el glosario de términos de la aplicación\footnote{Ver anexo A}.
+            
+            \item Descarga del \textit{IDE} Eclipse
+            
+            Para el desarrollo se utilizo Eclipse Kepler, descargado de la página oficial de Eclipse\cite{ECLIPSE-eclipseorg}
+            
+           \item Descargar y configurar \textit{plugins} de Eclipse
+           
+           Se realizaron los cambios necesarios en la configuración del "pom.xml" para así acceder a los repositorios de Maven que contienen las distintas librerías tanto de SPRING como de las distintas herramientas ya mencionadas. Se realizó la depuración de los archivos y la respectiva configuración adecuada al ambiente de trabajo. Esto se refiere a la configurar Eclipse para usar \textit{SPRING} como \textit{framework}, Hibernate y Liquibase como gestores de comunicación con la base de datos y configurar la base de datos con las credenciales de MySQL asignadas para el desarrollo del proyecto.
+           
+           \item Configuración de las características de \textit{SPRING} para trabajar con anotaciones
+           
+           Se realizaron los cambios dentro del archivo "occupational-servlet.xml" que permiten el uso de anotaciones para el direccio amiento interno de los procesos.
+           
+           
+           \item Descargar y configurar la librería de JSON para la comunicación con el \textit{frontend}            
+           
+           
+           \item Descargar y configurar las librerías de \textit{Hibernate} para la comunicación con la base de datos
+           
+           Usando Maven fueron descargadas las librerías de Hibernate que usan JPA como API para comunicarse con la base de datos. Esto, en conjunto con las anotaciones de \textit{SPRING} facilita la creación de las diferentes consultas y acciones a realizar en la base de datos.
         \end{itemize}
     \end{enumerate}
         
         
     \subsection{Segundo Sprint: Configuración de la aplicación}
+    
+    En este \textit{sprint} se relizaron las configuraciones necesarias de las herramientas y la creación de funcionalidades básicas del lado del servidor para empezar el desarrollo del sistema.
+    
     \begin{enumerate}
         \item Objetivos
         \begin{enumerate}
@@ -59,7 +94,7 @@
                 \item Sede
                 \item Departamento
                 \item Consulta
-                \item Nota de revisión (\textit{SoapNote}, por \textit{Subjective, Objective, Assets, Plan})
+                \item Nota de revisión (\textit{SoapNote}, por \textit{Subjective, Objective, Assessment, Plan})
                 \item Diagnóstico
                 \item Examen
                 \item Consulta
@@ -67,46 +102,131 @@
                 \item Medicamento
                 \item Laboratorio
             \end{itemize}
-            \item Crear los repositorios. Interfaces que usa \textit{Spring} para manejar la conexión con la base de datos.
-            \item Crear los servicios para las clases. Los servicios están compuestos por una interfaz y su respectiva implementación por cada una de las clases mencionadas. Estos servicios se encargan de procesar la información haciendo uso de los repositorios, en caso de ser necesario, para brindar respuestas encapsuladas a los respectivos controladores.
-            \item Crear los controladores de la aplicación. En este \textit{Sprint} se crearon los controladores con operaciones básicas de gestión de cada una de las clases, dejando para futuros \textit{Sprint} la tarea de modificar los mismos para cada una de las tareas, en caso de ser necesario.
+            
+            \item Crear los repositorios
+            
+            En este entorno 'repositorios' se refiere a las interfaces que usa \textit{Hibernate} para manejar los accesos y consultas con la base de datos. Estos vienen con métodos y procedimientos estipulados por JPA.
+             
+            \item Crear los servicios para las clases
+            
+            Los servicios están compuestos por una interfaz y su respectiva implementación por cada una de las clases mencionadas. Estos servicios se encargan de procesar la información haciendo uso de los repositorios, en caso de ser necesario, para brindar respuestas encapsuladas a los respectivos controladores.
+            
+            \item Crear los controladores de la aplicación
+            
+            En este \textit{Sprint} se crearon los controladores con operaciones básicas de gestión de cada una de las clases, dejando para futuros \textit{Sprint} la tarea de modificar los mismos para cada una de las tareas, en caso de ser necesario.
+            
         \end{itemize}
     \end{enumerate}
         
         
     \subsection{Tercer Sprint: Autenticación y gestión de Usuarios}
+    
+    En este \textit{sprint} se implementó el módulo de autenticación y las funcionalidades básicas de gestión de usuarios, dejando para el siguiente \textit{sprint} la parte estética de dicha gestión.
+    
     \begin{enumerate}
         \item Objetivos
         \begin{enumerate}
-            \item Configuración de \textit{SPRING} e \textit{Hibernate}
+            \item Implementación de la autenticación basada en tokens.
+            \item Creación, consulta, edición y eliminación de usuarios.
         \end{enumerate}
         \item Actividades
         \begin{itemize}
-            \item Configuración de las características de \textit{SPRING} para trabajar con anotaciones.
-            \item Descargar y configurar las librerías internas de la herramienta.
-            \item Descargar la librería JSON para la comunicación con el \textit{frontend}.
-            \item Descargar y configurar \textit{Hibernate} para la comunicación con la base de datos.
+            \item Se implementó el módulo de autenticación siguiedo los parámetros de autenticación basada en \textit{tokens}. La clave usada por el servidor fue una clave generada en tiempo de ejecución para que la misma fuera cambiante y mejorar la seguridad. Sin embargo, la clave, una vez generada se mantiene igual mientras el servidor esté en funcionamiento.
+            
+            \item Se implementó el módulo de gestión de usuarios, en el mismo, un usuario, con las credenciales adecuadas, puede crear, usuarios nuevos y se despliega una lista de los usuarios en la  cual se puede elegir uno para luego poder editarlo o eliminarlo definitivamente de la base de datos. Esta última acción no es reversible por lo cual queda a consideración del \textit{Product Owner} si quedará finalmente la funcionalidad al alcance de los usuarios.
         \end{itemize}   
     \end{enumerate}
              
         
     \subsection{Cuarto Sprint: Consultas de Usuarios y Vista del doctor}
+    
+    En este \textit{sprint} se mejoró la estética de la lista de usuarios y se implementó la visualización de parte de los doctores.
+    
     \begin{enumerate}
         \item Objetivos
         \begin{itemize}
-            \item Creación de clases, repositorios y servicios básicos.
+            \item Consultas del módulo de usuarios.
+            \item Desarrollo de la vista del doctor.
         \end{itemize}
         \item Actividades
+        \begin{itemize}
+            \item Ordenamiento de las listas de usuarios
+            
+            La lista de usuarios implementada en el \textit{sprint} anterior fue reordenada para aparecer alfabéticamente en pantalla. Las funcionalidades previas no fueron modificadas.
+            
+            \item Visualización de usuarios
+            
+            La lista también fue modificada para que fuese visualizada con la foto del usuario y con apariencia de lista de usuarios siguiendo los lineamientos de AngularJs.
+            
+            \item Creación de la vista del doctor
+            
+            Esta incluye la lista de pacientes a atender en el día actual y la lista de pacientes que ha atendido el doctor. Junto con las funcionalidades de:
+            
+            \begin{itemize}
+                \item Agregar Paciente: Agrega un paciente nuevo a la lista de doctor, ya sea tomado de la lista de usuarios o creando un nuevo usuario y agregándolo inmediatamente a la lista de pacientes del doctor. En este paso se genera también la historia médica del nuevo paciente.
+                
+                \item Crear Consulta: Crea una nueva consulta al historial de paciente. En este \textit{sprint} se realizó la funcionalidad de "programar" una confulta futura, que permitirá la planificación de consultas. Se dejó para un futuro \textit{sprint} la ceración de la consulta en sí misma ya que amerita el manejo de otros tipos de datos adicionales.
+            \end{itemize}
+            
+            No se implementó la funcionalidad de "Eliminar Paciente" ni la de "Modificar Paciente" dado que el sistema busca mantener un registro histórico de las consultas y un médico no debería poder modificar ni eliminar dicho registro, sólo agregar nueva información al mismo.
+            
+        \end{itemize}
+        
     \end{enumerate}
         
         
     \subsection{Quinto Sprint: Consulta del Paciente}
+    
+    En este \textit{sprint} se implementó el módulo de consultas del paciente, en este módulo el doctor puede crear y almacenar los datos pertinentes a una consulta dada y los mismos serán agregados al historial médico del paciente.
+    
     \begin{enumerate}
         \item Objetivos
         \begin{itemize}
-            \item Creación de controladores básicos.
+            \item Generación de consultas.
+            \item Gestión de la linea de tiempo de la consulta del paciente.
         \end{itemize}
         \item Actividades
+        \begin{itemize}
+            \item Crear consulta nueva
+            
+            Se crea la nueva consulta, permitiendo a médico almacenar los datos pertienentes a través de las \textit{Soap Notes}. La consulta creada se agrega inmediatamente al historial del paciente, anexando los diagnósticos, en caso de haberlos, a su apartado exclusivo dentro del historial.
+            
+            Se almacenan los parámetros fisiológicos pertinentes, peso, estatura, tensión arterial entre otros. Se deja libertad al médico para añadir nuevos parámetros a los que ya estén almacenados en la base de datos.
+            
+            \item Creación de \textit{Soap Note}
+            
+            Se crea y almacena, para cada consulta, los datos recogidos en la consulta. Tales son:
+            
+            \begin{itemize}
+                \item \underline{Subjetivos (\textit{Sbjective}):} Lo que el paciente atestigua, sintomas y comentarios hechos por el paciente en el lenguaje que el mismo paciente los exprese para así mantener la información sin cambios en caso de que sea necesario revisarlos.
+                \item \underline{Objetivos (\textit{Objective}):} Lo que el médico puede observar en la consulta. Se usa en esta sección el lenguaje técnico propio de la medicina.
+                \item \underline{Comentarios (\textit{Assessment})}: Algún comentario u obsevación adicional que pueda hacer el doctor.
+                \item \underline{Plan:} Se acordó que el \textit{Plan} estaría en un apartado especial por cuestiones de simplicidad y acceso a los datos.
+            \end{itemize}
+            
+            \item Solicitud y recepción de exámenes médicos
+            
+            El médico  tratante tiene uns sección de solicitud de exámenes médicos. En ella indica el nombre del exámen a solicitarle al paciente. Estas solicitudes quedan almacenadas y en futuras consultas, el médico tiene la opción de indicar la recepción de algún exámen previamente solicitado, ya sea uno o varios de ellos.
+            
+            En la sección de recepción de exámenes, el médico también tiene la opción de adjuntar algún archivo, ya sea resultados (en el caso de exámens sanguíneos) o imágenes (ecografías, rayos X, etc) los cuales serán anexados a la respectiva consulta y con ella al historial del paciente.
+            
+            \item Creación de diagnósticos
+            
+            El médico también puede almacenar uno o varios diagnósticos por consulta, estos constan de un nombre de enfermedad o dolencia y una gravedad. Ello lo elige de listas desplegables que estarán a su disposición tomando la base de datos del sistema. También se le permite agregar un nuevo diagnóstico en caso de carecer de ello el sistema, y el mismo será almacenado con posibilidad de reutilización (sólo del nombre) en futuras consultas.
+            
+            \item Creación del plan de tratamiento
+            
+            El médico puede crear un plan de tratamiento, el cual consiste en:
+            \begin{itemize}
+                \item Recomendaciones: Cambios o hábitos de los que el paciente deba cuidarse, así como recomendaciones alimenticias y reposos. Es una sección informal.
+                \item Comentarios: Algun comentario extra, preguntas o anotaciones que el médico quiera hacer del conocimiento del paciente.
+                \item Tratamiento: Este incluye al menos un medicamento y la posología elegida para cada uno de los medicamentoa añadidos. Los medicamentos son elegidos de la base de datos del sistema. El administrador del sistema se encararía de añadir o eliminar medicamentos a la base de datos por ahora.
+                \item Récipe Médico: En este se indica un medicamento y su respectiva dosis para permitir al paciente su compra en la farmacia de su preferencia.
+            \end{itemize}
+            
+            Esta información estará disponible, en un futuro \textit{Sprint} para ser impresa en hojas, según el formato lo establezca, y ser entregada al paciente.
+            
+        \end{itemize}
     \end{enumerate}
         
         
