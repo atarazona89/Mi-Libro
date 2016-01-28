@@ -28,9 +28,8 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
             \end{itemize}
     \end{enumerate}
     
-    \section{Arquitectura Orientada a Servicios(SOA por sus siglas en inglés, \textit{Service Oriented Architecture})}
-    
-    A parte del patrón MVC que garantiza el bajo acoplamiento del sistema, se tiene la filosofía de desarrollo orientada a servicios la cual actúa como una guía de desarrollo y facilita el mismo orientado a la escalabilidad del sistema, esto es: facilita las actializaciones de alguno de los componentes MVC y minimiza el efecto que dicha actualización tiene sobre los demás.
+    \section{Arquitectura Orientada a Servicios}
+    SOA por sus siglas en inglés, \textit{Service Oriented Architecture}. Es una filosofía de desarrollo la cual actúa como una guía de diseño y facilita el mismo orientado a la escalabilidad del sistema, esto es: facilita las actializaciones de uno o varios de los componentes MVC y minimiza el efecto que dicha actualización tiene sobre los demás.
     
     Según Gartner\cite{SOA-libroGartner} y González Quiroga\cite{SOA-tesis}, la incorporación de SOA empieza en las empresas hacia 2003, por las siguiente razones:
     
@@ -80,9 +79,16 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
 
     \section{Autenticación Basada en \textit{Tokens}}
     
-    Es una forma de autenticación ligera\cite{ToTOKEN-tokenbasedauth}, que va de la mano con SOA, que usa \textit{tokens} o fichas cifradas para la verificación de usuarios. Estas fichas son almacenadas en el cliente y enviadas en cada una de los \textit{requests} que realiza el navegador, la ficha es decifrada y se verifican las credenciales del usuario en cuestión.
+    Es una forma de autenticación ligera, que va de la mano con SOA, que usa \textit{tokens}, o fichas, cifradas para la verificación de usuarios. Estas fichas son almacenadas en el cliente y enviadas en cada una de los \textit{requests} que realiza el navegador, la ficha es decifrada y se verifican las credenciales del usuario en cuestión\cite{TOKEN-tokenbasedauth}.
     
-    Entre los datos almacenados en las fichas están:
+    \begin{figure}
+        \begin{center}
+            \includegraphics[scale=.5]{figures/tokenbarequest}
+        \end{center}
+        \caption{Autenticacion basada en fichas.}
+    \end{figure}
+    
+    Entre los datos almacenados en las fichas pueden estar:
     
     \begin{itemize}
         \item Nombre de usuario.
@@ -92,6 +98,13 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
     
     Estas son cifradas en el servidor bajo una clave secreta elegida por el mismo servidor y que se usa para el posterior decifrado de las fichas.
     
-    Todo esto permite que el servidor no se sobrecargue con variables de estado o de sesión por cada usuario autenticado en un momento dado y además permite la portabilidad desesada para el sistema.
+    Todo esto permite que el servidor no se sobrecargue con variables de estado o de sesión por cada usuario autenticado en un momento dado y además permite la portabilidad desesada para el sistema, como muestra en la figura.
+    
+    \begin{figure}
+        \begin{center}
+            \includegraphics{figures/tokenbaservers}
+        \end{center}
+        \caption{Portabilidad de la Autenticación Basada en Fichas.}
+    \end{figure}
     
 \pagebreak
