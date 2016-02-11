@@ -1,10 +1,14 @@
 \chapter{Marco Tecnológico}
 
+En este capítulo se presentarán las herramientas y protocolos utilizados durante el desarrollo del proyecto, ya sea para el desarrollo en sí mismo o para el apoyo en cuanto a control de versiones y gestión de tareas.
+
     \section{Herramientas para el desarrollo de la aplicación}
     
     En esta sección se describen las herramientas usadas en el desarrollo de la aplicación y las características que hicieron que fueran seleccionadas para tal fin.
     
-        \subsection{Eclipse}
+        \subsection{Eclipse (Kepler)}
+        
+        Entorno Integrado de Desarrollo (IDE) basado en Java. Provee las librerías necesarias para el desarrollo, facilita la configuración del proyecto y hace uso de herramientas como Maven para la gestión de librerías que use el proyecto.
     
         \subsection{Java}
         
@@ -19,6 +23,8 @@
         Fue elegido por su compatibilidad con Java y porque es independiente de la tecnología usada en la Vista, lo cual permite a su vez realizar cambios en la Vista sin afectar las funcionalidades del controlador.
         
         \subsection{JPA}
+        
+        Por ``Java Persistence API", proporciona un modelo de persistencia basado en objetos de Java planos para hacer la correspondencia con las entidades en la base de datos\cite{JPA-definicion}. En la práctica, hace transparentes las consultas y acciones realizadas sobre la base de datos.
         
         \subsection{Angular JS}
         
@@ -36,13 +42,19 @@
         
         \subsection{SPRING}
         
+        Framework para el desarrollo de aplicaciones y provee inversión de control, de código abierto para la plataforma Java. Permite integración con Hibernate, JPA y JSON\cite{SPRING-essential}.
+        
         \subsection{Maven}
+        
+        Es un sistema centralizado para la gestión y compilado d proyectos desde una sección de control llamada ``POM"\cite{MAVEN-basico}. Gestiona desde ahí la descarga de librerías necesarias y vínculos con las mismas.
         
         \subsection{Hibernate}
         
-        \subsection{Liquibase}
+        Es un gestoor de persistencia que provee una implementación de JPA para hacer correspondencias de objetos planos de Java con la base de datos\cite{HIBERNATE-basico}. Gestiona las comunicaciones a nivel de nombres de entidades y atributos con su respectiva contraparte de Java, clases con sus atributos.
         
         \subsection{iText}
+        
+        Herramienta de generación de PDF dinámicos\cite{ITEXT-basico}. Proporciona una serie de comandos que permiten la generación de archivos PDF usando la información enviada a través de estos.
         
     \section{Herramientas para el control de versiones y planificación}
     

@@ -1,5 +1,7 @@
 \chapter{Desarrollo de la Aplicación}
 
+En el presente capítulo se presenta, de forma detallada, cómo fue el desarrollo del proyecto, los objetivos y actividades específicas de cada \textit{Sprint} y finaliza con una revisión de dificultades técnicas y los resultados del proyecto.
+
 \section{Fase de Preparación}
     \subsection{Primer Sprint}
     
@@ -39,15 +41,15 @@
         \begin{itemize}
             \item Creación de las tablas en Trello para la gestión del proyecto
             
-            Las tablas de notas usadas fueron "Pendiente", "Impedido", "En desarrollo" y "Tarminado"; para referirse al estado actual de las tareas en cada una de las listas.
+            Las tablas de notas usadas fueron ``Pendiente", ``Impedido", ``En desarrollo" y ``Tarminado"; para referirse al estado actual de las tareas en cada una de las listas.
             
             \item Creación de repositorios
             
-            Se crearon los repositorios Git tanto local como remoto, para el almacenamiento de la aplicación usando Git y Github como sitio de almacenamiento para los repositorios remotos. Los repositorios están bajo los nombres de "ocupacional" y "proyectoAngular" en el url: \textit{www.github.com/atarazona89}.
+            Se crearon los repositorios Git tanto local como remoto, para el almacenamiento de la aplicación usando Git y Github como sitio de almacenamiento para los repositorios remotos. Los repositorios están bajo los nombres de ``ocupacional" y ``proyectoAngular" en el url: \textit{www.github.com/atarazona89}.
             
             \item Diseño de la Base de Datos
             
-            Creación del diagrama ER-E y el glosario de términos de la aplicación\footnote{Ver anexo A}.
+            Creación del diagrama ER-E y el glosario de términos de la aplicación. Ver apéndice \ref{ere}.
             
             \item Descarga del \textit{IDE} Eclipse
             
@@ -55,11 +57,11 @@
             
            \item Descargar y configurar \textit{plugins} de Eclipse
            
-           Se realizaron los cambios necesarios en la configuración del "pom.xml" para así acceder a los repositorios de Maven que contienen las distintas librerías tanto de SPRING como de las distintas herramientas ya mencionadas. Se realizó la depuración de los archivos y la respectiva configuración adecuada al ambiente de trabajo. Esto se refiere a la configurar Eclipse para usar \textit{SPRING} como \textit{framework}, Hibernate y Liquibase como gestores de comunicación con la base de datos y configurar la base de datos con las credenciales de MySQL asignadas para el desarrollo del proyecto.
+           Se realizaron los cambios necesarios en la configuración del ``pom.xml" para así acceder a los repositorios de Maven que contienen las distintas librerías tanto de SPRING como de las distintas herramientas ya mencionadas. Se realizó la depuración de los archivos y la respectiva configuración adecuada al ambiente de trabajo. Esto se refiere a la configurar Eclipse para usar \textit{SPRING} como \textit{framework}, Hibernate y Liquibase como gestores de comunicación con la base de datos y configurar la base de datos con las credenciales de MySQL asignadas para el desarrollo del proyecto.
            
            \item Configuración de las características de \textit{SPRING} para trabajar con anotaciones
            
-           Se realizaron los cambios dentro del archivo "occupational-servlet.xml" que permiten el uso de anotaciones para el direccio amiento interno de los procesos.
+           Se realizaron los cambios dentro del archivo ``occupational-servlet.xml" que permiten el uso de anotaciones para el direccio amiento interno de los procesos.
            
            
            \item Descargar y configurar la librería de JSON para la comunicación con el \textit{frontend}            
@@ -131,10 +133,39 @@
         \end{enumerate}
         \item Actividades
         \begin{itemize}
-            \item Se implementó el módulo de autenticación siguiedo los parámetros de autenticación basada en \textit{tokens}. La clave usada por el servidor fue una clave generada en tiempo de ejecución para que la misma fuera cambiante y mejorar la seguridad. Sin embargo, la clave, una vez generada se mantiene igual mientras el servidor esté en funcionamiento.
+            \item Se implementó el módulo de autenticación siguiedo los parámetros de autenticación basada en \textit{tokens}. La clave usada por el servidor fue una clave generada en tiempo de ejecución para que la misma fuera cambiante y mejorar la seguridad. Sin embargo, la clave, una vez generada se mantiene igual mientras el servidor esté en funcionamiento. Ver figura \ref{Autenticación}.
             
-            \item Se implementó el módulo de gestión de usuarios, en el mismo, un usuario, con las credenciales adecuadas, puede crear, usuarios nuevos y se despliega una lista de los usuarios en la  cual se puede elegir uno para luego poder editarlo o eliminarlo definitivamente de la base de datos. Esta última acción no es reversible por lo cual queda a consideración del \textit{Product Owner} si quedará finalmente la funcionalidad al alcance de los usuarios.
-        \end{itemize}   
+            \begin{figure}[htbp!]
+                \begin{center}
+                    \includegraphics[width=.8\textwidth]{figures/p1}
+                \end{center}
+                \caption{Pantalla de Autenticación de usuarios}
+                \label{Autenticación}
+            \end{figure}
+            
+            \item Se implementó el módulo de gestión de usuarios, en el mismo, un usuario, con las credenciales adecuadas, puede crear, usuarios nuevos y se despliega una lista de los usuarios en la  cual se puede elegir uno para luego poder editarlo o eliminarlo definitivamente de la base de datos. Esta última acción no es reversible por lo cual queda a consideración del \textit{Product Owner} si quedará finalmente la funcionalidad al alcance de los usuarios. Ver figuras \ref{Revisión} y \ref{Edición}.
+            
+            \begin{figure}[htbp!]
+                \begin{center}
+                    \includegraphics[width=.8\textwidth]{figures/p3}
+                \end{center}
+                \caption{Pantalla de Revisión de Usuario.}
+                \label{Revisión}
+            \end{figure}
+            
+            \begin{figure}[htbp!]
+                \begin{center}
+                    \includegraphics[width=.8\textwidth]{figures/p5}
+                \end{center}
+                \caption{Pantalla de Edición de Usuario.}
+                \label{Edición}
+            \end{figure}
+            
+        \end{itemize}
+         
+
+         
+            
     \end{enumerate}
              
         
@@ -156,21 +187,47 @@
             
             \item Visualización de usuarios
             
-            La lista también fue modificada para que fuese visualizada con la foto del usuario y con apariencia de lista de usuarios siguiendo los lineamientos de AngularJs.
+            La lista también fue modificada para que fuese visualizada con la foto del usuario y con apariencia de lista de usuarios siguiendo los lineamientos de Material Design. Ver figura \ref{Pacientes}.
+            
+            \begin{figure}[htbp!]
+                \begin{center}
+                    \includegraphics[width=.8\textwidth]{figures/p6}
+                \end{center}
+                \caption{\label{Pacientes}Lista de Pacientes del Médico}
+            \end{figure}
             
             \item Creación de la vista del doctor
             
             Esta incluye la lista de pacientes a atender en el día actual y la lista de pacientes que ha atendido el doctor. Junto con las funcionalidades de:
             
             \begin{itemize}
-                \item Agregar Paciente: Agrega un paciente nuevo a la lista de doctor, ya sea tomado de la lista de usuarios o creando un nuevo usuario y agregándolo inmediatamente a la lista de pacientes del doctor. En este paso se genera también la historia médica del nuevo paciente.
+                \item Agregar Paciente: Agrega un paciente nuevo a la lista de doctor, ya sea tomado de la lista de pacientes (Tal como se muestra en la figura \ref{Agregar}) o creando un nuevo historial y agregándolo inmediatamente a la lista de pacientes del doctor (Figura \ref{creación}).
                 
-                \item Crear Consulta: Crea una nueva consulta al historial de paciente. En este \textit{sprint} se realizó la funcionalidad de "programar" una confulta futura, que permitirá la planificación de consultas. Se dejó para un futuro \textit{sprint} la ceración de la consulta en sí misma ya que amerita el manejo de otros tipos de datos adicionales.
-            \end{itemize}
+                \begin{figure}[htbp!]
+                    \begin{center}
+                        \includegraphics[width=.8\textwidth]{figures/p8}
+                    \end{center}
+                    \caption{Vista de Agregar pacientes que ya han sido atendidos por algún médico.}
+                    \label{Agregar}
+                \end{figure}
+                
+                \begin{figure}[htbp!]
+                    \begin{center}
+                        \includegraphics[width=.8\textwidth]{figures/p10}
+                    \end{center}
+                    \caption{Vista de creación de nueva historia médica para un paciente nuevo.}
+                    \label{creación}
+                \end{figure}
+                
+                \item Crear Consulta: Crea una nueva consulta al historial de paciente. En este \textit{sprint} se realizó la funcionalidad de ``programar" una confulta futura, que permitirá la planificación de consultas. Se dejó para un futuro \textit{sprint} la ceración de la consulta en sí misma ya que amerita el manejo de otros tipos de datos adicionales.
+            \end{itemize}           
             
-            No se implementó la funcionalidad de "Eliminar Paciente" ni la de "Modificar Paciente" dado que el sistema busca mantener un registro histórico de las consultas y un médico no debería poder modificar ni eliminar dicho registro, sólo agregar nueva información al mismo.
+            
+            No se implementó la funcionalidad de ``Eliminar Paciente" ni la de ``Modificar Paciente" dado que el sistema busca mantener un registro histórico de las consultas y un médico no debería poder modificar ni eliminar dicho registro, sólo agregar nueva información al mismo.
             
         \end{itemize}
+        
+
         
     \end{enumerate}
         
@@ -189,13 +246,23 @@
         \begin{itemize}
             \item Crear consulta nueva
             
-            Se crea la nueva consulta, permitiendo a médico almacenar los datos pertienentes a través de las \textit{Soap Notes}. La consulta creada se agrega inmediatamente al historial del paciente, anexando los diagnósticos, en caso de haberlos, a su apartado exclusivo dentro del historial.
+            Se crea la nueva consulta, permitiendo a médico almacenar los datos pertinentes. La consulta creada se agrega inmediatamente al historial del paciente, anexando los diagnósticos, en caso de haberlos, a su apartado exclusivo dentro del historial.
             
-            Se almacenan los parámetros fisiológicos pertinentes, peso, estatura, tensión arterial entre otros. Se deja libertad al médico para añadir nuevos parámetros a los que ya estén almacenados en la base de datos.
+            
+            
+            Se almacenan los signos vitales o parámetros fisiológicos pertinentes, peso, estatura, tensión arterial entre otros. Se deja libertad al médico para añadir nuevos parámetros a los que ya estén almacenados en la base de datos (Figura \ref{parametros}).
+            
+            \begin{figure}[htbp!]
+                \begin{center}
+                    \includegraphics[width=.8\textwidth]{figures/p13}
+                \end{center}
+                \caption{\textit{Paarámetros Fisiológicos}}
+                \label{parametros}
+            \end{figure}
             
             \item Creación de \textit{Soap Note}
             
-            Se crea y almacena, para cada consulta, los datos recogidos en la consulta. Tales son:
+            Se crea y almacena, para cada consulta, los datos recogidos en la consulta (Figura \ref{soapnote}). Tales son:
             
             \begin{itemize}
                 \item \underline{Subjetivos (\textit{Sbjective}):} Lo que el paciente atestigua, sintomas y comentarios hechos por el paciente en el lenguaje que el mismo paciente los exprese para así mantener la información sin cambios en caso de que sea necesario revisarlos.
@@ -204,9 +271,33 @@
                 \item \underline{Plan:} Se acordó que el \textit{Plan} estaría en un apartado especial por cuestiones de simplicidad y acceso a los datos.
             \end{itemize}
             
+            \begin{figure}[htbp!]
+                \begin{center}
+                    \includegraphics[width=.8\textwidth]{figures/p12}
+                \end{center}
+                \caption{\textit{Soap Note}}
+                \label{soapnote}
+            \end{figure}
+            
             \item Solicitud y recepción de exámenes médicos
             
-            El médico  tratante tiene uns sección de solicitud de exámenes médicos. En ella indica el nombre del exámen a solicitarle al paciente. Estas solicitudes quedan almacenadas y en futuras consultas, el médico tiene la opción de indicar la recepción de algún exámen previamente solicitado, ya sea uno o varios de ellos.
+            El médico  tratante tiene uns sección de solicitud de exámenes médicos. En ella indica el nombre del exámen a solicitarle al paciente (Figura \ref{solicitudExamen}) Estas solicitudes quedan almacenadas y en futuras consultas, el médico tiene la opción de indicar la recepción de algún exámen previamente solicitado, ya sea uno o varios de ellos (Figura \ref{recepcionExamen}).
+            
+            \begin{figure}[htbp!]
+                \begin{center}
+                    \includegraphics[width=.8\textwidth]{figures/p16}
+                \end{center}
+                \caption{\textit{Solicitud de Exámenes}}
+                \label{solicitudExamen}
+            \end{figure}
+            
+            \begin{figure}[htbp!]
+                \begin{center}
+                    \includegraphics[width=.8\textwidth]{figures/p17}
+                \end{center}
+                \caption{\textit{Recepción de Exámenes}}
+                \label{recepcionExamen}
+            \end{figure}
             
             En la sección de recepción de exámenes, el médico también tiene la opción de adjuntar algún archivo, ya sea resultados (en el caso de exámens sanguíneos) o imágenes (ecografías, rayos X, etc) los cuales serán anexados a la respectiva consulta y con ella al historial del paciente.
             
@@ -237,8 +328,12 @@
             \item Generación de informes médicos y reposos.
         \end{itemize}
         \item Actividades
+        \begin{itemize}
+            \item Investigar las herramientas disponibles para generar archivos PDF.
+            \item Evaluar la compatibilidad con las herramientas y el \textit{framework} que se está usando en el dessarrollo de \textit{HxPlus Ocupacional}.
+            \item Elegir una de las herramientas y realizar los cambios adecuados para su uso en el sistema. Para \textit{HxPlus Ocupacional} se eligión iText por las razones mencionadas anteriormente.
+        \end{itemize}
     \end{enumerate}
-        
         
     \subsection{Septimo Sprint: Generar informes}
     \begin{enumerate}
@@ -247,6 +342,25 @@
             \item Vista de Solicitud de informes.
         \end{itemize}
         \item Actividades
+        \begin{itemize}
+            \item Se implantó la vista de solicitud de informes médicos con posibilidad de selección múltiple. Los parámetros son:
+            \begin{itemize}
+                \item Examen físico
+                \item Diagnóstico(s)
+                \item Tratamiento
+                \item Comentario(s)
+            \end{itemize}
+            
+            Tal como se muestra en la figura \ref{solicitudInforme}. Esto permite que en un solo formulario, el médico tiene la posibilidad de generar tanto informes como reposos médicos.
+            
+            \begin{figure}[htbp!]
+                \begin{center}
+                    \includegraphics[width=.8\textwidth]{figures/p23}
+                \end{center}
+                \caption{Sección de solicitud de informes médicos.}
+                \label{solicitudInforme}
+            \end{figure}
+        \end{itemize}
     \end{enumerate}
         
         
@@ -257,6 +371,17 @@
             \item Generacion de informes.
         \end{itemize}
         \item Actividades
+        \begin{itemize}
+            \item Se implantó el módulo de generación de informes médicos, tal y como fue descrito anteriormente, usando los parámetros selecciónados se generó el informe respectivo usando el formato indicado. Ver figura \ref{informeModelo}.
+        \end{itemize}
+        
+        \begin{figure}[htbp!]
+            \begin{center}
+                \includegraphics[width=.8\textwidth]{figures/p22}
+            \end{center}
+            \caption{Informe modelo}
+            \label{informeModelo}
+        \end{figure}
     \end{enumerate}
         
     
@@ -265,11 +390,15 @@
     \begin{enumerate}
         \item Objetivos
         \begin{itemize}
-            \item Diseño y ejecución de pruebas.
             \item Resolución de incidencias.
+            \item Diseño y ejecución de pruebas.
             \item Puesta en producción.
         \end{itemize}
         \item Actividades
+        \begin{itemize}
+            \item Se revisaron las incidencias y posibles errores de consistencia de la información y su acceso en el sistema.
+            \item Se realizaron pruebas de aceptación de parte del \textit{Scrum Master} en el uso del sistema.
+        \end{itemize}
     \end{enumerate}
         
     \subsection{Segundo Sprint: Redacción del libro de pasantías}
@@ -280,9 +409,29 @@
             \item Revisión y culminación del libro de pasantías.
         \end{itemize}
         \item Actividades
+        \begin{itemize}
+            \item Se recopiló la información del proyecto
+            \item Se realizó el filtrado de dicha información y se llevó al presente trabajo en limpio para su presentación.
+        \end{itemize}
     \end{enumerate}
         
         
     \subsection{Dificultades generales encontradas}
-    \subsection{Resultados}
+    
+    Las dificultades encontradas durante el desarrollo del proyecto fueron:
+    
+    \begin{itemize}
+        \item \textbf{Restricción en el uso de herramientas:} el \textit{Product Owner} solicitó explícitamente el uso de Java, SPRING, Hbernate, JavaScript, MySQL, AngularJS y JSON, tal y como fue descrito, para el desarrollo. Lo cual, si bien facilitó la creación y desarrollo del proyecto, dejó imposibilitada la posibilidad de, con tecnologías actuales, dar soporte a una base de datos orientada a eventos, tal como se pretendía hacer en el principio, y no se logró este enfoque.
+        
+        \item \textbf{Falta de informción de parte de Inpsasel:} originalmente se buscaba generar informes médicos especializados para el reporte de enfermedades ocupacionales al Inpsasel, órgano encargado de la gestión de enfermedades ocupacionales en el émbito nacional. Sin embargo, la falta de información, formatos y, más adelante, el lanzamiento de su portal (de Inpsasel) con automatización de dicha gestión, dejó a HxPlus Ocupacional sin la necesidad de realizar dichos informes.
+    \end{itemize}
+    
+    \subsection{Resultados Generales}
+    
+    El proyecto de pasantía se completó satisfactoriamente. A pesar de no poseer la funcioncionalidad de generación de informes de Inpsasel, la empresa de consideró satisfecha con los módulos implementados. La línea de tiempo de consultas se muestra adecuadamente y en orden cronológico, los diagnósticos y planes son almacenados y mostrados a gusto de la empresa y de conformidad con los lineamientos.
+    
+    Queda de parte de la empresa gestionar el desarrollo de futuros módulos o funcionalidades para la aplicación.
+    
+    
+    
 \pagebreak
