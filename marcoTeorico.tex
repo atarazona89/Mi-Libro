@@ -12,8 +12,8 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
         \item \textbf{Modelo}
             \begin{itemize}
                 \item Almacenamiento de los datos.
-                \item Estado de la aplicación.
-                \item Recuperación de errores en los datos.
+                \item Estado del sistema.
+                \item Recuperación de errores a nivel de datos.
             \end{itemize}
         \item \textbf{Vista}
             \begin{itemize}
@@ -27,6 +27,14 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
                 \item Direccionar a las vistas requeridas del lado del cliente.
             \end{itemize}
     \end{enumerate}
+    
+    \begin{figure}[htbp!]
+        \begin{center}
+            \includegraphics[width=.8\textwidth]{figures/Arquitectura-MVC}
+        \end{center}
+        \caption{Representación gráfica del patrón Modelo Vista Controlador\cite{MVC-imagen}}
+        \label{mvc-image}
+    \end{figure}
     
     \section{Arquitectura Orientada a Servicios}
     SOA por sus siglas en inglés, \textit{Service Oriented Architecture}. Es una filosofía de desarrollo la cual actúa como una guía de diseño y facilita el mismo orientado a la escalabilidad del sistema, esto es: facilita las actializaciones de uno o varios de los componentes MVC y minimiza el efecto que dicha actualización tiene sobre los demás.
@@ -53,7 +61,7 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
     
     En \textit{Service Oriented Architecture}\cite{SOA-msdn} definen SOA usando el poema de Saxe sobre los ciegos y el elfante.
     
-    "Seis ciegos de Indostan se encuentran con un elefante, cada uno describe el elefante de forma diferente porque se ve influenciado por sus propias experiencias
+    "Seis ciegos de Indostan se encuentran con un elefante, cada uno describe el elefante de forma diferente porque se ve influenciado por sus propias experiencias (Ver figura \ref{elefante-saxe})
     
     \begin{itemize}
         \item Quien le toca la trompa cree que es una serpiente.
@@ -65,11 +73,12 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
     \end{itemize}
     
 
-    \begin{figure}
+    \begin{figure}[htbp!]
         \begin{center}
-            \includegraphics[scale=.75]{figures/Elefante}
+            \includegraphics[width=.8\textwidth]{figures/Elefante}
         \end{center}
         \caption {El elefante de Saxe}
+        \label{elefante-saxe}
     \end{figure}
 
     Se usa la analogía para ejemplificar el hecho de que haya varias definiciones diferentes de lo que es SOA en si, porque se le ha definido como patrón de diseño o como una filosifía de desarrollo, siendo esta última la definición adoptada para el trabajo descrito en el presente informe.
@@ -83,7 +92,7 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
     
     \begin{figure}
         \begin{center}
-            \includegraphics[scale=.5]{figures/tokenbarequest}
+            \includegraphics[width=.8\textwidth]{figures/tokenbarequest}
         \end{center}
         \caption{Autenticacion basada en fichas.}
     \end{figure}
@@ -102,7 +111,7 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
     
     \begin{figure}
         \begin{center}
-            \includegraphics{figures/tokenbaservers}
+            \includegraphics[width=.8\textwidth]{figures/tokenbaservers}
         \end{center}
         \caption{Portabilidad de la Autenticación Basada en Fichas.}
     \end{figure}
