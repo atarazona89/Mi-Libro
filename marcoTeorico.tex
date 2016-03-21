@@ -1,10 +1,20 @@
 \chapter{Marco Teórico}
 
-En el presente capítulo se describen conceptos y patrones utilizados para el desarrollo del proyecto de patantía, los cuales fueron seleccionados siguiendo los criterios de usabilidad, mantenibilidad, escalabilidad y portabilidad.
+En el presente capítulo se describen conceptos y patrones utilizados para el desarrollo del proyecto de pasantía, los cuales fueron seleccionados siguiendo los criterios de usabilidad, mantenibilidad, escalabilidad y portabilidad.
 
     \section{Modelo Vista Controlador (MVC)}
     
-    El Modelo-Vista-Controlador es un patrón de arquitectura de \textit{software} que separa el modelo (Objetos de negocio) la vista (Interfaz con el usuario u otros sistemas) y el controlador (Manejo de la informacion de negocio)\cite{MVC-tiw}.
+    El Modelo-Vista-Controlador es un patrón de arquitectura de \textit{software} que separa el modelo (Objetos del negocio) la vista (Interfaz con el usuario u otros sistemas) y el controlador (Manejo de la información del negocio)\cite{MVC-tiw}.
+    
+    Tecnicamente el usuario intereactúa con las vistas llenando formularios, solicitando información o simplemente haciendo algún \textit{click} que genere una petición al sistema. En ese momento es el controlador quien recibe la petición y genera las acciones necesarias sobre el modelo para así acceder a los datos y generar la nueva vista, resultado de la petición realizada y enviarla al usuario. Tal y como muestra la figura \ref{mvc-image}.
+    
+    \begin{figure}[htbp!]
+        \begin{center}
+            \includegraphics[width=.7\textwidth]{figures/mvc}
+        \end{center}
+        \caption{Representación gráfica del patrón Modelo Vista Controlador\cite{MVC-imagen}}
+        \label{mvc-image}
+    \end{figure}
     
     Específicamente, cada componente tiene una asignación independiente de los demás componentes. Estas son:
     
@@ -28,18 +38,13 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
             \end{itemize}
     \end{enumerate}
     
-    \begin{figure}[htbp!]
-        \begin{center}
-            \includegraphics[width=.8\textwidth]{figures/Arquitectura-MVC}
-        \end{center}
-        \caption{Representación gráfica del patrón Modelo Vista Controlador\cite{MVC-imagen}}
-        \label{mvc-image}
-    \end{figure}
+    Esto se busca, primordialmente, para hacer del código altamente mantenible en el tiempo, ya que antiguamente se realizaban los sistemas siguiendo lo que se conoce como \textit{``programación de espaguetti"} (programación no estructurada) la cual no llevaba una separación entre lo que era la vista y los procesos internos del sistema. Esto traía como consecuencia, en el momento de realizar algún cambio al sistema ya sea de formato o de interacción, que tuviera que modificarse integralmente vista, interacciones y (potencialmente) el modelo de datos.
     
     \section{Arquitectura Orientada a Servicios}
-    SOA por sus siglas en inglés, \textit{Service Oriented Architecture}. Es una filosofía de desarrollo la cual actúa como una guía de diseño y facilita el mismo orientado a la escalabilidad del sistema, esto es: facilita las actializaciones de uno o varios de los componentes MVC y minimiza el efecto que dicha actualización tiene sobre los demás.
     
-    Según Gartner\cite{SOA-libroGartner} y González Quiroga\cite{SOA-tesis}, la incorporación de SOA empieza en las empresas hacia 2003, por las siguiente razones:
+    SOA por sus siglas en inglés, \textit{Service Oriented Architecture}. Es una filosofía de desarrollo la cual actúa como una guía de diseño y facilita el mismo orientado a la escalabilidad del sistema, esto es: facilita las actualizaciones de uno o varios de los componentes MVC y minimiza el efecto que dicha actualización tiene sobre los demás.
+    
+    Según \citeauthor{SOA-libroGartner}\cite{SOA-libroGartner} y \citeauthor{SOA-tesis}\cite{SOA-tesis}, la incorporación de SOA empieza en las empresas hacia 2003, por las siguiente razones:
     
     \begin{itemize}
         \item La incesante presión de los negocios para la agilidad. Cuando una empresa quiere
@@ -57,11 +62,11 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
         
     \end{itemize}
     
-    SOA se basa en capas, cada una servicios a la siguiente y sus procedimientos internos se mantienen ocultos a las demás capas. Con esto se generan APIs de acceso estandarizado y son independientes de las tecnologías utilizadas en el desarrollo.
+    SOA se basa en capas, cada una ofrece servicios a la siguiente y sus procedimientos internos se mantienen ocultos a las demás capas. Con esto se generan APIs de acceso estandarizado que son independientes de las tecnologías utilizadas en el desarrollo.
     
-    En \textit{Service Oriented Architecture}\cite{SOA-msdn} definen SOA usando el poema de Saxe sobre los ciegos y el elfante.
+    En \citetitle{SOA-msdn}\cite{SOA-msdn} definen SOA usando el poema de Saxe sobre seis ciegos y un elefante.
     
-    "Seis ciegos de Indostan se encuentran con un elefante, cada uno describe el elefante de forma diferente porque se ve influenciado por sus propias experiencias (Ver figura \ref{elefante-saxe})
+    ``Seis ciegos de Indostan se encuentran con un elefante, cada uno describe el elefante de forma diferente porque se ve influenciado por sus propias experiencias (Ver figura \ref{elefante-saxe})
     
     \begin{itemize}
         \item Quien le toca la trompa cree que es una serpiente.
@@ -81,39 +86,42 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
         \label{elefante-saxe}
     \end{figure}
 
-    Se usa la analogía para ejemplificar el hecho de que haya varias definiciones diferentes de lo que es SOA en si, porque se le ha definido como patrón de diseño o como una filosifía de desarrollo, siendo esta última la definición adoptada para el trabajo descrito en el presente informe.
+    Se usa la analogía para ejemplificar el hecho de que haya varias definiciones diferentes de lo que es SOA en si, porque se le ha definido como patrón de diseño o como una filosofía de desarrollo, siendo esta última la definición adoptada para el trabajo descrito en el presente informe.
     
-    También se puede usar dicha analogía para ejemplificar cómo las (potenciamente) distintas vistas pueden interactuar con el controlador y este a su vez con el modelo.
+    También se puede usar dicha analogía para ejemplificar cómo los (potenciamente diversos) dispositivos pueden interactuar con el controlador y este a su vez con el modelo sin que ello represente un cambio fundamental en diseño o estructura de los mismos. Cada dispositivo interactúa con los servicios que necesita y más ningún otro.
 
 
     \section{Autenticación Basada en \textit{Tokens}}
     
-    Es una forma de autenticación ligera, que va de la mano con SOA, que usa \textit{tokens}, o fichas, cifradas para la verificación de usuarios. Estas fichas son almacenadas en el cliente y enviadas en cada una de los \textit{requests} que realiza el navegador, la ficha es decifrada y se verifican las credenciales del usuario en cuestión\cite{TOKEN-tokenbasedauth}.
+    Es una forma de autenticación ligera, que va de la mano con SOA, que usa \textit{tokens}, o fichas, cifradas para la verificación de usuarios. Estas fichas son almacenadas en el cliente y enviadas en cada una de los \textit{requests} que realiza el navegador, la ficha es descifrada y se verifican las credenciales del usuario en cuestión\cite{TOKEN-tokenbasedauth}.
     
-    \begin{figure}
+    \begin{figure}[htbp!]
         \begin{center}
-            \includegraphics[width=.8\textwidth]{figures/tokenbarequest}
+            \includegraphics[width=.7\textwidth]{figures/tokenbarequest}
         \end{center}
         \caption{Autenticacion basada en fichas.}
+        \label{tba-request}
     \end{figure}
     
-    Entre los datos almacenados en las fichas pueden estar:
+    Entre los datos almacenados en las fichas suelen estar:
     
     \begin{itemize}
         \item Nombre de usuario.
         \item Fecha de autenticación.
         \item Fecha de caducidad de la ficha.
     \end{itemize}
+
     
-    Estas son cifradas en el servidor bajo una clave secreta elegida por el mismo servidor y que se usa para el posterior decifrado de las fichas.
+    Estas son cifradas en el servidor bajo una clave secreta elegida por el mismo servidor y que se usa para el posterior descifrado de las fichas.
     
-    Todo esto permite que el servidor no se sobrecargue con variables de estado o de sesión por cada usuario autenticado en un momento dado y además permite la portabilidad desesada para el sistema, como muestra en la figura.
+    Aunque no es un determinante, es deseable que la ficha contenga suficiente información del usuario para poder indentificarlo en cada una de las solicitudes y además sea lo suficientemente ligera como para no afectar la carga de datos. Todo esto permite que el servidor no se sobrecargue con variables de estado o de sesión por cada usuario autenticado en un momento dado y además permite la portabilidad desesada para el sistema, como muestra en las figuras \ref{tba-request} y \ref{tba-server}.
     
-    \begin{figure}
+    \begin{figure}[htbp!]
         \begin{center}
-            \includegraphics[width=.8\textwidth]{figures/tokenbaservers}
+            \includegraphics[width=.7\textwidth]{figures/tokenbaservers}
         \end{center}
         \caption{Portabilidad de la Autenticación Basada en Fichas.}
+        \label{tba-server}
     \end{figure}
     
 \pagebreak

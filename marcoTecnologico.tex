@@ -6,53 +6,119 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
     
     En esta sección se describen las herramientas usadas en el desarrollo de la aplicación y las características que hicieron que fueran seleccionadas para tal fin.
     
-        \subsection{Eclipse (Kepler)}
+        \subsection{Eclipse}
+        \label{tecno-eclipse}
         
-        Entorno Integrado de Desarrollo (IDE) basado en Java. Provee las librerías necesarias para el desarrollo, facilita la configuración del proyecto y hace uso de herramientas como Maven para la gestión de librerías que use el proyecto.
+        Es un entorno integrado de desarrollo (IDE) basado en Java. Provee las librerías necesarias para el desarrollo, facilita la configuración del proyecto y hace uso de herramientas como Maven para la gestión de librerías del proyecto.
+        
+        Combina un compilador junto con facilidades para la configuración de diferentes servidores, tanto de bases de datos como servidores web para atender los servicios del \textit{back end}.
+        
+        Usando esta herramienta se procedió a la configuración de los repositorios de Maven (ver \ref{tecno-maven}), el servidor tomcat (ver \ref{tecno-tomcat}), el entorno de desarrollo de Java y su respectivo entorno de ejecución (ver \ref{tecno-java}).
+        
+        En el desarrollo de ``HxPlus Ocupacional" se utilizó \textit{Eclipse Kepler} en su versión de 64 bits para Linux - Debian 9.
+        
+        \subsection{apache}
+        \label{tecno-apache}
+        
+        \subsection{Tomcat}
+        \label{tecno-tomcat}
     
         \subsection{Java}
+        \label{tecno-java}
         
-        Lenguaje de programación utilizado para el desarrollo del \textit{backend}. Java es un lenguaje de programación imperativo orientado a objetos que facilita el desarrollo intependiente de los servicios y el fácil acceso al modelo de datos permitiendo así la baja cohesión entre los componentes del sistema.
+        Lenguaje de programación utilizado para el desarrollo del \textit{backend}. Java es un lenguaje de programación imperativo orientado a objetos que facilita el desarrollo independiente de los servicios y el fácil acceso al modelo de datos permitiendo así la baja cohesión entre los componentes del sistema.
+        
+        El entorno de desarrollo (JDK) y de ejecución (JRE) fue Java 8. Ya que porvee las últimas actualizaciones de las librerías de Java y previene problemas de seguridad por puertas traseras presentados en la versión 7. Además que ofrece facilidades adicionales en lo que se refiere a la utilización de herramientas como Hibernate, JPA e iText.
         
         \subsection{JSON}
+        \label{tecno-json}
         
-        Por \textit{JavaScript Object Notation}, es un formato de intercambio de datos, ligero\cite{JSON-yahoo} que permite una sencilla comunicación entre la vista y el controlador.
+        Por \textit{JavaScript Object Notation}, es un formato de intercambio de datos, ligero\cite{JSON-yahoo} que permite una sencilla comunicación entre la vista y el controlador. También permite la fácil depuración y la visualización de los datos enviados, dentro del entorno de desarrollo, para la verificación y corrección de errores.
         
-        "JSON es un formato de texto que es completamente independiente del lenguaje pero utiliza convenciones que son ampliamente conocidos por los programadores de la familia de lenguajes C, incluyendo C, C++, C\#, Java, JavaScript, Perl, Python, y muchos otros. Estas propiedades hacen que JSON sea un lenguaje ideal para el intercambio de datos\cite{JSON-jsonOrg}."
+        JSON es un formato de texto que es independiente del lenguaje. Utiliza convenciones que son  conocidos por los programadores de Java, JavaScript, Perl, Python, y otros. Estas propiedades hacen que JSON sea el lenguaje ideal para el intercambio de datos\cite{JSON-jsonOrg}.
         
-        Fue elegido por su compatibilidad con Java y porque es independiente de la tecnología usada en la Vista, lo cual permite a su vez realizar cambios en la Vista sin afectar las funcionalidades del controlador.
+        JSON se contruye de la siguiente forma:
+        
+        \begin{itemize}
+            \item Todo objeto atómico comienza y termina con ``\{\}" (llaves).
+            \item Los objetos llevan nombre del objeto seguido de ``:" y el valor del objeto.
+            \item Si el valor del objeto es compuesto (varios atributos), los componentes se enlistan entre llaves y separados por ``," (coma).
+            \item Los atributos de un objeto son siempre un par \textit{nombre:valor}. Siendo ``nombre" el nombre del atributo. Es similar a la sintaxis usada para el nombre del objeto.
+            \item Listas o arreglos de objetos son nombrados como un objeto atómico mas una ``s" al final del nombre.
+            \item Los arreglos van enmarcados de ``[]" (corchetes).
+        \end{itemize}
+        
+        \begin{figure}[htbp!]
+            \begin{center}
+                \includegraphics[width=.8\textwidth]{figures/jsonejemplo}
+            \end{center}
+            \caption{Ejemplo de lista de empleados genérica en \textit{JSON}}
+            \label{json-ejemplo}
+        \end{figure}
+        
+        Fue elegido por su compatibilidad con Java y porque es independiente de la tecnología usada en la vista, lo cual permite a su vez realizar cambios en la vista sin afectar las funcionalidades del controlador.
         
         \subsection{JPA}
+        \label{tecno-jpa}
         
-        Por ``Java Persistence API", proporciona un modelo de persistencia basado en objetos de Java planos para hacer la correspondencia con las entidades en la base de datos\cite{JPA-definicion}. En la práctica, hace transparentes las consultas y acciones realizadas sobre la base de datos.
+        Por ``Java Persistence API", proporciona un modelo de persistencia basado en objetos de Java planos (POJO, por sus siglas en inglés \textit{Plain Old Java Object}) para hacer la correspondencia con las entidades en la base de datos\cite{JPA-definicion}. En la práctica, hace transparentes las consultas y acciones realizadas sobre la base de datos.
+        
+        Como tal, JPA, no implementa los modelos de persistencia que usará la base de datos si no que proporciona un estándar para que se puedan mantener las caractarísticas de la orientación a objetos de Java y se puedan enlazar, uno a uno, con las entidades, atributos y relaciones de la base de datos.
+        
+        JPA se puede configurar vía anotaciones o usando un documento XML que debe ser distribuido junto con el sistema. En el caso de ``HxPlus Ocupacional" se eligió la configuración por anotaciones debido que está presente directamente en los objetos (clases) de Java y permite una mejor mantinibilidad del código.
+        
+        Entre las implementaciones conocidas de JPA tenemos:
+        \begin{itemize}
+             \item Hibernate
+             \item ObjectDB
+             \item EclipseLink
+             \item OpenJPA
+        \end{itemize}
+        
+        Siendo la implementación de Hibernate la seleccionada por lo descrito en el punto \ref{tecno-hibernate}.
         
         \subsection{Angular JS}
+        \label{tecno-angular}
         
-        Es un \textit{framework} o conjunto de librerias orientada a facilitar el desarrollo web de aplicaciones dinámicas. "AngularJS le permite extender el vocabulario HTML para su aplicación"\cite{ANGULARJS-angularjs}.
+        Es un \textit{framework}orientada a facilitar el desarrollo web de aplicaciones dinámicas del lado del cilente. ``AngularJS le permite extender el vocabulario HTML para su aplicación"\cite{ANGULARJS-angularjs}. Utiliza lo que llama ``directivas" que son bloques de código en javascript que ayudan a estructurar las acciones del \textit{front-end}. También maneja ``atributos" y ``elementos" que pueden ser programados separadamente del código HTML y luego insertados en dicho archivo para su utilización.
+        
+        Provee asociación birireccional de variables del DOM lo cual simplifica drásticamente las pruebas del lado del cliente y mantiene, como se mencionó anteriormente, la estructura organizada del código. La asociación bidireccional a través de ``expresiones" se utiliza para mantener actualizado al cliente en cuanto a cambios que se realizen en las variables internas y mejora la respuesta visual sin realizar una recarga de la página.
+        
+        El código de Javascript (punto \ref{tecno-javascript}) debe ser importado en el archivo HTML en que se quieren utilizar. Existen dos formas de importarlas, desde el servidor de google\footnote{http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js} o descargando los archivos al servidor local y agregando la dirección local.
+        
+        Por todo esto, se eligió AngularJS para su utilización como \textit{framework} del \textit{front end} del sistema.
         
         \subsection{JavaScript}
+        \label{tecno-javascript}
         
-        JavaScript (abreviado comúnmente "JS") es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico\cite{JAVASCRIPT-wiki}.
+        JavaScript (abreviado comúnmente ``JS") es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico\cite{JAVASCRIPT-wiki}.
         
         Es un lenguaje de programación orientado a crear contenidos dinámicos para páginas web del lado del cliente. Tanto JSON como AngularJS, previamente mencionados, usan JavaScript en su codificación.
         
         \subsection{MySQL}
+        \label{tecno-mysql}
         
         Manejador de bases de datos, \textit{open source}, ofrece alto rendimiento, eficiencia y seguridad en el almacenamiento y recuperación de datos\cite{MYSQL-oracle}. Además de poseer librerías ampliamente usadas para Java las cuales ayudan al desarrollo debilmente acoplado del \textit{back-end}.
         
         \subsection{SPRING}
+        \label{tecno-spring}
         
         Framework para el desarrollo de aplicaciones y provee inversión de control, de código abierto para la plataforma Java. Permite integración con Hibernate, JPA y JSON\cite{SPRING-essential}.
         
         \subsection{Maven}
+        \label{tecno-maven}
         
-        Es un sistema centralizado para la gestión y compilado d proyectos desde una sección de control llamada ``POM"\cite{MAVEN-basico}. Gestiona desde ahí la descarga de librerías necesarias y vínculos con las mismas.
+        Es una herramienta de gestión, manejo y comprehensión. Utiliza el concepto del ``Modelo del Objeto de Proyecto" (del inglés \textit{Project Object Model}, o POM) para gestiónar la construcción del proyecto dónde se utilice. Esto es, gestiona las librerías, dependencias y versiones (de las librerías) de forma centralizada y limpia.
+        
+        En \citetitle{APACHE-maven}\cite{APACHE-maven} mantienen repositorios de librerías actualizados y correctamente asociados a las dependencias de dichas librerías.
         
         \subsection{Hibernate}
+        \label{tecno-hibernate}
         
-        Es un gestoor de persistencia que provee una implementación de JPA para hacer correspondencias de objetos planos de Java con la base de datos\cite{HIBERNATE-basico}. Gestiona las comunicaciones a nivel de nombres de entidades y atributos con su respectiva contraparte de Java, clases con sus atributos.
+        Es un gestor de persistencia que provee una implementación de JPA para hacer correspondencias de objetos planos de Java con la base de datos\cite{HIBERNATE-basico}. Gestiona las comunicaciones a nivel de nombres de entidades y atributos con su respectiva contraparte de Java, clases con sus atributos.
         
         \subsection{iText}
+        \label{tecno-itext}
         
         Herramienta de generación de PDF dinámicos\cite{ITEXT-basico}. Proporciona una serie de comandos que permiten la generación de archivos PDF usando la información enviada a través de estos.
         
@@ -61,14 +127,17 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
     En la presente sección se presentan las herramientas de planificación y control de versiones usadas durante el desarrollo de la aplicación. Si bien no están vinculadas directamente al código, las mismas sirvieron de soporte para la organización del proyecto.
     
         \subsection{Git}
+        \label{tecno-git}
         
         Sistema de manejo de control de versiones, \textit{open source}, que provee la capacidad de crear tanto repositorios locales como remotos, ambos pueden estar sincronizados.
         
         \subsection{GitHub}
+        \label{tecno-github}
         
         Servidores online de repositorios remotos para Git. Puede ser usado de manera gratuita y pública. Permite el acceso a los repositorios de manera ininterrumpida y global.
         
         \subsection{Trello}
+        \label{tecno-trello}
         
         Herramienta diseñada para la gestión de tareas usando listas o tablas. Cuenta con una interfaz intuitiva y de fácil aprendizaje.
         
