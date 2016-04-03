@@ -108,19 +108,49 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
         \subsection{Maven}
         \label{tecno-maven}
         
-        Es una herramienta de gestión, manejo y comprehensión. Utiliza el concepto del ``Modelo del Objeto de Proyecto" (del inglés \textit{Project Object Model}, o POM) para gestiónar la construcción del proyecto dónde se utilice. Esto es, gestiona las librerías, dependencias y versiones (de las librerías) de forma centralizada y limpia.
+        Es una herramienta de gestión y manejo de librerías, parecida a ``Apache Ant". Utiliza el concepto del ``Modelo del Objeto de Proyecto" (del inglés \textit{Project Object Model}, o POM) para gestiónar la construcción del proyecto dónde se utilice. Esto es, gestiona las librerías, dependencias y versiones (de las librerías) de forma centralizada y limpia.
+        
+        El POM es un archivo en formato XML dónde se registran las librerías que serán usadas por el proyecto  para que el manejador de Maven se encargue de la descarga de las mismas. Se gestiona a través de artefactos que registran la información de una librería de acuerdo con la figura \ref{pom-artifact}.
+        
+        \begin{figure}[htbp!]
+            \begin{center}
+                \includegraphics[scale=0.4]{figures/pomartifact}
+            \end{center}
+            \caption{Artefacto de Maven y descripción de su contenido.}
+            \label{pom-artifact}
+        \end{figure}
+        
+        La estructura del POM puede llegar a ser tan compleja como el proyecto que gestiona, llegando incluso a depender de otros POM. En ``HxPlus Ocupacional" se manejó usando un sólo POM de la manera más sencilla posible.
         
         En \citetitle{APACHE-maven}\cite{APACHE-maven} mantienen repositorios de librerías actualizados y correctamente asociados a las dependencias de dichas librerías.
         
         \subsection{Hibernate}
         \label{tecno-hibernate}
         
-        Es un gestor de persistencia que provee una implementación de JPA para hacer correspondencias de objetos planos de Java con la base de datos\cite{HIBERNATE-basico}. Gestiona las comunicaciones a nivel de nombres de entidades y atributos con su respectiva contraparte de Java, clases con sus atributos.
+        Es un framework de persistencia que provee una implementación de JPA\cite{HIBERNATE-basico}. Gestiona las comunicaciones a nivel de nombres de entidades y atributos con su respectiva contraparte de Java, clases con sus atributos. A esto se le conoce como ``Correlación Objeto-Relacional" (ORM, por su siglas en inglés \textit{Object Relational Mapping}).
+        
+        Esta correlación que crea Hibernate permite ciertas facilidades al momento de manejar las distintas interacciones con la base de datos que devienen en un código mantenible en el tiempo.
+        
+        El framework es integrado al desarrollo a través de Maven y tiene soporte para los siguientes manejadores de bases de datos\cite{HIBERNATE-tutorial}: 
+        \begin{itemize}
+            \item MySQL
+            \item PostgreSQL
+            \item Oracle
+            \item DB2/NT
+            \item HSQL Database Engine
+            \item entre otros...
+        \end{itemize}
+        
+        Tradicionalmente se utilizan dos archivos de configuración (llamados ``hibernate.properties" y ``hibernate.cgf.xml") que se modifican con cada nueva tabla o ``clase de persistencia" que se requiera, sin embargo este método tiende a no ser mantenible en el tiempo ya que debe buscarse dentro de estos archivos las configuraciones de las clases y no existe un orden estipulado para la creación y modificación de estos archivos. Para evitar esto, y dado que se tiene una versión de Java opsterior a JDK 5, se procedió a la utilización de la versión 3 de hibernate que incorpora librerías para el uso de anotaciones, quedando así la configuración de las clases de persistencia dentro del código de las clases de Java, lo cual permite y permitió, durante el desarrollo, fácil depuración de errores y un sencillo mantenimiento del código.
         
         \subsection{iText}
         \label{tecno-itext}
         
-        Herramienta de generación de PDF dinámicos\cite{ITEXT-basico}. Proporciona una serie de comandos que permiten la generación de archivos PDF usando la información enviada a través de estos.
+        Herramienta de generación de PDF dinámicos\cite{ITEXT-basico}. Proporciona un API que permite la generación de archivos PDF usando la información enviada.
+        
+        Actualmente existen módulos de gestión, interpretación y conversión de archivos PDF, sin embargo para efectos de ``HxPlus Ocupacional" sólo se utilizó el módulo de generación de los mismos.
+        
+        Su integración con Maven permitió la fácil descarga de la librería y su configuración dentro del proyecto. Para su uso sólo se necesitó la creación de una clase dentro del \textit{back end}, que contiene las importaciones requeridas para así poder generar los PDF necesarios.
         
     \section{Herramientas para el control de versiones y planificación}
     
@@ -140,8 +170,5 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
         \label{tecno-trello}
         
         Herramienta diseñada para la gestión de tareas usando listas o tablas. Cuenta con una interfaz intuitiva y de fácil aprendizaje.
-        
-        
-        
     
 \pagebreak
