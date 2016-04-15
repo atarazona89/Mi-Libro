@@ -40,7 +40,7 @@ En el presente capítulo se presenta, de forma detallada, cómo fue el desarroll
         \end{enumerate}
         \item Actividades
         \begin{itemize}
-            \item Creación de las tablas en Trello para la gestión del proyecto
+            \item Creación de cuenta y tablas en Trello para la gestión del proyecto
             
             Las tablas de notas usadas fueron ``Pendiente", ``Impedido", ``En desarrollo" y ``Tarminado"; para referirse al estado actual de las tareas en cada una de las listas.
             
@@ -60,17 +60,70 @@ En el presente capítulo se presenta, de forma detallada, cómo fue el desarroll
            
            Se realizaron los cambios necesarios en la configuración del ``pom.xml" para así acceder a los repositorios de Maven que contienen las distintas librerías tanto de SPRING como de las distintas herramientas ya mencionadas. Se realizó la depuración de los archivos y la respectiva configuración adecuada al ambiente de trabajo. Esto se refiere a la configurar Eclipse para usar \textit{SPRING} como \textit{framework}, Hibernate y Liquibase como gestores de comunicación con la base de datos y configurar la base de datos con las credenciales de MySQL asignadas para el desarrollo del proyecto.
            
+           \begin{table}[h!]
+               
+               \begin{center}
+                   \begin{tabular}{|l|l|l|}\hline
+                       Grupo & Artefacto & Versión \\\hline
+                       org.springframework & spring-core & 4.1.2.RELEASE \\\hline
+                       org.springframework & spring-orm & 4.1.2.RELEASE \\\hline
+                       org.springframework & spring-webmvc & 4.1.2.RELEASE \\\hline
+                       mysql & mysql-connector-java & 5.1.9 \\\hline
+                       org.liquibase & liquibase-plugin & 1.6.1.0 \\\hline
+                    \end{tabular}
+                \end{center}
+                
+                \caption{Artefactos de Maven: Spring}
+                \label{artefactos-spring}
+           \end{table}
+            
+           Aunque, en lo referente a liquibase, se utilizó un plugin, no una librería. Ver cuadro \ref{artefactos-hibernate}.
+           
            \item Configuración de las características de \textit{SPRING} para trabajar con anotaciones
            
            Se realizaron los cambios dentro del archivo ``occupational-servlet.xml" que permiten el uso de anotaciones para el direccio amiento interno de los procesos.
            
            
-           \item Descargar y configurar la librería de JSON para la comunicación con el \textit{frontend}            
+           \item Descargar y configurar la librería de JSON para la comunicación con el \textit{front-end}
            
+           Usando los repositorios de Maven se descargaron las librerías necesarias de JSON para la comunicación. Las dependencias descargadas fueron, del grupo \textit{com.fasterxml.jackson.core}, las enumeradas en el cuadro \ref{artefactos-json}.
            
-           \item Descargar y configurar las librerías de \textit{Hibernate} para la comunicación con la base de datos
+           \begin{table}[h!]
+               
+               \begin{center}
+                    \begin{tabular}{|l|l|}\hline
+                       Artefacto & Versión \\\hline
+                       jackson-core & 2.2.2 \\\hline
+                       jackson-annotations & 2.2.2 \\\hline
+                       jackson-databind & 2.2.2 \\\hline                   
+                    \end{tabular}
+                \end{center}
+                
+                \caption{Artefactos de Maven: JSON}
+                \label{artefactos-json}
+            \end{table}
            
-           Usando Maven fueron descargadas las librerías de Hibernate que usan JPA como API para comunicarse con la base de datos. Esto, en conjunto con las anotaciones de \textit{SPRING} facilita la creación de las diferentes consultas y acciones a realizar en la base de datos.
+           \item Descargar y configurar las librerías de Hibernate para la comunicación con la base de datos
+           
+           Usando Maven fueron descargadas las librerías de Hibernate que usan JPA como API para comunicarse con la base de datos.
+           
+           \begin{table}[h!]
+               
+               \begin{center}
+                   \begin{tabular}{|l|l|l|}\hline
+                       Grupo & Artefacto & Versión \\\hline
+                       org.hibernate.javax.persistence & hibernate-jpa-2.0-api & 1.0.1.Final \\\hline
+                       org.hibernate.common & hibernate-commons-annotations & 4.0.4.Final \\\hline
+                       javax.persistence & persistence-api & 1.0.2 \\\hline
+                       org.hibernate & hibernate-entitymanager & 4.1.9.Final \\\hline
+                       org.springframework.data & spring-data-jpa & 1.8.1.RELEASE \\\hline
+                    \end{tabular}
+                \end{center}
+                
+                \caption{Artefactos de Maven: Hibernate}
+                \label{artefactos-hibernate}
+            \end{table}
+           
         \end{itemize}
     \end{enumerate}
         
@@ -108,7 +161,9 @@ En el presente capítulo se presenta, de forma detallada, cómo fue el desarroll
             
             \item Crear los repositorios
             
-            En este entorno 'repositorios' se refiere a las interfaces que usa \textit{Hibernate} para manejar los accesos y consultas con la base de datos. Estos vienen con métodos y procedimientos estipulados por JPA.
+            En este entorno `repositorios' se refiere a las interfaces que usa \textit{Hibernate} para manejar los accesos y consultas con la base de datos. Estos repositorios vienen con métodos y procedimientos  implemantados por Hibernate y estipulados por JPA.
+            
+            Se creó un paquete de clases, llamado ``repositories", con un repositorio para cada una de las clases mencionadas anteriormente.
              
             \item Crear los servicios para las clases
             
@@ -116,7 +171,7 @@ En el presente capítulo se presenta, de forma detallada, cómo fue el desarroll
             
             \item Crear los controladores de la aplicación
             
-            En este \textit{Sprint} se crearon los controladores con operaciones básicas de gestión de cada una de las clases, dejando para futuros \textit{Sprint} la tarea de modificar los mismos para cada una de las tareas, en caso de ser necesario.
+            En este \textit{Sprint} se crearon los controladores con operaciones básicas de gestión (crear, listar, consultar, modificar y eliminar) de cada una de las clases, dejando para futuros \textit{Sprint} la tarea de modificar los mismos las tareas específicas, en caso de ser necesario.
             
         \end{itemize}
     \end{enumerate}
@@ -134,7 +189,8 @@ En el presente capítulo se presenta, de forma detallada, cómo fue el desarroll
         \end{enumerate}
         \item Actividades
         \begin{itemize}
-            \item Se implementó el módulo de autenticación siguiedo los parámetros de autenticación basada en \textit{tokens}. La clave usada por el servidor fue una clave generada en tiempo de ejecución para que la misma fuera cambiante y mejorar la seguridad. Sin embargo, la clave, una vez generada se mantiene igual mientras el servidor esté en funcionamiento. Ver figura \ref{Autenticación}.
+            \item Se implementó el módulo de autenticación siguiedo los parámetros de autenticación basada en \textit{tokens}
+            La clave usada por el servidor fue una clave generada en tiempo de ejecución para que la misma fuera cambiante y mejorar la seguridad. Sin embargo, la clave, una vez generada se mantiene igual mientras el servidor esté en funcionamiento. Ver figura \ref{Autenticación}.
             
             \begin{figure}[htbp!]
                 \begin{center}
@@ -143,6 +199,21 @@ En el presente capítulo se presenta, de forma detallada, cómo fue el desarroll
                 \caption{Pantalla de Autenticación de usuarios}
                 \label{Autenticación}
             \end{figure}
+            
+            Para ello se agregó al ``pom.xml" las dependencias requeridas para la autenticación. Ver cuadro \ref{artefactos-tba}
+            
+            \begin{table}[h!]
+                
+                \begin{center}
+                    \begin{tabular}{|l|l|l|}\hline
+                        Grupo & Artefacto & Versión \\\hline
+                        io.jsonwebtoken & jjwt & 0.5.1 \\\hline
+                    \end{tabular}
+                \end{center}
+                
+                \caption{Artefactos de Maven: Autenticación}
+                \label{artefactos-tba}
+            \end{table}
             
             \item Se implementó el módulo de gestión de usuarios, en el mismo, un usuario, con las credenciales adecuadas, puede crear, usuarios nuevos y se despliega una lista de los usuarios en la  cual se puede elegir uno para luego poder editarlo o eliminarlo definitivamente de la base de datos. Esta última acción no es reversible por lo cual queda a consideración del \textit{Product Owner} si quedará finalmente la funcionalidad al alcance de los usuarios. Ver figuras \ref{Revisión} y \ref{Edición}.
             
@@ -188,7 +259,7 @@ En el presente capítulo se presenta, de forma detallada, cómo fue el desarroll
             
             \item Visualización de usuarios
             
-            La lista también fue modificada para que fuese visualizada con la foto del usuario y con apariencia de lista de usuarios siguiendo los lineamientos de Material Design. Ver figura \ref{Pacientes}.
+            La lista también fue modificada para que fuese visualizada con apariencia de lista de usuarios siguiendo los lineamientos de Material Design. Ver figura \ref{Pacientes}.
             
             \begin{figure}[htbp!]
                 \begin{center}
@@ -223,13 +294,10 @@ En el presente capítulo se presenta, de forma detallada, cómo fue el desarroll
                 \item Crear Consulta: Crea una nueva consulta al historial de paciente. En este \textit{sprint} se realizó la funcionalidad de ``programar" una confulta futura, que permitirá la planificación de consultas. Se dejó para un futuro \textit{sprint} la ceración de la consulta en sí misma ya que amerita el manejo de otros tipos de datos adicionales.
             \end{itemize}           
             
-            
             No se implementó la funcionalidad de ``Eliminar Paciente" ni la de ``Modificar Paciente" dado que el sistema busca mantener un registro histórico de las consultas y un médico no debería poder modificar ni eliminar dicho registro, sólo agregar nueva información al mismo.
             
         \end{itemize}
-        
 
-        
     \end{enumerate}
         
         
@@ -248,8 +316,6 @@ En el presente capítulo se presenta, de forma detallada, cómo fue el desarroll
             \item Crear consulta nueva
             
             Se crea la nueva consulta, permitiendo a médico almacenar los datos pertinentes. La consulta creada se agrega inmediatamente al historial del paciente, anexando los diagnósticos, en caso de haberlos, a su apartado exclusivo dentro del historial.
-            
-            
             
             Se almacenan los signos vitales o parámetros fisiológicos pertinentes, peso, estatura, tensión arterial entre otros. Se deja libertad al médico para añadir nuevos parámetros a los que ya estén almacenados en la base de datos (Figura \ref{parametros}).
             

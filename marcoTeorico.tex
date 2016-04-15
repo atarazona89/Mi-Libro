@@ -41,8 +41,9 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
     Esto se busca, primordialmente, para hacer del código altamente mantenible en el tiempo, ya que antiguamente se realizaban los sistemas siguiendo lo que se conoce como \textit{``programación de espaguetti"} (programación no estructurada) la cual no llevaba una separación entre lo que era la vista y los procesos internos del sistema. Esto traía como consecuencia, en el momento de realizar algún cambio al sistema ya sea de formato o de interacción, que tuviera que modificarse integralmente vista, interacciones y (potencialmente) el modelo de datos.
     
     \section{Arquitectura Orientada a Servicios}
+    \label{teorico-soa}
     
-    SOA por sus siglas en inglés, \textit{Service Oriented Architecture}. Es una filosofía de desarrollo la cual actúa como una guía de diseño y facilita el mismo orientado a la escalabilidad del sistema, esto es: facilita las actualizaciones de uno o varios de los componentes MVC y minimiza el efecto que dicha actualización tiene sobre los demás.
+    Es una filosofía de desarrollo la cual actúa como una guía de diseño y facilita el mismo orientado a la escalabilidad del sistema, esto es: facilita las actualizaciones de uno o varios de los componentes MVC y minimiza el efecto que dicha actualización tiene sobre los demás.
     
     Según \citeauthor{SOA-libroGartner}\cite{SOA-libroGartner} y \citeauthor{SOA-tesis}\cite{SOA-tesis}, la incorporación de SOA empieza en las empresas hacia 2003, por las siguiente razones:
     
@@ -123,5 +124,8 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
         \caption{Portabilidad de la Autenticación Basada en Fichas.}
         \label{tba-server}
     \end{figure}
+    
+    \section{Inversión de Control}
+    
     
 \pagebreak

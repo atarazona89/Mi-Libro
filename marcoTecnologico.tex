@@ -20,8 +20,22 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
         \subsection{apache}
         \label{tecno-apache}
         
+        Es un servidor web multiplataforma. Utiliza el protocolo http para la transferencia de información con los clientes y posee soporte de seguridad para SSLy TLS\cite{APACHE-culturacion}. Posee licencia GPL y una comunidad de desarrolladores que mantiene el servidor actualizado continuamente.
+        
+        Dadas sus características \textit{open source} se cuenta con equipos de desarrolladores alrededor del mundo que además funjen como soporte del mismo, lo cual lo hace un servidor altamente utilizado y con muy buena capacidad de respuesta en caso de inconvenientes con el mismo.
+        
+        Está alojado dentro del servidor de ``Apache Foundation"\cite{APACHE-maven} en donde además se alojan otras herramientas utilizadas en el proyecto.
+        
+        Para ``HxPlus Ocupacional" se designó Apache como servidor web exclusivo de \textit{front end}. Se hace incapié en ello ya que dada la orientación a servicios del sistema, se pueden crear nuevos servidores, para dispositivos móbiles primordialmente, que están dedicados exclusivamente a su función y no cambiarían la forma de interacción de este servidor.
+        
         \subsection{Tomcat}
         \label{tecno-tomcat}
+        
+        Apache Tomcat, 	Jakarta Tomcat o comunmente llamado Tomcat es un servidor web especializado en el almacenamiento de sistemas web bajo las especificaciones JSP (JavaServer Pages) de Oracle Corporation, aunque fue creado, originalmente, por Sun Microsystems.
+        
+        Siendo parte de Apache Foundation, también posee licencia GPL y es de código abierto, con una comunidad que desarrolla, bajo ``Java Comunity Process", las especificaciones de Java Servlet, JavaServer Pages, Java Expression Language y Java WebSocket\cite{APACHE-tomcat}.
+        
+        Este servidor fue instalado y configurado para hospedar el \textit{back end} de ``HxPlus Ocupacional" y los servicios que ofrece. Tomando la filosofía de SOA (Ver \ref{teorico-soa}), en este servidor estarán alojados los servicios que proporcionará el sistema, para ser usados por las distintas implementaciones del \textit{front en}.
     
         \subsection{Java}
         \label{tecno-java}
@@ -91,9 +105,9 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
         \subsection{JavaScript}
         \label{tecno-javascript}
         
-        JavaScript (abreviado comúnmente ``JS") es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico\cite{JAVASCRIPT-wiki}.
+        JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico\cites{JAVASCRIPT-wiki}{JAVASCRIPT-manual}. También posee soporte en casi todos los navegadores utilizados actualmente.
         
-        Es un lenguaje de programación orientado a crear contenidos dinámicos para páginas web del lado del cliente. Tanto JSON como AngularJS, previamente mencionados, usan JavaScript en su codificación.
+        Es un lenguaje de programación orientado a crear contenidos dinámicos para páginas web del lado del cliente. AngularJS, previamente mencionado, usa JavaScript como lenguaje de programación para su implementación.
         
         \subsection{MySQL}
         \label{tecno-mysql}
@@ -103,7 +117,12 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
         \subsection{SPRING}
         \label{tecno-spring}
         
-        Framework para el desarrollo de aplicaciones y provee inversión de control, de código abierto para la plataforma Java. Permite integración con Hibernate, JPA y JSON\cite{SPRING-essential}.
+        Framework para el desarrollo de aplicaciones que provee inversión de control; es de código abierto y está diseñado sobre Java. Permite integración con Hibernate, JPA y JSON\cite{SPRING-essential}.
+        
+        SPRING fue diseñado para facilitar el desacoplamiento de los compomentes del sistema utilizanco IOC. Esto permite que los componentes sean desarrollados una y sólo una vez y que puedan ser reutilizados en diferentes contextos\cite{SPRING-referencedoc}.
+        
+        Su fácil integración con Hibernate y, por consecuencia, con JPA permite que la interacción con la base de datos sea transparente al desarrollador y evita que tenga que reescribirse el código en caso de cambios en el manejador (de bases de datos) utilizados.
+        
         
         \subsection{Maven}
         \label{tecno-maven}
@@ -159,16 +178,26 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
         \subsection{Git}
         \label{tecno-git}
         
-        Sistema de manejo de control de versiones, \textit{open source}, que provee la capacidad de crear tanto repositorios locales como remotos, ambos pueden estar sincronizados.
+        Es un sistema de control de versiones distribuido, diseñado por Linus Torvalds, enfocado en eficiencia, integridad de datos, velocidad de transferencia y soporte para flujos de trabajo no lineales.
+        
+        Siguiendo este enfoque, se logró un \textit{software} que almacena los archivos relativos a un proyecto tomando como base un directorio ``raiz" y los archivos y directorios que lo conformen, incluye recursivamente los archivos y directorios dentro del directorio raiz, y  a partir de ellos almacena los cambios realizados a la última versión, sin modificar los archivos originales ni los archivos de modificaciones; con ello se logra que los cambios puedan ser reversibles y que sean almacenados con poco uso de memoria, reduce la carga de datos al momento de crear repositorios remotos ya que no se está enviando los archivos completos sino los archivos de cambios.
+        
+        Para el caso de repositorios remotos y el manejo de la carga, también incluye la restricción de versiones. Un usuario debe tener en el repositorio local la última versión disponible, en caso de que la última versión esté en el repositorio local, se cargan los cambios normalmente al repositorio remoto; en caso contrario, el usuario debe descargar la última versión del repositorio remoto, (potencialmente) resolver conflictos que puedan surgir entre los archivos modificados de manera local y los que hayan sido modificados en el servidor remoto y luego hacer la carga al servidor remoto.
+        
+        También ofrece la posibilidad de crear ``ramas" de desarrollo. Esto es, cambios y modificaciones de un proyecto que parten de una raiz pero que puede tener una meta diferente. Esto facilita el proceso cuando existen varios desarrolladores trabajando en paralelo sobre el mismo proyecto, aunque en el caso de surgir conflictos en los cambios puede llegar a ser engorrosa la integración (\textit{merge}) del código.
+        
+        Para HxPlus se crearon dos repositorios raices, dadas implicaciones de permisos de ejecución dentro del sistema operativo elegido. Estos repositorios fueron llamasdos ``occupational" y ``proyectoAngular" refiriendose al \textit{back-end} y \textit{front-end} respectivamente.
         
         \subsection{GitHub}
         \label{tecno-github}
         
         Servidores online de repositorios remotos para Git. Puede ser usado de manera gratuita y pública. Permite el acceso a los repositorios de manera ininterrumpida y global.
         
+        Los repositorios fueron almacenados en la cuenta personal de Alejandro Tarazona, en el url: \textit{http://www.github.com/atarazona89} con los nombres descritos con anterioridad, para su almacenamiento en la web.
+        
         \subsection{Trello}
         \label{tecno-trello}
         
-        Herramienta diseñada para la gestión de tareas usando listas o tablas. Cuenta con una interfaz intuitiva y de fácil aprendizaje.
+        Herramienta diseñada con la misión de facilitar la gestión de tareas usando listas o tablas. Cuenta con una interfaz intuitiva y de fácil aprendizaje para llevar a cabo dicha misión. Una vez creadas las tablas que se desean, se pueden crear tareas dentro de ellas, las cuales a su vez pueden ser etiquetadas, organizadas o comentadas por los participantes. Las tareas pueden ser arrastradas entre las listas emulando así la transición entre los estados de desarrollo del proyecto.
     
 \pagebreak
