@@ -1,0 +1,92 @@
+\chapter{Desarrollo de la Aplicación}
+
+En el presente capítulo se presenta, de forma detallada, cómo fue el desarrollo del proyecto y finaliza con una revisión de dificultades técnicas y los resultados del proyecto.
+
+El desarrollo se dividió en tres fases:
+
+\begin{enumerate}
+    \item Fase de Preparación.    
+    \item Fase de Implementación.
+    \item Fase de Cierre.
+\end{enumerate}
+
+Las cuales poseen sus propios objetivos generales y específicos, la fase de implementación contempla también los \textit{Sprint} realizados siguiendo la metodología seleccionada.
+
+\section{Fase de Preparación}
+    
+    \textbf{\underline{Objetivo General:}}
+    Llevar a cabo el levantamiento de requerimientos la descarga de las herramientas a utilizar durante el desarrollo y la configuración inicial de las mismas.
+    
+    \textbf{\underline{Objetivos Específicos:}}
+    \begin{itemize}
+        \item Levantamiento de los requerimientos del sistema.
+        \item Descarga y configuración de Eclipse, Hibernate, Maven, AngularJS, Apache y Tomcat.
+        \item Creación de cuentas para el manejo de los repositorios del proyecto y \textit{Product Backlog}.
+        \item Creación del \textit{Product Backlog}.
+        \item Elaboración de los diagramas iniciales de base de datos y casos de uso.
+        \item Evaluación de restricciones y riesgos por parte del equipo de desarrollo.
+    \end{itemize}
+    
+    En esta fase se realizó, en conjunto con el ing. Juán Albarrán, el levantamiento de los requerimientos funcionales y no funcionales del sistema, dichos requerimientos fueron:
+    
+    \begin{itemize}
+        \item \textbf{\underline{Requerimientos Generales:}}
+        
+        El sistema debe proveer una plataforma de almacenamiento de historiales médicos con asociaciones entre la empresa en la que trabaja el paciente, la zona o ``centro de costos" en el cual labora el paciente al momento de la consulta, mantener los historiales a través del tiempo, sin importar los contratos contraidos por el paciente ni el médico que lo atienda.
+        
+        En casos de cambio de centro de costos de trabajo, se deberán especificar como terminación o renovación de contratos de parte de los usuarios y la empresa.
+        
+        Todo esto con la finalidad de poder realizar cruces de información e investigación de causas de enfermedades tomando en cuenta los lugares de trabajo y las tareas desempeñadas por los trabajadores.
+        
+        \item \textbf{\underline{Usuarios:}}
+        
+        El sistema debe ser capaz de agregar nuevos usuarios que serán almacenados en la base de datos con los atributos especificados en \ref{ere} que a su vez puedan ser utilizados tanto en historiales médicos como en pacientes de algún doctor de la empresa. También los doctores de cada empresa tienen que ser registrados como usuarios del sistema y ser asignados al cargo de ``Doctor" de algún departamento de dicha empresa.
+        
+        El cargo de ``Doctor" en una empresa se refiere al personal médico calificado para realizar consultas y diagnósticos médicos. Por consecuencia será representado como un contrato especial y, sin discriminación por la especialidad o nivel de instrucción del mismo, será almacenado en el sistema con el nombre de ``Doctor". En la sección de almacenamiento de los datos del doctor, será  almacenada la información específica del mismo.
+        
+        \item \textbf{\underline{Historial Médico:}}
+        
+        El historial médico de un paciente se realiza al momento de la primera consulta que sea registrada en el sistema, en ese momento de registran:
+        
+        \begin{enumerate}
+            \item Antecedentes o Trasfondos: Enfermedades diagnosticadas previamente al paciente así como predisposiciones a enfermedades hereditarias.
+            \item Hábitos: Son actividades regulares del paciente. Pueden variar en tipo y frecuencia. Éstos pueden ser habitos recomendados o perniciosos para el paciente. La finalidad es que las investigaciones de enfermedades ocupacionales puedan descartar los hábitos de los pacientes como factores.
+            \item Alergias: También se registran alergias diagnosticadas al paciente. Se realiza en una sección a parte de los trasfondos debido a que las alergias poseen características específicas y se manifiestan sólo con la presencia del alérgeno\footnote{Según el diccionario de la RAE: \textit{alérgeno, na}: 1. adj. Perteneciente o relativo a los alérgenos. 2. m. Sustancia antigénica que induce una reacción alérgica en un organismo.} correspondiente.
+            \item Vacunas: Por último ser registran las vacunas que posee el paciente detallando el nombre y la potencia en caso en que aplique (vacunas de varias dosis o refuerzos).
+        \end{enumerate}
+        
+        El usuario debe estar previamente registrado y contratado por la empresa que contrata al doctor para poder crearse su historial médico.
+        
+        \item \textbf{\underline{Consultas Médicas:}}
+         
+        Una vez creado el historial médico pueden realizarse consultas médicas. En ellas se registrará la información recogida durante dicha consulta y se almacenará en el sistema.
+         
+        Basándose en la información recopilada por Globinsoft S.A. para su proyecto ``HxPlus" (principal antecedente del presente proyecto), queda establecida la estructura de una consulta de la siguiente forma:
+         
+        \begin{enumerate}
+            \item \textit{SoapNote} (nota de revisión): Usada por los médicos para organizar las consultas y que consta de:
+            \begin{enumerate}
+                \item Subjective: Información subjetiva, comunmente redactada en lenguaje informal, que contiene lo que el paciente describe, dolencias y síntomas presentados.
+                \item Objective: Información objetiva recopilada por el médico durante la consulta. Redactada en lenguaje formal.
+                \item Assessment: Comentarios u observaciones realizados por el médico.
+                \item Plan: Plan acción a realizar para tratar las dolencias.
+            \end{enumerate}
+            \item Diagnóstico(s): Uno o varios diagnósticos realizados por el médico en la consulta.
+            \item Instrucción(es): Una o varias instrucciones. Acciones que deben ser llevadas al pie de la letra en cuanto a conductas o hábitos del paciente, se incluye en este apartado regulaciones alimenticias y recomendaciones periódicas.
+            \item Prescripción(es): Instrucciones de uso de medicamentos registrados en el sistema junto con la información de dicho medicamento. Con esto se podrán generar los récipes médicos para la adquisición de fármacos que así lo requieran.
+            \item Signos Vitales: Se registran los signos vitales recabados en la consulta. Dado que puede variar los signos vitales pertinentes entre las distintas especialidades de la medicina, se deja a juicio del médico tratante qué signos vitales serán tomados en la consulta.
+            \item Solicitud y Recepción de exámenes médicos: El la primera se registra una solicitud de un examen dado. En una futura consulta puede darse por recibido en el sistema el examen médico y adjuntar el archivo respectivo para su almacenamiento. Se puede solicitar o recibir más de un examen médico por consulta.
+        \end{enumerate}
+        
+        El sistema debe ser capaz de almacenar y desplegar esta información ordenada cronológicamente a partir de la consulta médica más reciente.
+         
+    \item \textbf{\underline{Reportes Médicos:}}
+    
+     El sistema debe poder generar de manera automática los reportes médicos con la información recopilada en las consultas a solicitud del médico.
+        
+    \end{itemize}
+    
+\section{Fase de Implementación}    
+
+\section{Fase de Cierre}
+    

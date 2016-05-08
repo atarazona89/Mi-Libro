@@ -143,14 +143,6 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
     
     En caso de fallos de autenticación, ya sea por credenciales incorrectas o un \textit{token} inválido, el servidor responderá con un mensaje de error y redireccionará la navegación a la vista de ``inicio de sesión" u otra página por defecto.
     
-%    \begin{figure}[htbp!]
-%        \begin{center}
-%            \includegraphics[width=.7\textwidth]{figures/tokenbaservers}
-%        \end{center}
-%        \caption{Portabilidad de la Autenticación Basada en Fichas.}
-%        \label{tba-server}
-%    \end{figure}
-    
     \section{Inversión de Control}
     
     Concepto utilizado por primera vez por Martin Fowler\cite{IOC-dgarcia} que define una diferenciación principal entre un \textit{framework} y una biblioteca, siendo la biblioteca un conjunto de clases y funciones que pueden ser llamadas por el programa desarrollado y el \textit{framework} un diseño que controla el flujo y eventualmente llamará al código desarrollado para cumplir con las funciones específicas. De esta forma, el control de flujo no lo tiene el código si no el \textit{framework}, que responde a las solicitudes de los usuarios y solicita al programa las acciones requeridas.
@@ -169,9 +161,26 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
     En el caso de Spring, se usa inyección de dependencias en varios niveles:
     
     \begin{enumerate}
-        \item Los ``controladores" utilizan a los ``servicios", que son interfaces creadas para realizar el procesamiento interno de los datos que llegan al servidor. Estas interfaces tienen procedimientos prederterminados, como toda ``interface", sus implementaciones deben implementar individualmente todos estos procedimientos y son inyectados (los ``servicios") en sus respectivos ``controladores".
+        \item Los ``controladores" utilizan a los ``servicios", que son interfaces creadas para realizar el procesamiento interno de los datos que llegan al servidor. Estas interfaces tienen procedimientos prederterminados, como toda ``interface", sus implementaciones deben implementar individualmente todos estos procedimientos y son inyectados (los ``servicios") en sus respectivos ``controladores" (figura \ref{img-controllerdi}).
         
-        \item Los ``servicios" a su vez hace uso de los diferentes ``repositorios". También son interfaces que están estipuladas por JPA e implementadas por Hibernate (ver puntos \ref{tecno-jpa} y \ref{tecno-hibernate}) que son inyectados en los ``servicios" que así lo requieran.
+        \begin{figure}[htbp!]
+            \begin{center}
+                \includegraphics[width=.8\textwidth]{figures/controller}
+            \end{center}
+            \caption{Ejemplo de inyección de dependencias en controladores.}
+            \label{img-controllerdi}
+        \end{figure}
+        
+        \item Los ``servicios" a su vez hace uso de los diferentes ``repositorios". También son interfaces que están estipuladas por JPA e implementadas por Hibernate (ver puntos \ref{tecno-jpa} y \ref{tecno-hibernate}) que son inyectados en los ``servicios" que así lo requieran (figura \ref{img-servicerdi}).
+
+        \begin{figure}[htbp!]
+            \begin{center}
+                \includegraphics[width=.8\textwidth]{figures/serviceimpl}
+            \end{center}
+            \caption{Ejemplo de inyección de dependencias en servicios.}
+            \label{img-servicerdi}
+        \end{figure}        
+        
     \end{enumerate}
     
 \pagebreak

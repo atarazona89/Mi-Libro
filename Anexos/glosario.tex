@@ -1,22 +1,129 @@
-\begin{table}[h!]
+%\begin{table}[h!]
+\begin{longtable}{|l|p{.2\textwidth}|l|p{.2\textwidth}|p{.2\textwidth}|}\hline
+    Entidad	& Descripción	& Atributo	& Descripción	& Tipo	\\\hline
+    USER	& Información de los usuarios registrados en el sistema.	& id	& Identificador del usuario en el sistema.	& Clave, autogenerado, BIGINTEGER.	\\\hline
+    &	& username	& Nombre de usuario a utilizar en el sistema.	& VARCHAR.	\\\hline
+    &	& password	& Contraseña privada del usuario en el sistema.	& VARCHAR.	\\\hline
+    &	& ci	& Documento de identificación del usuario en el país. Número de cédula de identidad	& BIGINTEGER.	\\\hline
+    &	& rif	& Documento de identificación del usuario en el país. Número de registro de información fiscal.	& BIGINTEGER.	\\\hline
+    &	& firstName	& Primer nombre del usuario.	& VARCHAR.	\\\hline
+    &	& lastName	& Primer apellido del usuario.	& VARCHAR.	\\\hline
+    &	& sex	& Sexo del usuario.	& “m” o “f”.	\\\hline
+    &	& birthdate	& Fecha de nacimiento del usuario.	& DATETIME.	\\\hline
+    &	& email	& Dirección de correo electrónico del usuario.	& VARCHAR.	\\\hline
+    &	& address	& Dirección de habitación del usuario.	& Monovaluado, VARCHAR.	\\\hline
+    &	& phoneNumber	& Número de teléfono del usuario.	& Monovaluado, VARCHAR.	\\\hline
+    &	& idpost	& Identificador del puesto asignaddo al usuario.	& Monovaluado,  BIGINTEGER.	\\\hline
+    &	& idcostcenter	& Identificador del centro de costo donde trabaja el usuario.	& BIGINTEGER.	\\\hline
+    &	& idcompany	& Identificador de la compañía donde trabaja el usuario.	& BIGINTEGER.	\\\hline
+    &	& photo	& Fotografía tipo carnet del usuario.	& BIGINTEGER.	\\\hline
+    COMPANY	& Información de las empresas registradas en el sistema.	& id	& Identificador de la compañía registrada.	& Clave, autogenerado, BIGINTEGER.	\\\hline
+    & 	& companyname	& Nombre de la compañía.	& VARCHAR.	\\\hline
+    & 	& rif	& Documento de identificación de la compañía en el país. Número de registro de información fiscal.	& BIGINTEGER.	\\\hline
+    & 	& description	& Descripción de la companía.	& VARCHAR.	\\\hline
+    & 	& idcostcenter	& Identificador del centro de costos que es sede principal de la compañía.	& BIGINTEGER.	\\\hline
+    COSTCENTER	& Centro de costos de una empresa. Se toma como centro de costos una sede o un almacén de la empresa.	& id	& Identificador del centro de costos.	& Clave, autogenerado, BIGINTEGER.	\\\hline
+    & 	& idcompany	& Identificador de la compañía a la que pertenece el centro de costos.	& BIGINTEGER.	\\\hline
+    & 	& address	& Dirección del centro de costos.	& VARCHAR.	\\\hline
+    & 	& phoneNumber	& Número de teléfono principal del centro de costos.	& VARCHAR.	\\\hline
+    DEPARTMENT	& Departamentos de una compañía.	& id	& Identificador del departamento en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& name	& Nombre del departamento.	& VARCHAR.	\\\hline
+    & 	& description	& Descripción del departamento.	& VARCHAR.	\\\hline
+    & 	& idcompany	& Compañía a la que pertenece el departamento	& BIGINTEGER.	\\\hline
+    POST	& Puestos de trabajos ofrecidos en una caompañía.	& id	& Identificador del puesto en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& name	& Nombre del puesto.	& VARCHAR.	\\\hline
+    & 	& description	& Descripción de las funciones del puesto.	& VARCHAR.	\\\hline
+    & 	& iddepartment	& Departamento al que pertenece el puesto.	& BIGINTEGER.	\\\hline
+    PATIENT	& Usuarios que han sido atendidos por médicos de una empresa.	& id	& Identificador del paciente. También usado como número de historial  médico dentro del sistema.	& Clave, autogenerado, BIGINTEGER.	\\\hline
+    & 	& iduser	& Usuario asociado.	& BIGINTEGER.	\\\hline
+    HABIT	& Parte del historial médico. Son hábitos mencionados por el paciente al momento de la creación de su historial médico.	& id	& Identificador del hábito en el sistema.	& Clave, autogenerado, BIGINTEGER.	\\\hline
+    & 	& name	& Nombre del hábito.	& VARCHAR.	\\\hline
+    & 	& frecuency	& Frecuencia con la cual practica el hábito.	& VARCHAR.	\\\hline
+    & 	& idpatient	& Paciente que está practicando el hábito.	& BIGINTEGER.	\\\hline
+    BACKGROUND	& Parte del historial médico. Enfermedades previas o actuales, condiciones hereditarias o predisposiciones a enfermedades diagnosticadas al paciente.	& id	& Identificador del trasfondo en el sistema.	& Clave, autogenerado, BIGINTEGER.	\\\hline
+    &	& idpatient	& Paciente que presenta el trasfondo.	& BIGINTEGER.	\\\hline
+    & 	& name	& Nombre del trasfondo o enfermedad.	& VARCHAR.	\\\hline
+    & 	& description	& Descripción de síntomas o tratamientos llevados a cabo en virtud del trasfondo.	& VARCHAR.	\\\hline
+    ALLERGY	& Parte del historial médico. Alergias manifestadas por el paciente.	& id	& Identificador de la aleragia en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& name	& Nombre de la alergia. En caso de no conocerlo se indica a qué es alergico el paciente.	& VARCHAR.	\\\hline
+    & 	& description	& Descripción más detallada de la alergia.	& VARCHAR.	\\\hline
+    & 	& severity	& Severidad en caso que aplique y que haya sido diagnosticada por parte de un doctor.	& VARCHAR.	\\\hline
+    & 	& idpatient	& Paciente que presenta la alergia.	& BIGINTEGER.	\\\hline
+    VACCINE	& Parte del historial médico. Historial de vacunas del paciente.	& id	& Identificador de la vacuna en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& name	& Nombre de la vacuna.	& VARCHAR.	\\\hline
+    & 	& potency	& Pontencia de la misma en caso que aplique.	& VARCHAR.	\\\hline
+    & 	& idpatient	& Paciente que tiene la vacuna.	& BIGINTEGER.	\\\hline
+    DOCTOR	& Usuarios que tienen el puesto de doctores en alguna empresa registrada en el sistema.	& id	& Idenficador del dorctor en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& iduser	& Datos del usuario en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& regnumber	& Documento de identificación del doctor ante el colegio de médicos. Número de registro.	& BIGINTEGER.	\\\hline
+    VITALSIGN	& Signos vitales registrados en una consulta.	& id	& Identificador de la nota de signo vitale en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& idconsult	& Identificador de la consulta dónde se tomaron los signos vitales.	& BIGINTEGER.	\\\hline
+    & 	& name	& Nombre del signo vital tomado.	& VARCHAR.	\\\hline
+    & 	& description	& Descripción de lo observado o valores tomados.	& VARCHAR.	\\\hline
+    SOAPNOTE	& Parte de una consulta. Nota de revisión.	& id	& Identificador de la nota de revisión en el sistema.	& Clave, autogenerado, BIGINTEGER.	\\\hline
+    & 	& subjective	& Parte subjetiva de la nota de revisión de la consulta. Lo que el paciente expresa y son sus sítomas de manera informal.	& VARCHAR.	\\\hline
+    & 	& objective	& Parte objetiva de la nota de revisión. Lo que el doctor observa en la consulta. Lenguaje formal.	& VARCHAR.	\\\hline
+    & 	& plan	& Plan de acción a realizar por el paciente.	& VARCHAR.	\\\hline
+    & 	& comments	& Comentarios adicionales por parte del doctor.	& VARCHAR.	\\\hline
+    & 	& iddiagnostic	& Diagnóstico realizado durante la consulta, si aplica.	& BIGINTEGER.	\\\hline
+    FILE	& Archivos almacenados en el sistema. Fotos de usuario, logos de compañías o resultados de exámenes.	& id	& Identificador del archivo en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& idconsult	& Consulta en la cual se realizó la carga del archivo. Esto en caso de ser resultado de un examen.	& BIGINTEGER.	\\\hline
+    & 	& filename	& Nombre con el que se guarda el archivo.	& VARCHAR.	\\\hline
+    & 	& type	& Tipo de archivo. Si  es imágen o archivo de formato portátil.	& VARCHAR.	\\\hline
+    & 	& filedata	& Datos del archivo.	& LONGBLOB.	\\\hline
+    DIAGNOSTIC	& Parte de una soapnote. Diagnóstico realizado.	& id	& Identificador del diagnóstico en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& idconsult	& Consulta en que fue realizado el diagnóstico.	& BIGINTEGER.	\\\hline
+    & 	& details	& Detalles del diagnóstico realizado.	& VARCHAR.	\\\hline
+    & 	& idexam	& Examen por el cual se detectó una enfermedad o dolencia diagnósticada. Si aplica.	& BIGINTEGER.	\\\hline
+    LABORATORY	& Laboratorio encargado de fabricar un medicamento.	& id	& Identificador del laboratorio en el sistema.	& Clave, autogenerado, BIGINTEGER.	\\\hline
+    & 	& name	& Nombre del laboratorio.	& VARCHAR.	\\\hline
+    & 	& phoneNumber	& Número de teléfono principal del laboratorio.	& VARCHAR.	\\\hline
+    DRUG	& Medicamento que es registrado en el sistema para complementar los tratamientos médicos.	& id	& Identificador del medicamento en el sistema.	& Clave, autogenerado, BIGINTEGER.	\\\hline
+    & 	& name	& Nombre del medicamento.	& VARCHAR.	\\\hline
+    & 	& description	& Descripción de la presentación del medicamento.	& VARCHAR.	\\\hline
+    & 	& idlaboratory	& Laboratorio que fabrica el medicamento	& BIGINTEGER.	\\\hline
+    INDICATION	& Indicaciones o posología de uso de un medicamento.	& id	& Identificador de la indicación en el sistema.	& Clave, autogenerado, BIGINTEGER.	\\\hline
+    & 	& description	& Descripción o explicación de la indicación.	& VARCHAR.	\\\hline
+    PRESCRIPTION	& Prescripción médica. Necesaria para elaborar los récipes médicos. Contiene información de un medicamento y sus indicaciones.	& id	& Identificador de la prescripción en el sistema.	& Clave, autogenerado, BIGINTEGER.	\\\hline
+    & 	& date	& Fecha en que se realizó la prescripción.	& DATETIME.	\\\hline
+    & 	& iddoctor	& Doctor responsable de la prescripción.	& BIGINTEGER.	\\\hline
+    & 	& idconsult	& Consulta en que fue realizado la prescripción.	& BIGINTEGER.	\\\hline
+    & 	& iddrug	& Medicamento prescrito.	& BIGINTEGER.	\\\hline
+    & 	& idindication	& Indicación a seguir por parte del paciente para el medicamento prescrito.	& BIGINTEGER.	\\\hline
+    INSTRUCTION	& Instrucciones médicas para el tratamiento que no contienen medicamentos. También recomendaciones sobre hábitos del paciente.	& id	& Identificador de la instrucción en el sistema.	& Clave, autogenerado, BIGINTEGER.	\\\hline
+    & 	& instruction	& Información de la instrucción a seguir por parte del paciente.	& VARCHAR.	\\\hline
+    & 	& idconsult	& Consulta asociada a la indicación realizada.	& BIGINTEGER.	\\\hline
+    EXAM	& Examenes médicos que sean solicitados a través del sistema.	& id	& Identificador del examen en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& ordered	& Consulta en la cual fue ordenado el examen.	& BIGINTEGER.	\\\hline
+    & 	& type	& Tipo o nombre del examen solicitado.	& VARCHAR.	\\\hline
+    & 	& results	& Resultados obtenidos el examen.	& BIGINTEGER.	\\\hline
+    CONSULT	& Datos referentes a una consulta médica.	& id	& Identificador de la consulta en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& idpatient	& Paciente atendido durante la consulta.	& BIGINTEGER.	\\\hline
+    & 	& consultdate	& Fecha en la que se realizó la consulta.	& DATETIME.	\\\hline
+    & 	& idsoapnote	& Nota de revisión de la consulta.	& BIGINTEGER.	\\\hline
+    & 	& idprescription	& Prescripción realizada en la consulta.	& BIGINTEGER.	\\\hline
+    & 	& iddoctor	& Doctor tratante.	& BIGINTEGER.	\\\hline
+    ATTENDS	& Relación de atención entre doctores y pacientes.	& id	& Identificador de la relación en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& iddoctor	& Doctor tratante.	& BIGINTEGER.	\\\hline
+    & 	& idpatient	& Paciente atendido.	& BIGINTEGER.	\\\hline
+    RECIEVE\_EXAM	& Datos de recepción de un examen solicitado.	& id	& Identificador de la relación en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& idconsult	& Consulta en la cual se recibió el examen.	& BIGINTEGER.	\\\hline
+    & 	& idexam	& 	& BIGINTEGER.	\\\hline
+    HAVE\_INST	& Relación entre un diagnóstico realizado y las instrucciones que recomienda el doctor.	& id	& Identificador de la relación en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& idinstruction	& Instrucción asociada.	& BIGINTEGER.	\\\hline
+    & 	& iddiagnostic	& Diagnóstico asociado.	& BIGINTEGER.	\\\hline
+    CONTRACT	& Contrato de trabajo entre un usuario y la empresa.	& id	& Identificador del contrato en el sistema.	& 	\\\hline
+    & 	& begindate	& Fecha de firma o comienzo del contrato.	& DATETIME.	\\\hline
+    & 	& enddate	& Fecha de culminación del contrato.	& DATETIME.	\\\hline
+    & 	& idpost	& Puesto otorgado mediante el contrato.	& BIGINTEGER.	\\\hline
+    & 	& iduser	& Usuario contratado.	& BIGINTEGER.	\\\hline
+    & 	& idcostcenter	& Centro de costos asignado para la ejecución del contrato por parte del contratado.	& BIGINTEGER.	\\\hline
+    HAVEPOST	& Relación entre un centro de costos y los puestos de trabajo que están ofrecidos en el mismo.	& id	& Identificador de la relación en el sistema.	& BIGINTEGER.	\\\hline
+    & 	& idpost	& Puesto ofertado.	& BIGINTEGER.	\\\hline
+    & 	& idcostcenter	& Centro de costos que ofrece el puesto.	& BIGINTEGER.	\\\hline
     
-    \begin{tabular}{|p{.2\textwidth}|p{.2\textwidth}|p{.2\textwidth}|p{.2\textwidth}|p{.2\textwidth}|}\hline
-        Entidad & 
-        Descripción & 
-        Atributo & 
-        Descripción &
-        Tipo 
-        
-        \\\hline
-        
-        company & 
-        Información pertinente de las empresas registradas & 
-        id &
-        Monovaluado, clave, BIGINTEGER, autogenerado & \\\hline
-        
-        & & & & \\\hline
-    \end{tabular}
     
     \caption{Glosario de términos del diagrama ER-E}
     \label{glosario-ere}
-\end{table}
+\end{longtable}
+%\end{table}
