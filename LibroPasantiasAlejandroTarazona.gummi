@@ -1,0 +1,20 @@
+version=0.6.0
+typesetter=xelatex
+steps=texpdf
+root=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/LibroPasantiaAlejandroTarazona.tex
+
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/marcoMetodologico.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/introduccion.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/entorno.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/anexos.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/conclusiones.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/bibliografia.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/agradecimientos.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/acta.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/dedicatoria.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/desarrolloDeLaAplicacion.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/marcoTecnologico.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/marcoTeorico.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/portada.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/resumen.tex
+file=/home/alejandro/windows/Documents and Settings/Alejandro/Documents/Clases/Pasantías/Mi Libro/Anexos/glosario.tex

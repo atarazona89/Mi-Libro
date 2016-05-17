@@ -20,10 +20,10 @@ Las cuales poseen sus propios objetivos generales y específicos, la fase de imp
     \textbf{\underline{Objetivos Específicos:}}
     \begin{itemize}
         \item Levantamiento de los requerimientos del sistema.
-        \item Descarga y configuración de Eclipse, Hibernate, Maven, AngularJS, Apache y Tomcat.
+        \item Descarga y configuración de Eclipse, JSON, Hibernate, Liquibase, Maven, AngularJS, Apache y Tomcat.
         \item Creación de cuentas para el manejo de los repositorios del proyecto y \textit{Product Backlog}.
         \item Creación del \textit{Product Backlog}.
-        \item Elaboración de los diagramas iniciales de base de datos y casos de uso.
+        \item Elaboración del diagrama inicial de base de datos. %y casos de uso.
         \item Evaluación de restricciones y riesgos por parte del equipo de desarrollo.
     \end{itemize}
     
@@ -37,6 +37,8 @@ Las cuales poseen sus propios objetivos generales y específicos, la fase de imp
         En casos de cambio de centro de costos de trabajo, se deberán especificar como terminación o renovación de contratos de parte de los usuarios y la empresa.
         
         Todo esto con la finalidad de poder realizar cruces de información e investigación de causas de enfermedades tomando en cuenta los lugares de trabajo y las tareas desempeñadas por los trabajadores.
+        
+        El sistema debe poseer mecanismos de autenticación, se sugirió el uso de autenticación basada en \textit{tokens} para este requerimiento.
         
         \item \textbf{\underline{Usuarios:}}
         
@@ -86,7 +88,339 @@ Las cuales poseen sus propios objetivos generales y específicos, la fase de imp
         
     \end{itemize}
     
-\section{Fase de Implementación}    
+    Todos estos requerimientos fueron archivados en notas para la realización del \textit{Product Backlog} utilizando el sistema Trello, para lo cual se procedió a crear la cuenta del equipo de desarrollo y se enlazó con la pizarra creada por el \textit{Scrum Manager} para la gestión del proyecto.
+    
+    Se dividió el proyecto en ``módulos" y éstos a su vez en ``vistas" las cuales pasaron a ser la unidad granular deseada para el manejo del proyecto, quedando así la primera versión de la lista del producto de la siguiente forma:
+    
+    \begin{enumerate}
+        \item \textbf{\underline{Módulo de Autenticación:}}
+        
+        \begin{itemize}
+            \item Vista de autenticación: Incluye inicio y cierre de sesión dentro del sistema.
+        \end{itemize}
+        
+        \item \textbf{\underline{Módulo de Gestión de Usuarios:}}
+        
+        \begin{itemize}
+            %\item Vista de Agregar Usuario: Formulario de creación de usuarios nuevos en el sistema.
+            \item Vista de Lista de Usuarios: Lista de los usuarios registrados en el sistema. Esta vista será refinada en el futuro para que haga discriminación entre usuarios por empresa (ej. un usuario de una empresa A no podrá ver la lista de otra empresa B ni éstos aparecerán en su lista).
+            \item Vista de Detalles de Usuario: Vista de los datos personales de un usuario.
+            \item Vista de Edición de Usuario: Formulario lleno con los datos personales de un usuario dado que se usa para la actualización de dichos datos.
+        \end{itemize}
+        
+%        \item \textbf{\underline{Módulo de Doctores:}}
+%        \begin{itemize}
+%            \item Vista de Agregar Doctor: Formulario para el registro de un nuevo dorctor en la empresa.
+%            \item Vista de Lista de Doctores: Lista con los doctores contratados por una empresa.
+%            \item Vista de Detalles de Doctor: Vista de los datos característicos de un doctor.
+%            \item Vista de Edición de Doctor: Formulario lleno con los datos profesionales de un doctor dado. Se usa para la actualización de dichos datos.
+%        \end{itemize}
+        
+        \item \textbf{\underline{Módulo de Pacientes:}}
+        \begin{itemize}
+            \item Vista de Añadir Nuevo Paciente: Al añadir un nuevo paciente, el doctor puede añadir un nuevo paciente a su lista de pacientes atendidos y el mismo puede provenir de las listas de usuarios atendidos previamente y que estén contratados por la empresa o ser un paciente totalmente nuevo, en tal caso pasaría a la siguiente vista.
+            \item Vista de Lista de Pacientes Atendidos: El doctor tiene a su disposición una lista de pacientes que ha atendido con anterioridad, ordenada por fecha de última consulta médica y se mostrarán los pacientes atendidos más recientemente primero.
+            \item Vista de Creación de Historia Médica: Formulario con el cual se añaden los datos necesarios para la creacción de una nueva historia médica al sistema. Usado en el caso de que un paciente esté siendo atendido por primera vez desde su registro en el sistema (no importa si ha cambiado de puestos de trabajo, sólo se discrimina por el puesto actual).
+        \end{itemize}
+        
+        \item \textbf{\underline{Módulo de Consultas Médicas:}}
+        \begin{itemize}
+            \item Vista de Historial de Consultas Médicas del Paciente: Una lista de las consultas que ha tenido el paciente ordenadas cronológicamente empezando desde la última consulta.
+            \item Vista de Agregar Consulta Médica: Formulario con los datos requeridos para almacenar una consulta médica nueva.
+            \item Vista de Revisión de Consulta Médica: En esta vista se despliegan los datos almacenados de una consulta médica ya realizada. También se accede a los archivos previamente almacenados (exámenes médicos recibidos) y a la funcionalidad de generación de reportes.
+            \item Vista de Generación de Reportes Médicos: En esta vista de podrán elegir los reportes que serán generados por el sistema.            
+        \end{itemize}
+    \end{enumerate}
+    
+    Todo esto quedó plasmado en el sistema de pizarras de Trello asociado a la cuenta del equipo de desarrollo.
+    
+    Basándose en los requerimientos recopilados, el equipo de desarrollo, realizó un diagrama de base de datos el cual a su vez fue modificado durante el desarrollo del proyecto. La versión final del mismo puede encontrarse en \ref{ere-diagrama}.
+    
+    Del análisis de riesgos del proyecto, se obtuvo la siguiente lista de riesgos:
+    
+    \begin{enumerate}
+        \item \textbf{Equipo de desarrollo pequeño:} Dado que se cuenta con un sólo integrante del equipo de desarrollo los avances en la implementación del proyecto deben ser pequeños con la intención de que sean funcionales y estén probados.
+        \item \textbf{Falta de diversidad en el conocimiento:} También por ser un grupo pequeño, pueden surgir, durante el desarrollo, impedimentos por falta de dominio de las herramientas. En tal caso se deberá realizar una fase de capacitación para las fases impedidas lo cual podría retrasar las entregas.
+        \item \textbf{Tiempo dedicado a los \textit{Sprint}:} Si los \textit{Sprint} son establecidos en una o dos semanas, los avances podrán verse rápidamente, aunque serían poco avance. Por otro lado, mantener el tiempo de \textit{Sprint} en tres o cuatro semanas, se verían pocos avances y la retroalimentación sería escasa. Para solventar tal riesgo, se designó un tiempo de \textit{Sprint} variable, quedando establecido un tiempo de dos semanas para aquellas vistas en las que el equipo de desarrollo no precise capacitación y de tres a cuatro semanas para las que si sea necesaria la capacitación.
+    \end{enumerate}
+    
+    En paralelo a la realización de este trabajo, se realizó la descarga Eclipse Kepler, descargado de la página oficial de Eclipse\cite{ECLIPSE-eclipseorg}, Apache, Tomcat (ambos descargados de \cites{APACHE-maven}{APACHE-tomcat} respectivamente) y las librerías de AngularJS.
+    
+    Se procedió a la configuración de Maven y se agregaron las dependencias iniciales para usar \textit{SPRING} como \textit{framework}, Hibernate y Liquibase como gestores de comunicación con la base de datos y configurar la base de datos con las credenciales de MySQL asignadas para el desarrollo del proyecto.
+    
+    \begin{table}[h!]
+        
+        \begin{center}
+            \begin{tabular}{|l|l|l|}\hline
+                Grupo & Artefacto & Versión \\\hline
+                org.springframework & spring-core & 4.1.2.RELEASE \\\hline
+                org.springframework & spring-orm & 4.1.2.RELEASE \\\hline
+                org.springframework & spring-webmvc & 4.1.2.RELEASE \\\hline
+                mysql & mysql-connector-java & 5.1.9 \\\hline
+                org.liquibase & liquibase-plugin & 1.6.1.0 \\\hline
+            \end{tabular}
+        \end{center}
+        
+        \caption{Artefactos de Maven: Spring}
+        \label{artefactos-spring}
+    \end{table}
+    
+    Aunque, en lo referente a liquibase, se utilizó un plugin, no una librería. Ver cuadro \ref{artefactos-spring}.
+    
+    Se realizaron los cambios dentro del archivo ``occupational-servlet.xml" que permiten el uso de anotaciones para el direccionamiento interno de los procesos.
+    
+    Usando los repositorios de Maven se descargaron las librerías necesarias de JSON para la comunicación. Las dependencias descargadas fueron, del grupo \textit{com.fasterxml.jackson.core}, las enumeradas en el cuadro \ref{artefactos-json}.
+     
+    \begin{table}[h!]
+         
+        \begin{center}
+            \begin{tabular}{|l|l|}\hline
+                Artefacto & Versión \\\hline
+                jackson-core & 2.2.2 \\\hline
+                jackson-annotations & 2.2.2 \\\hline
+                jackson-databind & 2.2.2 \\\hline                   
+            \end{tabular}
+        \end{center}
+        
+        \caption{Artefactos de Maven: JSON}
+        \label{artefactos-json}
+    \end{table}
+    
+    También, usando Maven, fueron descargadas las librerías de Hibernate que usan JPA como API para comunicarse con la base de datos.
+    
+    \begin{table}[h!]
+        
+        \begin{center}
+            \begin{tabular}{|l|l|l|}\hline
+                Grupo & Artefacto & Versión \\\hline
+                org.hibernate.javax.persistence & hibernate-jpa-2.0-api & 1.0.1.Final \\\hline
+                org.hibernate.common & hibernate-commons-annotations & 4.0.4.Final \\\hline
+                javax.persistence & persistence-api & 1.0.2 \\\hline
+                org.hibernate & hibernate-entitymanager & 4.1.9.Final \\\hline
+                org.springframework.data & spring-data-jpa & 1.8.1.RELEASE \\\hline
+            \end{tabular}
+        \end{center}
+        
+        \caption{Artefactos de Maven: Hibernate}
+        \label{artefactos-hibernate}
+    \end{table}
+    
+\section{Fase de Implementación} 
 
+En esta fase se realizó en sí el desarrollo del sistema. Hubo modificaciones en el diagrama de base de datos y los requerimientos que cambiaron, se reflejaron en el \textit{product backlog} conforme fueron sucediendo.
+
+La implementación se subdividió en Sprints y, como se menciona anteriormente, estos fueron de duración variable.
+
+Cabe destacar que dado que los módulos referentes al manejo de empresas (``Compañía", ``Agregar Usuario", ``Contratos" y la gestión de doctores) están por fuera del alcance del proyecto, se utilizó una base de datos de pruebas generada exclusivamente para tal fin. También fueron generados datos de prueba para el medicamentos y laboratorios, por las mismas razones expresadas con anterioridad.
+
+    \subsection{Primer Sprint: Vista de Autenticación de Usuarios}
+    Se implementó el módulo de autenticación siguiedo los parámetros de autenticación basada en \textit{tokens}
+    La clave usada por el servidor fue una clave generada en tiempo de ejecución para que la misma fuera cambiante y mejorar la seguridad. Sin embargo, la clave, una vez generada se mantiene igual mientras el servidor esté en funcionamiento. Ver figura \ref{Autenticación}.
+    
+    \begin{figure}[htbp!]
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{figures/p1}
+        \end{center}
+        \caption{Pantalla de Autenticación de usuarios}
+        \label{Autenticación}
+    \end{figure}
+    
+    Para ello se agregó al ``pom.xml" las dependencias requeridas para la autenticación. Ver cuadro \ref{artefactos-tba}
+    
+    \begin{table}[h!]
+        
+        \begin{center}
+            \begin{tabular}{|l|l|l|}\hline
+                Grupo & Artefacto & Versión \\\hline
+                io.jsonwebtoken & jjwt & 0.5.1 \\\hline
+            \end{tabular}
+        \end{center}
+        
+        \caption{Artefactos de Maven: Autenticación}
+        \label{artefactos-tba}
+    \end{table}
+    
+    Las pruebas sobre esta vista fueron realizados evaluando la generación de la ficha de parte del servidor en \textit{back end} y su posterior uso para el acceso a las demás páginas del sistema. La ficha fue generada con éxito y verificado el cambio de ficha en cada inicio de sesión, se dió la aprobación de la vista para proseguir al siguiente Sprint.
+    
+%    \subsection{Segundo Sprint: Vista de Agregar Usuario}
+%    
+%    En esta vista se buscó crear un formulario con los datos de un usuario nuevo que serán agregados al sistema. Los datos para el mismo fueron:
+    
+%    \begin{itemize}
+%        \item Nombre de usuario: El apodo que tendrá el usuario en el sistema.
+%        \item Contraseña: La contraseña que será utilizada para verificar la identidad del usuario. Se reqiuere que sea introducida dos veces al sistema para evitar errores posteriores.
+%        \item Cédula de Identidad: El número de cédula es el documento de identificación del usuario en el país.
+%        \item RIF: Registro de información fiscal. También es un método de identificación del usuario en el país.
+%        \item Nombre: Indica el primer nombre del usuario. No se hace mención al segundo nombre dado que no es estrictamente necesario para el sistema y sería una carga extra para la transferencia de datos.
+%        \item Apellido: Indica el primer apellido del usuario.
+%        \item Sexo.
+%        \item Fecha de nacimiento.
+%        \item Correo Electrónico: Correo electrónico del usuario al cual contactarle en caso de ser necesario. También es usado para verificar la identidad del usuario y evitar que sea registrado dos veces en el sistema.
+%        \item Dirrección: La dirección de habitación del usuario.
+%        \item Número de Teléfono: El número de teléfono al que se pueda contactar al usuario.
+%    \end{itemize}
+    
+%    A este Sprint se le asignó un tiempo de dos semanas debido a que, a pesar se la sencillez del mismo, el equipo de desarrollo no poseía los conocimientos técnicos específicos para el manejo de AngularJS y requirió capacitación previa para solventarse. Para ello se utilizó como referencia \cite{CODESCHOOL-main} en su curso ``Shaping up with Angular.js" que hace referencia al manejo de AngularJS desde el diseño de UI hasta manejo de los datos del lado del cliente.
+    
+%    Las pruebas fueron realizadas usando los siguientes criterios:
+    
+%    \begin{enumerate}
+%        \item Agregar un usuario con un apodo ya existente.
+%        \item Agregar un usuario con un número de cédula o RIF ya existentes.
+%        \item Agregar un usuario sin alguno de los campos requeridos (nombre de usuario, contraseña, primer nombre, primer apellido, número de cédula y correo electrónico).
+%    \end{enumerate}
+    
+    \subsection{Segundo Sprint: Vista de Lista de Usuarios}
+    
+    Esta vista contiene una lista con los nombres de los usuarios registrados en el sistema. Para el alcance del sistema se implementó una lista general sin discriminaciones sobre dicha lista y fue utilizada en las pruenas de la vista de ``Detalles de Usuario". Se plantea que a futuro sea utilizada por usuarios especiales dentro del sistema y que manejen dichas listas dentro de una empresa.
+    
+    A este Sprint se le asignó una semana de lapso para su entrega dada la importancia relativamente baja de la vista no se refinó y su UI está muy poco refinada.
+    
+    Las pruebas de la vista se basaron en el orden de aparición de los usuarios (ordenados alfabeticamente) y la actualización de la lista al agregar un nuevo usuario.
+    
+    \subsection{Tercer Sprint: Vista de Detalles de Usuario}
+    
+    Esta vista es la muestra de los datos ingresados al sistema del usuario elegido. Es un paso previo a la edición del usuario, si este así lo desea y se mantiene con los datos actuales del usuario.
+    
+    A este Sprint, debido a su simpleza, se le dedicó sólo una semana de tiempo para realizar las pruebas necesarias.
+    
+    Por ser una vista sencilla, las pruebas se realizaron correlacionando los datos ingresados de los usuarios con lo que se muestra en pantalla.
+    
+    \begin{figure}[htbp!]
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{figures/p3}
+        \end{center}
+        \caption{Pantalla de Revisión de Usuario.}
+        \label{Revisión}
+    \end{figure}
+    
+    \subsection{Cuarto Sprint: Vista de Edición de Usuario}
+    
+    Esta vista muestra un formulario, similar al formulario de registro de usuario, lleno previamente con los datos de la vista de ``Detalles de Usuario". Si el formulario cambia y estos cambios son enviados, el sistema los almacena y regresa a la vista anterior, en caso de éxito, y muestra los datos actualizados del usuario. En caso de algún fallo, el sistema debe dar el mensaje correspondiente al cambio ilegal y mantenerse en la vista con los datos originales del usuario. En caso de modificaciones de la contraseña, el usuario no podrá ver la contraseña previa y el campo estará vacío; este campo se llenará en caso de desear modificarla y se necesita también una verificación de doble escritura de la contraseña para tal fin.
+    
+    Las pruebas de esta vista fueron:
+    \begin{enumerate}
+        \item\label{required} Alterar la información del usuario eliminando campos requeridos (nombre de usuario, contraseña, primer nombre, primer apellido, número de cédula y correo electrónico).
+%        \item\label{password} Cambiar la contraseña con errores en la doble verificación de escritura.
+        \item\label{repeated} Cambiar el nombre de usuario, número de cédula o correo electrónico por valores ya registrados en el sistema.
+        \item\label{no-alter} No alterar ningún dato del usuario y enviar el formulario con los datos previos usando el botón de envío de datos.
+        \item\label{details} Verificar que los datos fuesen actualizados en la vista anterior en caso de haber verifiaciones válidas en el usuario dado.
+    \end{enumerate}
+    
+    A partir del caso \ref{repeated} se detectó que el sistema realizaba una modificación completa del usuario en la base de datos con los datos enviados en el formulario, lo cual podría devenir en problemas de procesamiento a futuro con grandes cargas de datos y es innecesario en el caso \ref{no-alter} por la misma naturaleza de la no modificación. Se acordó, en el siguiente Sprint, revisar esta funcionalidad.
+    
+    \begin{figure}[htbp!]
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{figures/p5}
+        \end{center}
+        \caption{Pantalla de Edición de Usuario.}
+        \label{Edición}
+    \end{figure}
+    
+    A este Sprint, dada la poca complejidad que presenta, se le asigno una semana de duración pero, debido a los errores encontrados en la implementación, se le asignó una semana adicional de revisión adicional dentro del siguiente Sprint.
+    
+%    \subsection{Quinto Sprint: Vista de Agregar Doctor}%
+%    \subsection{Sexto Sprint: Vista de Lista de Doctores}
+%    \subsection{Sexto Sprint: Vista de Detalles del Doctor}
+%    \subsection{Septimo Sprint: Vista de Edición de Doctor}
+    \subsection{Quinto Sprint: Vista de Añadir Nuevo Paciente y Revisón de la Edición de Usuario}
+    
+    Se realizó la revisión de la ``Vista de Edición de Usuario" debido a que presentaba sobrecarga de datos y en el caso de la no modificación del usuario se reescribían los datos con los mismos valores. El problema fue solventado agregando un detector de cambios con el cual sólo los datos modificados son enviados en el formulario, con esto se logra, no sólo reducir la cantidad de datos enviados al servidor si no que también se elimina la sobrecarga en caso de enviar un formulario con datos identicos a los que fueron recibidos.
+    
+    Por otro lado, en la ``Vista de Añadir Nuevo Paciente", el doctor tiene la opción de elegir entre:
+    
+    \begin{enumerate}
+        \item\label{list} Un paciente que ya posea historia médica en el sistema:\\
+        Se creó una lista de pacientes cuyos historiales médicos estén registrados en el sistema y serán agregados a la lista de pacientes del doctor.
+        \item\label{new} Crear la historia médica de un usuario, ya registrado, que no la posea.\\
+        Para este caso se planificó agregar un botón de redirección a la ``Vista de Crear Historia Médica", descrita posteriormente, y que actualizaría la lista de pacientes con historia médica y dejaría en selección el nuevo paciente ya creado.
+    \end{enumerate}
+    
+    La fase de pruebas de esta vista fue, en este Sprint, aceptación de la UI y revisión de la acción mencionada en el punto \ref{list} dentro de la base de datos dado que no se cuenta con la vista necesaria y esta será desarrollada en el próximo Sprint.
+    
+    Se dedicó, en total, dos semanas a este Sprint, dejando para futuros Sprint las pruebas mencionadas.
+    
+    \begin{figure}[htbp!]
+        \begin{center}
+            \includegraphics[width=.8\textwidth]{figures/p8}
+        \end{center}
+        \caption{Vista de Agregar pacientes que ya han sido atendidos por algún médico.}
+        \label{Agregar}
+    \end{figure}
+    
+    \subsection{Quinto Sprint: Vista de Lista de Pacientes Atendidos}
+    
+    En esta vista se presentan por orden alfabetico los pacientes que han sido atendidos por el doctor. Además, se presenta la opción de revisar su historial médico con lo cual se desplegará la ``Vista de Historial de Consultas Médicas del Paciente" (ver punto \ref{historial-medico}).
+    
+    Esta vista se usó como referencia para las pruebas de la ``Vista de Agregar Nuevo Paciente" para revisar que la agregación estaba siendo realizada exitosamente.
+    
+    Para este Sprint se dedicó una semana y las pruebas se basaron en la respuesta de la vista ante los cambios realizados por la vista mencionada y en la aceptación de la UI.
+    
+    \begin{figure}[htbp!]
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{figures/p6}
+        \end{center}
+        \caption{\label{Pacientes}Lista de Pacientes del Médico}
+    \end{figure}
+    
+    \subsection{Sexto Sprint: Vista de Creación de Historia Médica}
+    
+    En esta vista se presenta un formulario dinámico\footnote{Flexible en la cantidad de valores que puede aceptar un mismo campo. Puede verse como un ejemplo de \textit{carro de compras}} con los campos requeridos para la creación de la historia médica del paciente.
+    
+    Los campos que admiten más de un sólo valor son:
+    \begin{itemize}
+        \item Alergias.
+            \begin{itemize}
+                \item Nombre
+                \item Descripción
+                \item Severidad
+            \end{itemize}
+        \item Hábitos.
+            \begin{itemize}
+                \item Nombre
+                \item Frecuencia
+            \end{itemize}
+        \item Vacunas.
+            \begin{itemize}
+                \item Nombre
+                \item Potencia
+            \end{itemize}
+    \end{itemize}
+    
+    Se realizó la subdivisión de acuerdo a los avances realizados por Globinsoft S.A. y están encapsuladas de tal forma que se pueden agregar o eliminar de forma independiente una alergia, un hábito o una vacuna a la lista respectiva sin la necesidad de refrescar o recargar la página. Todos los datos recaudados son enviados una y sólo una vez al servidor una vez seleccionada la opción de envío del formulario.
+    
+    Las enfermedades diagnosticadas previamente son un único valor dado que puede no ser precisa la información suministrada por el paciente.
+    
+    \begin{figure}[htbp!]
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{figures/p10}
+        \end{center}
+        \caption{Vista de creación de nueva historia médica para un paciente nuevo.}
+        \label{creación}
+    \end{figure}
+    
+    Debido a la complejidad de implementación de los formularios dinámicos, se necesitaron tres semanas para la implementación exitosa de esta vista. Las pruebas fueron realizadas basándose en:
+    
+    \begin{enumerate}
+        \item Respuesta a agregación o eliminación de valores en los campos dinámicos.
+        \item Carga y comunicación con el servidor.
+        \item Revisión de la creación de la historia médica (por verificar luego de la implementación del punto \ref{historial-medico}).
+    \end{enumerate}
+    
+    \subsection{Sprint: Vista de Historial de Consultas Médicas del Paciente}
+    \label{historial-medico}
+    
+    \begin{figure}[htbp!]
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{figures/p11}
+        \end{center}
+        \caption{Vista de Historial de Consultas Médicas del Paciente}
+        \label{consultas}
+    \end{figure}
+    
+    \subsection{Sprint: Vista de Revisión de Consulta Médica}
+    \subsection{Sprint: Vista de Generación de Reportes Médicos}
+    
+    
 \section{Fase de Cierre}
     
