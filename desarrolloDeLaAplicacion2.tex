@@ -178,11 +178,11 @@ Cada fase posee sus propios objetivos generales y específicos, la fase de imple
         \label{artefactos-spring}
     \end{table}
     
-    Aunque, en lo referente a liquibase, se utilizó un plugin, no una librería. Ver cuadro \ref{artefactos-spring}.
+    Aunque, en lo referente a liquibase, se utilizó un plugin, no una librería. Ver tabla \ref{artefactos-spring}.
     
-    Se realizaron los cambios dentro del archivo ``occupational-servlet.xml" que permiten el uso de anotaciones para el direccionamiento interno de los procesos.
+    Se realizaron los cambios dentro del archivo ``occupational-servlet.xml" que permite el uso de anotaciones para el direccionamiento interno de los procesos.
     
-    Usando los repositorios de Maven se descargaron las librerías necesarias de JSON para la comunicación. Las dependencias descargadas fueron del grupo \textit{com.fasterxml.jackson.core}, las enumeradas en el cuadro \ref{artefactos-json}.
+    Usando los repositorios de Maven se descargaron las librerías necesarias de JSON para la comunicación. Las dependencias descargadas fueron del grupo \textit{com.fasterxml.jackson.core}, las enumeradas en el tabla \ref{artefactos-json}.
      
     \begin{table}[h!]
          
@@ -199,7 +199,7 @@ Cada fase posee sus propios objetivos generales y específicos, la fase de imple
         \label{artefactos-json}
     \end{table}
     
-    También, usando Maven, fueron descargadas las librerías de Hibernate que usan JPA como API para comunicarse con la base de datos (cuadro \ref{artefactos-hibernate}).
+    También, usando Maven, fueron descargadas las librerías de Hibernate que usan JPA como API para comunicarse con la base de datos (tabla \ref{artefactos-hibernate}).
     
     \begin{table}[h!]
         
@@ -227,7 +227,7 @@ La implementación se subdividió en Sprints y, como se menciona anteriormente, 
 Cabe destacar que dado que los módulos referentes al manejo de empresas (``Compañía", ``Agregar Usuario", ``Contratos" y la gestión de doctores) están por fuera del alcance del proyecto, se utilizó una base de datos de pruebas generada exclusivamente para tal fin. También fueron generados datos de prueba para medicamentos y laboratorios, por las mismas razones expresadas con anterioridad.
 
     \subsection{Primer Sprint: Vista de Autenticación de Usuarios}
-    Se implementó la funcionalidad de autenticación siguiedo los parámetros de autenticación basada en \textit{tokens}, para ello se agregó al ``pom.xml"\footnote{Ver punto \ref{tecno-maven}} las dependencias requeridas para la autenticación. Ver cuadro \ref{artefactos-tba}
+    Se implementó la funcionalidad de autenticación siguiedo los parámetros de autenticación basada en \textit{tokens}, para ello se agregó al ``pom.xml"\footnote{Ver punto \ref{tecno-maven}} las dependencias requeridas para la autenticación. Ver tabla \ref{artefactos-tba}
     La clave usada por el servidor fue una clave generada en tiempo de ejecución para que la misma fuera cambiante y mejorar la seguridad. Sin embargo, la clave, una vez generada se mantiene igual mientras el servidor esté en funcionamiento. Ver figura \ref{Autenticación}.
     
     \begin{figure}[htbp!]
@@ -295,13 +295,13 @@ Cabe destacar que dado que los módulos referentes al manejo de empresas (``Comp
     
     A este Sprint, debido a su simpleza, se le dedicó sólo una semana de tiempo para realizar las pruebas necesarias.
     
-    Por ser una vista sencilla, las pruebas se realizaron correlacionando los datos de los usuarios con lo que se muestra en pantalla y la aceptación de UI por parte del \textit{product owner}.
+    Por ser una vista sencilla, las pruebas se realizaron correlacionando los datos de los usuarios con lo que se muestra en pantalla y la aceptación de UI por parte del \textit{product owner} (figura \ref{Revisión}).
     
     \begin{figure}[htbp!]
         \begin{center}
             \includegraphics[width=.9\textwidth]{figures/p3}
         \end{center}
-        \caption{Pantalla de Revisión de Usuario.}
+        \caption{Pantalla de Detalles de Usuario.}
         \label{Revisión}
     \end{figure}
     
@@ -318,7 +318,7 @@ Cabe destacar que dado que los módulos referentes al manejo de empresas (``Comp
         \item\label{details} Verificar que los datos fuesen actualizados en la vista anterior en caso de haber verificaciones válidas en el usuario dado.
     \end{enumerate}
     
-    A partir del caso \ref{repeated} se detectó que el sistema realizaba una modificación completa del usuario en la base de datos con los datos enviados en el formulario, lo cual podría devenir en problemas de procesamiento a futuro con grandes cargas de datos y es innecesario en el caso \ref{no-alter} por la misma naturaleza de la no modificación. Se acordó, en el siguiente Sprint, revisar esta funcionalidad.
+    A partir del caso \ref{repeated} se detectó que el sistema realizaba una modificación completa del usuario en la base de datos con los datos enviados en el formulario, lo cual podría devenir en problemas de procesamiento a futuro con grandes cargas de datos y es innecesario en el caso \ref{no-alter} por la misma naturaleza de la no modificación. Se acordó, en el siguiente Sprint, revisar esta funcionalidad (figura \ref{Edición}).
     
     \begin{figure}[htbp!]
         \begin{center}
@@ -342,7 +342,7 @@ Cabe destacar que dado que los módulos referentes al manejo de empresas (``Comp
     
     \begin{enumerate}
         \item\label{list} Un paciente que ya posea historia médica en el sistema:\\
-        Se creó una lista de pacientes cuyos historiales médicos estén registrados en el sistema y serán agregados a la lista de pacientes del doctor.
+        Se creó una lista de pacientes cuyos historiales médicos estén registrados en el sistema y serán agregados a la lista de pacientes del doctor (figura \ref{Agregar}).
         \item\label{new} Crear la historia médica de un usuario, ya registrado, que no la posea.\\
         Para este caso se planificó agregar un botón de redirección a la ``Vista de Crear Historia Médica", descrita posteriormente, y que actualizaría la lista de pacientes con historia médica y dejaría en selección el nuevo paciente ya creado.
     \end{enumerate}
@@ -365,7 +365,7 @@ Cabe destacar que dado que los módulos referentes al manejo de empresas (``Comp
     
     Esta vista se usó como referencia para las pruebas de la ``Vista de Agregar Nuevo Paciente" para revisar que la agregación estaba siendo realizada exitosamente.
     
-    Para este Sprint se dedicó una semana y las pruebas se basaron en la respuesta de la vista ante los cambios realizados por la vista mencionada y en la aceptación de la UI.
+    Para este Sprint se dedicó una semana y las pruebas se basaron en la respuesta de la vista ante los cambios realizados por la vista mencionada y en la aceptación de la UI (figura \ref{Pacientes}).
     
     \begin{figure}[htbp!]
         \begin{center}
@@ -410,7 +410,7 @@ Cabe destacar que dado que los módulos referentes al manejo de empresas (``Comp
         \label{creación}
     \end{figure}
     
-    Debido a la complejidad de la implementación de los formularios dinámicos, se asignaron tres semanas para la implementación exitosa de esta vista. Las pruebas fueron realizadas basándose en:
+    Debido a la complejidad de la implementación de los formularios dinámicos, se asignaron tres semanas para la implementación exitosa de esta vista (figura \ref{creación}). Las pruebas fueron realizadas basándose en:
     
     \begin{enumerate}
         \item Respuesta a agregación o eliminación de valores en los campos dinámicos.
@@ -424,7 +424,7 @@ Cabe destacar que dado que los módulos referentes al manejo de empresas (``Comp
     En esta vista se presentan los formularios respectivos para la creación de una nueva consulta médica separados por subvistas que van llenando cada una de los aspectos requeridos de las consultas médicas tal y como se enumeraron en \ref{consultas-datos} y subdivididos en:
     
     \begin{itemize}
-        \item Resumen General:
+        \item Resumen General (figura \ref{img-revisiongeneral}):
             \begin{itemize}
                 \item Análisis Subjetivo (\textit{Sujective})
                 \item Análisis Objetivo (\textit{Objective})
@@ -438,13 +438,13 @@ Cabe destacar que dado que los módulos referentes al manejo de empresas (``Comp
             
             \begin{figure}[htb!]
                 \begin{center}
-                    \includegraphics[width=.9\linewidth,keepaspectratio=true]{figures/consulta1}
+                    \includegraphics[width=.75\textwidth,keepaspectratio=true]{figures/consulta1}
                 \end{center}
                 \caption{Resumen General}
                 \label{img-revisiongeneral}
             \end{figure}
                 
-        \item Signos Vitales:\\
+        \item Signos Vitales (figura \ref{img-signovital}):\\
         Para el caso en que aplique, se tiene esta sección de la consulta donde se registran los signos vitales tomados en la misma. Se tomó el nombre de ``Signos Vitales" por convención aunque refiere a datos fisiológicos en general: altura, peso, presión arterial y cualquier otro que el doctor considere pertinente. Se deja una acción especial para añadir al sistema nuevos parámetros; esto con la finalidad de permitir flexibilidad y mejorar la eficiencia de la carga de datos.
             \begin{itemize}
                 \item Flexibilidad: En caso de precisar un nuevo parámetro fisiológico, por no estar previamente contemplado, el doctor puede agregarlo haciendo uso de la opción ``Otro".
@@ -453,28 +453,28 @@ Cabe destacar que dado que los módulos referentes al manejo de empresas (``Comp
             
             \begin{figure}[htb!]
                 \begin{center}
-                    \includegraphics[width=.9\linewidth,keepaspectratio=true]{figures/consulta2}
+                    \includegraphics[width=.75\textwidth,keepaspectratio=true]{figures/consulta2}
                 \end{center}
                 \caption{Signos Vitales}
                 \label{img-signovital}
             \end{figure}
-        \item Solicitud de Examen Médico\\
+        \item Solicitud de Examen Médico (figura \ref{img-solicitarexamen}):\\
         En este caso se utilizó un formulario dinámico para el registro de solicitud de exámenes médicos. En esta fase, el exámen sólo cuenta con un nombre, dado por el doctor tratante, y se registra la solicitud que puede ser recibida en una consulta futura en la sección ``Recibir Exámenes" descrita a continuación.
         
         \begin{figure}[htb!]
             \begin{center}
-                \includegraphics[width=.9\linewidth,keepaspectratio=true]{figures/consulta3}
+                \includegraphics[width=.75\textwidth,keepaspectratio=true]{figures/consulta3}
             \end{center}
             \caption{Solicitud de Examen Médico}
             \label{img-solicitarexamen}
         \end{figure}
         
-        \item Recepción de Examen Médico\\
+        \item Recepción de Examen Médico (figura \ref{img-recibirexamen}):\\
         En esta fase el doctor puede indicar la recepción de un examen médico solicitado en una consulta previa, y sólo de los solicitados en consultas previas, junto con la carga de un archivo asociado al examen (en caso de poseer un archivo digital). La intención es mantener la información médica que llevó a diagnósticos de tal forma que se puedan realizar revisiones a la misma y estudios de evolución de pacientes. Ver figura \ref{img-recibirexamen}.
         
         \begin{figure}[htb!]
             \begin{center}
-                \includegraphics[width=.9\linewidth,keepaspectratio=true]{figures/consulta4}
+                \includegraphics[width=.75\textwidth,keepaspectratio=true]{figures/consulta4}
             \end{center}
             \caption{Recepción de Examen Médico}
             \label{img-recibirexamen}
@@ -502,7 +502,7 @@ Cabe destacar que dado que los módulos referentes al manejo de empresas (``Comp
     
     \begin{figure}[htbp!]
         \begin{center}
-            \includegraphics[    ]{figures/p11}
+            \includegraphics[width=.9\textwidth]{figures/p11}
         \end{center}
         \caption{Vista de Historial de Consultas Médicas del Paciente}
         \label{consultas}
@@ -512,7 +512,7 @@ Cabe destacar que dado que los módulos referentes al manejo de empresas (``Comp
     
     Las pruebas para esta vista fueron principalmente de aceptación de UI pero se tomó en cuenta la agregación de nuevas consultas a la lista una vez realizada la consulta y almacenada en el sistema. Además se revisó la integración con la vista de agregar consulta médica (ver \ref{crear-consulta}) y las acciones que ella realiza dentro del sistema.
     
-    Para este Sprint se asignaron dos semanas pero debido a problemas de integración con las vistas mencionadas, fue requerido una semana adicional de revisión para el correcto funcionamiento de la vista.
+    Para este Sprint se asignaron dos semanas pero debido a problemas de integración con las vistas mencionadas, fue requerido una semana adicional de revisión para el correcto funcionamiento de la vista (figura \ref{consultas}).
     
     \subsection{Décimo Sprint: Vista de Revisión de Consulta Médica}
     \label{revisar-consulta}
@@ -520,9 +520,9 @@ Cabe destacar que dado que los módulos referentes al manejo de empresas (``Comp
     
     \begin{enumerate}
         \item Resumen\\
-        Resumen general de la consulta, se muestra la \textit{Soap Note} de la consulta y los exámenes solicitados y recibidos (con su respectivo archivo, según coresponda).
+        Resumen general de la consulta, se muestra la \textit{Soap Note} de la consulta y los exámenes solicitados y recibidos con su respectivo archivo, según coresponda (figura \ref{consultarev-resumen}).
         \item Signos Vitales\\
-        En esta subvista se muestran los signos vitales recabados durante la consulta. Se muestra un mensaje adecuado en caso de no haberse recabado signos vitales durante dicha consulta. Se hace en un apartado para no saturar la vista principal de ``Resumen" con lo que es información muy específica y potencialmente puede ser excesiva para una vista ya cargada.
+        En esta subvista se muestran los signos vitales recabados durante la consulta. Se muestra un mensaje adecuado en caso de no haberse recabado signos vitales durante dicha consulta. Se hace en un apartado para no saturar la vista principal de ``Resumen" con lo que es información muy específica y potencialmente puede ser excesiva para una vista ya cargada (figura \ref{consultarev-signosv}).
     \end{enumerate}
     
     Para este Sprint se asignaron dos semanas y las pruebas fueron realizadas tomando en cuenta:
@@ -562,8 +562,8 @@ Cabe destacar que dado que los módulos referentes al manejo de empresas (``Comp
     
     \begin{itemize}
         \item Aceptación de UI.
-        \item Correctitud de la información en el informe médico generado.
-        \item Correctitud de la información en los reposos médicos.
+        \item Correctitud de la información en el informe médico generado(figuras \ref{reportes-informenav} y \ref{reportes-informepdf}).
+        \item Correctitud de la información en los reposos médicos (figuras \ref{reportes-reposonav} y \ref{reportes-reposopdf}).
         \item Aceptación del formato visual de ambas clases de archivos.
     \end{itemize}
     %  Informe

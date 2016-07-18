@@ -4,14 +4,72 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces El elefante de Saxe}}{5}{figure.2.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Estructura Organizacional de Globinsoft}}{5}{figure.1.1}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Representación gráfica del patrón Modelo Vista Controlador\cite {MVC-imagen}}}{7}{figure.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces El elefante de Saxe}}{9}{figure.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Autenticacion basada en fichas.}}{11}{figure.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de inyección de dependencias en controladores.}}{12}{figure.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ejemplo de inyección de dependencias en servicios.}}{12}{figure.2.5}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagrama ER-E de la base de datos.}}{23}{figure.5.1}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Esquema de trabajo de SCRUM}}{16}{figure.3.1}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo de lista de empleados genérica en \textit {JSON}}}{23}{figure.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Artefacto de Maven y descripción de su contenido.}}{25}{figure.4.2}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Pantalla de Autenticación de usuarios}}{36}{figure.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Pantalla de Detalles de Usuario.}}{37}{figure.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Pantalla de Edición de Usuario.}}{39}{figure.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Vista de Agregar pacientes que ya han sido atendidos por algún médico.}}{40}{figure.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Lista de Pacientes del Médico}}{40}{figure.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Vista de creación de nueva historia médica para un paciente nuevo.}}{42}{figure.5.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Resumen General}}{43}{figure.5.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Signos Vitales}}{44}{figure.5.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Solicitud de Examen Médico}}{44}{figure.5.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Recepción de Examen Médico}}{45}{figure.5.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Vista de Historial de Consultas Médicas del Paciente}}{46}{figure.5.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Vista de Revisión de consulta. Resumen}}{47}{figure.5.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Vista de Revisión de consulta. Signos Vitales}}{47}{figure.5.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Vista de Generación de Reportes Médicos. Informe}}{48}{figure.5.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Archivo de informe médico generado por el sistema}}{48}{figure.5.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Vista de Generación de Reportes Médicos. Reposo}}{48}{figure.5.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Archivo de reposo médico generado por el sistema}}{48}{figure.5.17}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagrama ER-E de la base de datos.}}{65}{figure.A.1}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Diagrama de Casos de uso implementados.}}{66}{figure.B.1}

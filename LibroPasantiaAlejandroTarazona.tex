@@ -3,8 +3,6 @@
 \usepackage{polyglossia}
 \setdefaultlanguage{spanish}
 
-
-
 %\usepackage[spanish]{babel}
 %\usepackage[utf8]{inputenc}
 
@@ -25,16 +23,20 @@
 
 \DeclareGraphicsExtensions{.jpg,.pdf,.png}
 
+\addto\captionsspanish{%
+    \renewcommand{\tablename}{Tabla}%
+   } % Para que diga Tabla en vez de cuadro.
+
 \begin{document}	
      
      % Portada
-%     \input{portada}
+     \input{portada}
      % Título
 %     \input{titulo}
      
      % Copia y pega
      % Pagina de acta final (vacio)
-%     \input{acta}
+     %\input{acta}
      
      \setcounter{secnumdepth}{3}
      \setcounter{tocdepth}{4}
@@ -60,9 +62,9 @@
      
      % Hasta aquí copié y pege
      
-%     \input{resumen}
-%     \input{dedicatoria}
-%     \input{agradecimientos}
+     \input{resumen}
+     \input{dedicatoria}
+     \input{agradecimientos}
      
      \tableofcontents
      

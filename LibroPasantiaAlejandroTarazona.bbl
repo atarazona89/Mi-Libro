@@ -38,6 +38,22 @@
       \verb http://www.lab.inf.uc3m.es/~a0080802/RAI/mvc.html
       \endverb
     \endentry
+    \entry{MVC-imagen}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=fc497aba24d87c43f3370da4bde2925f}{Alicante}{A\bibinitperiod}{Universidad}{U\bibinitperiod}{de}{d\bibinitperiod}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=fc497aba24d87c43f3370da4bde2925f}{Alicante}{A\bibinitperiod}{Universidad}{U\bibinitperiod}{de}{d\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{fc497aba24d87c43f3370da4bde2925f}
+      \strng{fullhash}{fc497aba24d87c43f3370da4bde2925f}
+      \field{sortinit}{0}
+      \field{labeltitle}{Modelo vista controlador (MVC)}
+      \field{title}{Modelo vista controlador (MVC)}
+      \verb{url}
+      \verb http://si.ua.es/es/documentacion/asp-net-mvc-3/1-dia/modelo-vista-controlador-mvc.html
+      \endverb
+    \endentry
     \entry{SOA-libroGartner}{book}{}
       \name{labelname}{1}{}{%
         {{hash=18bfab6309a4addeb7e1dae07d2a4b89}{Gartner}{G\bibinitperiod}{}{}{}{}{}{}}%
@@ -89,6 +105,166 @@
       \verb https://msdn.microsoft.com/en-us/library/bb833022.aspx
       \endverb
     \endentry
+    \entry{AUTENTICACION-rae}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{DLE}
+      \field{title}{DLE}
+      \field{urlday}{19}
+      \field{urlmonth}{04}
+      \field{urlyear}{2016}
+      \verb{url}
+      \verb http://dle.rae.es/?w=autenticad&origen=REDLE
+      \endverb
+    \endentry
+    \entry{AUTENTICACION-wordref}{online}{}
+      \field{sortinit}{0}
+      \field{urlday}{19}
+      \field{urlmonth}{04}
+      \field{urlyear}{2016}
+      \verb{url}
+      \verb http://www.wordreference.com/definicion/autenticar
+      \endverb
+    \endentry
+    \entry{AUTENTICACION-aplicaciones}{report}{}
+      \name{labelname}{1}{}{%
+        {{hash=024329b90f9b491dd17fd838865f73ba}{Mitre\bibnamedelima B}{M\bibinitperiod\bibinitdelim B\bibinitperiod}{Héctor}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=024329b90f9b491dd17fd838865f73ba}{Mitre\bibnamedelima B}{M\bibinitperiod\bibinitdelim B\bibinitperiod}{Héctor}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {Universidad Latina de Panamá}%
+      }
+      \strng{namehash}{024329b90f9b491dd17fd838865f73ba}
+      \strng{fullhash}{024329b90f9b491dd17fd838865f73ba}
+      \field{sortinit}{0}
+      \field{labeltitle}{Aplicaciones de Autenticación}
+      \field{title}{Aplicaciones de Autenticación}
+    \endentry
+    \entry{TOKEN-tokenbasedauth}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=c6c8a36aebc1fa6f14f58622e9888bd4}{Babal}{B\bibinitperiod}{Hüseyin}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=c6c8a36aebc1fa6f14f58622e9888bd4}{Babal}{B\bibinitperiod}{Hüseyin}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c6c8a36aebc1fa6f14f58622e9888bd4}
+      \strng{fullhash}{c6c8a36aebc1fa6f14f58622e9888bd4}
+      \field{sortinit}{0}
+      \field{labeltitle}{Token-Based Authentication With AngularJS \& NodeJS}
+      \field{title}{Token-Based Authentication With AngularJS \& NodeJS}
+      \field{urlday}{04}
+      \field{urlmonth}{08}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://code.tutsplus.com/tutorials/token-based-authentication-with-angularjs-nodejs--cms-22543
+      \endverb
+    \endentry
+    \entry{IOC-dgarcia}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Inversión de Control e Inyección de Dependencias}
+      \field{day}{15}
+      \field{month}{01}
+      \field{title}{Inversión de Control e Inyección de Dependencias}
+      \field{urlday}{19}
+      \field{urlmonth}{04}
+      \field{urlyear}{2016}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://danielggarcia.wordpress.com/2014/01/15/inversio-de-control-e-inyeccion-de-dependecias/
+      \endverb
+    \endentry
+    \entry{IOC-mpachano}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Inversión de Control e Inyección de Dependencias en Java/Spring}
+      \field{day}{22}
+      \field{month}{07}
+      \field{title}{Inversión de Control e Inyección de Dependencias en Java/Spring}
+      \field{urlday}{19}
+      \field{urlmonth}{04}
+      \field{urlyear}{2016}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.solvetic.com/tutoriales/article/987-inversion-de-control-e-inyeccion-de-dependencias-en-javaspring
+      \endverb
+    \endentry
+    \entry{scrum-guia}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=58773ace3592a33f6407315bd6f64a5d}{Jeff\bibnamedelima Sutherland}{J\bibinitperiod\bibinitdelim S\bibinitperiod}{Ken\bibnamedelima Schwaber}{K\bibinitperiod\bibinitdelim S\bibinitperiod}{y}{y\bibinitperiod}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=58773ace3592a33f6407315bd6f64a5d}{Jeff\bibnamedelima Sutherland}{J\bibinitperiod\bibinitdelim S\bibinitperiod}{Ken\bibnamedelima Schwaber}{K\bibinitperiod\bibinitdelim S\bibinitperiod}{y}{y\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{58773ace3592a33f6407315bd6f64a5d}
+      \strng{fullhash}{58773ace3592a33f6407315bd6f64a5d}
+      \field{sortinit}{0}
+      \field{labeltitle}{La Guía Definitiva de Scrum: Las Reglas del Juego}
+      \field{title}{La Guía Definitiva de Scrum: Las Reglas del Juego}
+      \warn{\item Datamodel: Entry 'scrum-guia' (Bibliografia/biblio.bib): Invalid format '07-2013' of date field 'date' - ignoring}
+    \endentry
+    \entry{scrum-primer}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=a7c4b1db72125620879287193783c9cd}{Pete\bibnamedelima Deemer}{P\bibinitperiod\bibinitdelim D\bibinitperiod}{Craig\bibnamedelimb Larman\bibnamedelimb y\bibnamedelimb Bas\bibnamedelima Vodde}{C\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim y\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim V\bibinitperiod}{}{}{Gabrielle\bibnamedelima Benefield}{G\bibinitperiod\bibinitdelim B\bibinitperiod}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=a7c4b1db72125620879287193783c9cd}{Pete\bibnamedelima Deemer}{P\bibinitperiod\bibinitdelim D\bibinitperiod}{Craig\bibnamedelimb Larman\bibnamedelimb y\bibnamedelimb Bas\bibnamedelima Vodde}{C\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim y\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim V\bibinitperiod}{}{}{Gabrielle\bibnamedelima Benefield}{G\bibinitperiod\bibinitdelim B\bibinitperiod}}%
+      }
+      \name{translator}{1}{}{%
+        {{hash=88f2b2180e286cede5402d614ff501fd}{Medinilla}{M\bibinitperiod}{Ángel}{Á\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{a7c4b1db72125620879287193783c9cd}
+      \strng{fullhash}{a7c4b1db72125620879287193783c9cd}
+      \field{sortinit}{0}
+      \field{labeltitle}{SCRUM PRIMER. Una introducción básica a la teoría y práctica de Scrum. Versión 2.0}
+      \field{title}{SCRUM PRIMER. Una introducción básica a la teoría y práctica de Scrum. Versión 2.0}
+      \field{year}{2012}
+    \endentry
+    \entry{scrum-agile}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=e798a223ce13b2dbe8e2f0e926f3782b}{proyectosagiles.org}{p\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=e798a223ce13b2dbe8e2f0e926f3782b}{proyectosagiles.org}{p\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{e798a223ce13b2dbe8e2f0e926f3782b}
+      \strng{fullhash}{e798a223ce13b2dbe8e2f0e926f3782b}
+      \field{sortinit}{0}
+      \field{labeltitle}{Qué es SCRUM}
+      \field{title}{Qué es SCRUM}
+      \verb{url}
+      \verb http://proyectosagiles.org/que-es-scrum/
+      \endverb
+    \endentry
+    \entry{APACHE-culturacion}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{¿Qué es Apache?}
+      \field{title}{¿Qué es Apache?}
+      \field{urlday}{30}
+      \field{urlmonth}{06}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://culturacion.com/que-es-apache/
+      \endverb
+    \endentry
+    \entry{APACHE-maven}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{The Apache Software Foundation}
+      \field{title}{The Apache Software Foundation}
+      \verb{url}
+      \verb http://www.apache.org/
+      \endverb
+    \endentry
+    \entry{APACHE-tomcat}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Apache Tomcat}
+      \field{title}{Apache Tomcat}
+      \field{urlday}{28}
+      \field{urlmonth}{06}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://tomcat.apache.org
+      \endverb
+    \endentry
     \entry{JSON-yahoo}{online}{}
       \name{labelname}{1}{}{%
         {{hash=5f3409c5b3d66fbff53ebfdb7f28e6ec}{Network}{N\bibinitperiod}{Yahoo\bibnamedelima Developer}{Y\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
@@ -125,6 +301,25 @@
       \field{urlyear}{2015}
       \verb{url}
       \verb http://www.json.org/json-es.html
+      \endverb
+    \endentry
+    \entry{JPA-definicion}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=599383f14fe025ab24d5882549c2cc31}{ejemplosTIW}{e\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=599383f14fe025ab24d5882549c2cc31}{ejemplosTIW}{e\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{599383f14fe025ab24d5882549c2cc31}
+      \strng{fullhash}{599383f14fe025ab24d5882549c2cc31}
+      \field{sortinit}{0}
+      \field{labeltitle}{Interfaz de Persistencia Java (JPA) - Entidades y Managers}
+      \field{title}{Interfaz de Persistencia Java (JPA) - Entidades y Managers}
+      \field{urlday}{10}
+      \field{urlmonth}{08}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://www.lab.inf.uc3m.es/~a0080802/RAI/jpa.html
       \endverb
     \endentry
     \entry{ANGULARJS-angularjs}{online}{}
@@ -165,6 +360,33 @@
       \verb https://es.wikipedia.org/wiki/JavaScript
       \endverb
     \endentry
+    \entry{JAVASCRIPT-manual}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=eb8b531ab324e9325cd4f5e530ddbb07}{Rodríguez}{R\bibinitperiod}{Jose\bibnamedelima Antonio}{J\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=eb8b531ab324e9325cd4f5e530ddbb07}{Rodríguez}{R\bibinitperiod}{Jose\bibnamedelima Antonio}{J\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{eb8b531ab324e9325cd4f5e530ddbb07}
+      \strng{fullhash}{eb8b531ab324e9325cd4f5e530ddbb07}
+      \field{sortinit}{0}
+      \field{labeltitle}{Manual de JavaScript}
+      \field{title}{Manual de JavaScript}
+      \verb{url}
+      \verb http://www.internetmania.net
+      \endverb
+    \endentry
+    \entry{MYSQL-referencemanual}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Reference Manual}
+      \field{title}{Reference Manual}
+      \field{urlday}{04}
+      \field{urlmonth}{01}
+      \field{urlyear}{2016}
+      \verb{url}
+      \verb http://dev.mysql.com/doc/refman/5.7/en/introduction.html
+      \endverb
+    \endentry
     \entry{MYSQL-oracle}{online}{}
       \name{labelname}{1}{}{%
         {{hash=c3e3f219b6b8cad735598568fe19ca71}{ORACLE}{O\bibinitperiod}{}{}{}{}{}{}}%
@@ -182,6 +404,97 @@
       \field{urlyear}{2015}
       \verb{url}
       \verb http://www.oracle.com/us/products/mysql/overview/index.html
+      \endverb
+    \endentry
+    \entry{SPRING-essential}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=dda99fe4fb5ef335ecc8e12cac71554f}{al.}{a\bibinitperiod}{Rod\bibnamedelima Johnson}{R\bibinitperiod\bibinitdelim J\bibinitperiod}{et}{e\bibinitperiod}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=dda99fe4fb5ef335ecc8e12cac71554f}{al.}{a\bibinitperiod}{Rod\bibnamedelima Johnson}{R\bibinitperiod\bibinitdelim J\bibinitperiod}{et}{e\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{dda99fe4fb5ef335ecc8e12cac71554f}
+      \strng{fullhash}{dda99fe4fb5ef335ecc8e12cac71554f}
+      \field{sortinit}{0}
+      \field{labeltitle}{Spring Framework Reference Documentation}
+      \field{title}{Spring Framework Reference Documentation}
+      \field{year}{2004}
+      \verb{url}
+      \verb http://docs.spring.io/spring/docs/current/spring-framework-reference/html/
+      \endverb
+    \endentry
+    \entry{SPRING-referencedoc}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=9717509a4fbddb47ab1936e99543049f}{co.}{c\bibinitperiod}{Rod\bibnamedelima Johnson}{R\bibinitperiod\bibinitdelim J\bibinitperiod}{et}{e\bibinitperiod}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=9717509a4fbddb47ab1936e99543049f}{co.}{c\bibinitperiod}{Rod\bibnamedelima Johnson}{R\bibinitperiod\bibinitdelim J\bibinitperiod}{et}{e\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{9717509a4fbddb47ab1936e99543049f}
+      \strng{fullhash}{9717509a4fbddb47ab1936e99543049f}
+      \field{sortinit}{0}
+      \field{labeltitle}{Spring Framework Reference Documentation}
+      \field{title}{Spring Framework Reference Documentation}
+      \field{urlday}{19}
+      \field{urlmonth}{07}
+      \field{urlyear}{2015}
+      \field{year}{2004}
+      \verb{url}
+      \verb http://docs.spring.io/spring/docs/4.2.0.RC1/spring-framework-reference/htmlsingle/#extensible-xml-resources
+      \endverb
+    \endentry
+    \entry{HIBERNATE-basico}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=7bf221189e755390b1a4dc27a82be06b}{comunity}{c\bibinitperiod}{Hibernate}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=7bf221189e755390b1a4dc27a82be06b}{comunity}{c\bibinitperiod}{Hibernate}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{7bf221189e755390b1a4dc27a82be06b}
+      \strng{fullhash}{7bf221189e755390b1a4dc27a82be06b}
+      \field{sortinit}{0}
+      \field{labeltitle}{Hibernate ORM}
+      \field{title}{Hibernate ORM}
+      \field{urlday}{03}
+      \field{urlmonth}{07}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://hibernate.org/orm/
+      \endverb
+    \endentry
+    \entry{HIBERNATE-tutorial}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=952dd859e8f3255dcc7ec30948e25672}{Ltd.}{L\bibinitperiod}{Tutorials\bibnamedelimb Point\bibnamedelimb (I)\bibnamedelima Pvt.}{T\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=952dd859e8f3255dcc7ec30948e25672}{Ltd.}{L\bibinitperiod}{Tutorials\bibnamedelimb Point\bibnamedelimb (I)\bibnamedelima Pvt.}{T\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{952dd859e8f3255dcc7ec30948e25672}
+      \strng{fullhash}{952dd859e8f3255dcc7ec30948e25672}
+      \field{sortinit}{0}
+      \field{labeltitle}{Hibernate Java persistence framework}
+      \field{title}{Hibernate Java persistence framework}
+      \verb{url}
+      \verb http://www.tutorialspoint.com/hibernate/hibernate_tutorial.pdf
+      \endverb
+    \endentry
+    \entry{ITEXT-basico}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=f9fd7efe8da7d299b56d2a095894cf30}{corporation}{c\bibinitperiod}{ITEXT}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=f9fd7efe8da7d299b56d2a095894cf30}{corporation}{c\bibinitperiod}{ITEXT}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{f9fd7efe8da7d299b56d2a095894cf30}
+      \strng{fullhash}{f9fd7efe8da7d299b56d2a095894cf30}
+      \field{sortinit}{0}
+      \field{labeltitle}{The future belongs to automated PDF}
+      \field{title}{The future belongs to automated PDF}
+      \field{urlday}{10}
+      \field{urlmonth}{09}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://itextpdf.com/
       \endverb
     \endentry
     \entry{ECLIPSE-eclipseorg}{online}{}
@@ -221,6 +534,22 @@
       \verb http://www.lab.inf.uc3m.es/~a0080802/RAI/mvc.html
       \endverb
     \endentry
+    \entry{MVC-imagen}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=fc497aba24d87c43f3370da4bde2925f}{Alicante}{A\bibinitperiod}{Universidad}{U\bibinitperiod}{de}{d\bibinitperiod}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=fc497aba24d87c43f3370da4bde2925f}{Alicante}{A\bibinitperiod}{Universidad}{U\bibinitperiod}{de}{d\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{fc497aba24d87c43f3370da4bde2925f}
+      \strng{fullhash}{fc497aba24d87c43f3370da4bde2925f}
+      \field{sortinit}{0}
+      \field{labeltitle}{Modelo vista controlador (MVC)}
+      \field{title}{Modelo vista controlador (MVC)}
+      \verb{url}
+      \verb http://si.ua.es/es/documentacion/asp-net-mvc-3/1-dia/modelo-vista-controlador-mvc.html
+      \endverb
+    \endentry
     \entry{SOA-libroGartner}{book}{}
       \name{labelname}{1}{}{%
         {{hash=18bfab6309a4addeb7e1dae07d2a4b89}{Gartner}{G\bibinitperiod}{}{}{}{}{}{}}%
@@ -272,6 +601,166 @@
       \verb https://msdn.microsoft.com/en-us/library/bb833022.aspx
       \endverb
     \endentry
+    \entry{AUTENTICACION-rae}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{DLE}
+      \field{title}{DLE}
+      \field{urlday}{19}
+      \field{urlmonth}{04}
+      \field{urlyear}{2016}
+      \verb{url}
+      \verb http://dle.rae.es/?w=autenticad&origen=REDLE
+      \endverb
+    \endentry
+    \entry{AUTENTICACION-wordref}{online}{}
+      \field{sortinit}{0}
+      \field{urlday}{19}
+      \field{urlmonth}{04}
+      \field{urlyear}{2016}
+      \verb{url}
+      \verb http://www.wordreference.com/definicion/autenticar
+      \endverb
+    \endentry
+    \entry{AUTENTICACION-aplicaciones}{report}{}
+      \name{labelname}{1}{}{%
+        {{hash=024329b90f9b491dd17fd838865f73ba}{Mitre\bibnamedelima B}{M\bibinitperiod\bibinitdelim B\bibinitperiod}{Héctor}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=024329b90f9b491dd17fd838865f73ba}{Mitre\bibnamedelima B}{M\bibinitperiod\bibinitdelim B\bibinitperiod}{Héctor}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {Universidad Latina de Panamá}%
+      }
+      \strng{namehash}{024329b90f9b491dd17fd838865f73ba}
+      \strng{fullhash}{024329b90f9b491dd17fd838865f73ba}
+      \field{sortinit}{0}
+      \field{labeltitle}{Aplicaciones de Autenticación}
+      \field{title}{Aplicaciones de Autenticación}
+    \endentry
+    \entry{TOKEN-tokenbasedauth}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=c6c8a36aebc1fa6f14f58622e9888bd4}{Babal}{B\bibinitperiod}{Hüseyin}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=c6c8a36aebc1fa6f14f58622e9888bd4}{Babal}{B\bibinitperiod}{Hüseyin}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c6c8a36aebc1fa6f14f58622e9888bd4}
+      \strng{fullhash}{c6c8a36aebc1fa6f14f58622e9888bd4}
+      \field{sortinit}{0}
+      \field{labeltitle}{Token-Based Authentication With AngularJS \& NodeJS}
+      \field{title}{Token-Based Authentication With AngularJS \& NodeJS}
+      \field{urlday}{04}
+      \field{urlmonth}{08}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://code.tutsplus.com/tutorials/token-based-authentication-with-angularjs-nodejs--cms-22543
+      \endverb
+    \endentry
+    \entry{IOC-dgarcia}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Inversión de Control e Inyección de Dependencias}
+      \field{day}{15}
+      \field{month}{01}
+      \field{title}{Inversión de Control e Inyección de Dependencias}
+      \field{urlday}{19}
+      \field{urlmonth}{04}
+      \field{urlyear}{2016}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://danielggarcia.wordpress.com/2014/01/15/inversio-de-control-e-inyeccion-de-dependecias/
+      \endverb
+    \endentry
+    \entry{IOC-mpachano}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Inversión de Control e Inyección de Dependencias en Java/Spring}
+      \field{day}{22}
+      \field{month}{07}
+      \field{title}{Inversión de Control e Inyección de Dependencias en Java/Spring}
+      \field{urlday}{19}
+      \field{urlmonth}{04}
+      \field{urlyear}{2016}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.solvetic.com/tutoriales/article/987-inversion-de-control-e-inyeccion-de-dependencias-en-javaspring
+      \endverb
+    \endentry
+    \entry{scrum-guia}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=58773ace3592a33f6407315bd6f64a5d}{Jeff\bibnamedelima Sutherland}{J\bibinitperiod\bibinitdelim S\bibinitperiod}{Ken\bibnamedelima Schwaber}{K\bibinitperiod\bibinitdelim S\bibinitperiod}{y}{y\bibinitperiod}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=58773ace3592a33f6407315bd6f64a5d}{Jeff\bibnamedelima Sutherland}{J\bibinitperiod\bibinitdelim S\bibinitperiod}{Ken\bibnamedelima Schwaber}{K\bibinitperiod\bibinitdelim S\bibinitperiod}{y}{y\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{58773ace3592a33f6407315bd6f64a5d}
+      \strng{fullhash}{58773ace3592a33f6407315bd6f64a5d}
+      \field{sortinit}{0}
+      \field{labeltitle}{La Guía Definitiva de Scrum: Las Reglas del Juego}
+      \field{title}{La Guía Definitiva de Scrum: Las Reglas del Juego}
+      \warn{\item Datamodel: Entry 'scrum-guia' (Bibliografia/biblio.bib): Invalid format '07-2013' of date field 'date' - ignoring}
+    \endentry
+    \entry{scrum-primer}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=a7c4b1db72125620879287193783c9cd}{Pete\bibnamedelima Deemer}{P\bibinitperiod\bibinitdelim D\bibinitperiod}{Craig\bibnamedelimb Larman\bibnamedelimb y\bibnamedelimb Bas\bibnamedelima Vodde}{C\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim y\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim V\bibinitperiod}{}{}{Gabrielle\bibnamedelima Benefield}{G\bibinitperiod\bibinitdelim B\bibinitperiod}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=a7c4b1db72125620879287193783c9cd}{Pete\bibnamedelima Deemer}{P\bibinitperiod\bibinitdelim D\bibinitperiod}{Craig\bibnamedelimb Larman\bibnamedelimb y\bibnamedelimb Bas\bibnamedelima Vodde}{C\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim y\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim V\bibinitperiod}{}{}{Gabrielle\bibnamedelima Benefield}{G\bibinitperiod\bibinitdelim B\bibinitperiod}}%
+      }
+      \name{translator}{1}{}{%
+        {{hash=88f2b2180e286cede5402d614ff501fd}{Medinilla}{M\bibinitperiod}{Ángel}{Á\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{a7c4b1db72125620879287193783c9cd}
+      \strng{fullhash}{a7c4b1db72125620879287193783c9cd}
+      \field{sortinit}{0}
+      \field{labeltitle}{SCRUM PRIMER. Una introducción básica a la teoría y práctica de Scrum. Versión 2.0}
+      \field{title}{SCRUM PRIMER. Una introducción básica a la teoría y práctica de Scrum. Versión 2.0}
+      \field{year}{2012}
+    \endentry
+    \entry{scrum-agile}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=e798a223ce13b2dbe8e2f0e926f3782b}{proyectosagiles.org}{p\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=e798a223ce13b2dbe8e2f0e926f3782b}{proyectosagiles.org}{p\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{e798a223ce13b2dbe8e2f0e926f3782b}
+      \strng{fullhash}{e798a223ce13b2dbe8e2f0e926f3782b}
+      \field{sortinit}{0}
+      \field{labeltitle}{Qué es SCRUM}
+      \field{title}{Qué es SCRUM}
+      \verb{url}
+      \verb http://proyectosagiles.org/que-es-scrum/
+      \endverb
+    \endentry
+    \entry{APACHE-culturacion}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{¿Qué es Apache?}
+      \field{title}{¿Qué es Apache?}
+      \field{urlday}{30}
+      \field{urlmonth}{06}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://culturacion.com/que-es-apache/
+      \endverb
+    \endentry
+    \entry{APACHE-maven}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{The Apache Software Foundation}
+      \field{title}{The Apache Software Foundation}
+      \verb{url}
+      \verb http://www.apache.org/
+      \endverb
+    \endentry
+    \entry{APACHE-tomcat}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Apache Tomcat}
+      \field{title}{Apache Tomcat}
+      \field{urlday}{28}
+      \field{urlmonth}{06}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://tomcat.apache.org
+      \endverb
+    \endentry
     \entry{JSON-yahoo}{online}{}
       \name{labelname}{1}{}{%
         {{hash=5f3409c5b3d66fbff53ebfdb7f28e6ec}{Network}{N\bibinitperiod}{Yahoo\bibnamedelima Developer}{Y\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
@@ -308,6 +797,25 @@
       \field{urlyear}{2015}
       \verb{url}
       \verb http://www.json.org/json-es.html
+      \endverb
+    \endentry
+    \entry{JPA-definicion}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=599383f14fe025ab24d5882549c2cc31}{ejemplosTIW}{e\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=599383f14fe025ab24d5882549c2cc31}{ejemplosTIW}{e\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{599383f14fe025ab24d5882549c2cc31}
+      \strng{fullhash}{599383f14fe025ab24d5882549c2cc31}
+      \field{sortinit}{0}
+      \field{labeltitle}{Interfaz de Persistencia Java (JPA) - Entidades y Managers}
+      \field{title}{Interfaz de Persistencia Java (JPA) - Entidades y Managers}
+      \field{urlday}{10}
+      \field{urlmonth}{08}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://www.lab.inf.uc3m.es/~a0080802/RAI/jpa.html
       \endverb
     \endentry
     \entry{ANGULARJS-angularjs}{online}{}
@@ -348,6 +856,33 @@
       \verb https://es.wikipedia.org/wiki/JavaScript
       \endverb
     \endentry
+    \entry{JAVASCRIPT-manual}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=eb8b531ab324e9325cd4f5e530ddbb07}{Rodríguez}{R\bibinitperiod}{Jose\bibnamedelima Antonio}{J\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=eb8b531ab324e9325cd4f5e530ddbb07}{Rodríguez}{R\bibinitperiod}{Jose\bibnamedelima Antonio}{J\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{eb8b531ab324e9325cd4f5e530ddbb07}
+      \strng{fullhash}{eb8b531ab324e9325cd4f5e530ddbb07}
+      \field{sortinit}{0}
+      \field{labeltitle}{Manual de JavaScript}
+      \field{title}{Manual de JavaScript}
+      \verb{url}
+      \verb http://www.internetmania.net
+      \endverb
+    \endentry
+    \entry{MYSQL-referencemanual}{online}{}
+      \field{sortinit}{0}
+      \field{labeltitle}{Reference Manual}
+      \field{title}{Reference Manual}
+      \field{urlday}{04}
+      \field{urlmonth}{01}
+      \field{urlyear}{2016}
+      \verb{url}
+      \verb http://dev.mysql.com/doc/refman/5.7/en/introduction.html
+      \endverb
+    \endentry
     \entry{MYSQL-oracle}{online}{}
       \name{labelname}{1}{}{%
         {{hash=c3e3f219b6b8cad735598568fe19ca71}{ORACLE}{O\bibinitperiod}{}{}{}{}{}{}}%
@@ -367,6 +902,97 @@
       \verb http://www.oracle.com/us/products/mysql/overview/index.html
       \endverb
     \endentry
+    \entry{SPRING-essential}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=dda99fe4fb5ef335ecc8e12cac71554f}{al.}{a\bibinitperiod}{Rod\bibnamedelima Johnson}{R\bibinitperiod\bibinitdelim J\bibinitperiod}{et}{e\bibinitperiod}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=dda99fe4fb5ef335ecc8e12cac71554f}{al.}{a\bibinitperiod}{Rod\bibnamedelima Johnson}{R\bibinitperiod\bibinitdelim J\bibinitperiod}{et}{e\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{dda99fe4fb5ef335ecc8e12cac71554f}
+      \strng{fullhash}{dda99fe4fb5ef335ecc8e12cac71554f}
+      \field{sortinit}{0}
+      \field{labeltitle}{Spring Framework Reference Documentation}
+      \field{title}{Spring Framework Reference Documentation}
+      \field{year}{2004}
+      \verb{url}
+      \verb http://docs.spring.io/spring/docs/current/spring-framework-reference/html/
+      \endverb
+    \endentry
+    \entry{SPRING-referencedoc}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=9717509a4fbddb47ab1936e99543049f}{co.}{c\bibinitperiod}{Rod\bibnamedelima Johnson}{R\bibinitperiod\bibinitdelim J\bibinitperiod}{et}{e\bibinitperiod}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=9717509a4fbddb47ab1936e99543049f}{co.}{c\bibinitperiod}{Rod\bibnamedelima Johnson}{R\bibinitperiod\bibinitdelim J\bibinitperiod}{et}{e\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{9717509a4fbddb47ab1936e99543049f}
+      \strng{fullhash}{9717509a4fbddb47ab1936e99543049f}
+      \field{sortinit}{0}
+      \field{labeltitle}{Spring Framework Reference Documentation}
+      \field{title}{Spring Framework Reference Documentation}
+      \field{urlday}{19}
+      \field{urlmonth}{07}
+      \field{urlyear}{2015}
+      \field{year}{2004}
+      \verb{url}
+      \verb http://docs.spring.io/spring/docs/4.2.0.RC1/spring-framework-reference/htmlsingle/#extensible-xml-resources
+      \endverb
+    \endentry
+    \entry{HIBERNATE-basico}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=7bf221189e755390b1a4dc27a82be06b}{comunity}{c\bibinitperiod}{Hibernate}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=7bf221189e755390b1a4dc27a82be06b}{comunity}{c\bibinitperiod}{Hibernate}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{7bf221189e755390b1a4dc27a82be06b}
+      \strng{fullhash}{7bf221189e755390b1a4dc27a82be06b}
+      \field{sortinit}{0}
+      \field{labeltitle}{Hibernate ORM}
+      \field{title}{Hibernate ORM}
+      \field{urlday}{03}
+      \field{urlmonth}{07}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://hibernate.org/orm/
+      \endverb
+    \endentry
+    \entry{HIBERNATE-tutorial}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=952dd859e8f3255dcc7ec30948e25672}{Ltd.}{L\bibinitperiod}{Tutorials\bibnamedelimb Point\bibnamedelimb (I)\bibnamedelima Pvt.}{T\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=952dd859e8f3255dcc7ec30948e25672}{Ltd.}{L\bibinitperiod}{Tutorials\bibnamedelimb Point\bibnamedelimb (I)\bibnamedelima Pvt.}{T\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{952dd859e8f3255dcc7ec30948e25672}
+      \strng{fullhash}{952dd859e8f3255dcc7ec30948e25672}
+      \field{sortinit}{0}
+      \field{labeltitle}{Hibernate Java persistence framework}
+      \field{title}{Hibernate Java persistence framework}
+      \verb{url}
+      \verb http://www.tutorialspoint.com/hibernate/hibernate_tutorial.pdf
+      \endverb
+    \endentry
+    \entry{ITEXT-basico}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=f9fd7efe8da7d299b56d2a095894cf30}{corporation}{c\bibinitperiod}{ITEXT}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=f9fd7efe8da7d299b56d2a095894cf30}{corporation}{c\bibinitperiod}{ITEXT}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{f9fd7efe8da7d299b56d2a095894cf30}
+      \strng{fullhash}{f9fd7efe8da7d299b56d2a095894cf30}
+      \field{sortinit}{0}
+      \field{labeltitle}{The future belongs to automated PDF}
+      \field{title}{The future belongs to automated PDF}
+      \field{urlday}{10}
+      \field{urlmonth}{09}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://itextpdf.com/
+      \endverb
+    \endentry
     \entry{ECLIPSE-eclipseorg}{online}{}
       \name{labelname}{1}{}{%
         {{hash=c29e9dd4709b3acadeef395a1b0997ed}{Foundation}{F\bibinitperiod}{Eclipse}{E\bibinitperiod}{}{}{}{}}%
@@ -384,7 +1010,6 @@
       \endverb
     \endentry
   \endsortlist
-  \missing{ToTOKEN-tokenbasedauth}
 \endrefsection
 \endinput
 

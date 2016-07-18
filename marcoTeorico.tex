@@ -38,7 +38,7 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
             \end{itemize}
     \end{enumerate}
     
-    Esto se busca, primordialmente, para hacer del código altamente mantenible en el tiempo, ya que antiguamente se realizaban los sistemas siguiendo lo que se conoce como \textit{``programación de espaguetti"} (programación no estructurada) la cual no llevaba una separación entre lo que era la vista y los procesos internos del sistema. Esto traía como consecuencia, en el momento de realizar algún cambio al sistema ya sea de formato o de interacción, que tuviera que modificarse integralmente vista, interacciones y (potencialmente) el modelo de datos.
+    Esto se busca, primordialmente, para hacer del código altamente mantenible en el tiempo, ya que antiguamente se realizaban los sistemas siguiendo lo que se conoce como \textit{``programación de espaguetti"} (programación no estructurada) la cual no llevaba una separación entre lo que era la vista y los procesos internos del sistema. Esto traía como consecuencia, en el momento de realizar algún cambio al sistema ya sea de formato o de interacción, que tuviera que modificarse integralmente la vista, las interacciones y (potencialmente) el modelo de datos.
     
     \section{Arquitectura Orientada a Servicios}
     \label{teorico-soa}
@@ -145,14 +145,14 @@ En el presente capítulo se describen conceptos y patrones utilizados para el de
     
     \section{Inversión de Control}
     
-    Concepto utilizado por primera vez por Martin Fowler\cite{IOC-dgarcia} que define una diferenciación principal entre un \textit{framework} y una biblioteca, siendo la biblioteca un conjunto de clases y funciones que pueden ser llamadas por el programa desarrollado y el \textit{framework} un diseño que controla el flujo y eventualmente llamará al código desarrollado para cumplir con las funciones específicas. De esta forma, el control de flujo no lo tiene el código si no el \textit{framework}, que responde a las solicitudes de los usuarios y solicita al programa las acciones requeridas.
+    Concepto utilizado por primera vez por Martin Fowler\cite{IOC-dgarcia} que define una diferenciación principal entre un \textit{framework} y una biblioteca, siendo la biblioteca un conjunto de clases y funciones que pueden ser llamadas por el programa desarrollado y el \textit{framework} un diseño que controla el flujo y eventualmente llamará al código desarrollado para cumplir con las funciones específicas. De esta forma, el control de flujo no lo tiene el código sino el \textit{framework}, que responde a las solicitudes de los usuarios y solicita al programa las acciones requeridas.
     
-    En este sentido, Spring cumple la cunción de manejar las solicitudes que surgen del \textit{front end} e invoca las secciones de código designadas como ``controladores" las cuales dependen (ver \ref{teorico-di}) de ``servicios".
+    En este sentido, Spring cumple la función de manejar las solicitudes que surgen del \textit{front end} e invoca las secciones de código designadas como ``controladores" las cuales dependen (ver \ref{teorico-di}) de ``servicios".
     
     \section{Inyección de Dependencias}
     \label{teorico-di}
     
-    Es una forma de IOC, se basa en que una clase A ``inyecte" objetos en otra clase B, siendo B dependiente de A, en lugar de permitir que la clase B se encargue de crear los objetos en sí misma\cites{IOC-mpachano}{IOC-dgarcia}.
+    Es una forma de inversión de control, se basa en que una clase A ``inyecte" objetos en otra clase B, siendo B dependiente de A, en lugar de permitir que la clase B se encargue de crear los objetos en sí misma\cites{IOC-mpachano}{IOC-dgarcia}.
     
     De esta forma se pueden crear objetos de una clase B y pasar el objeto de la clase A como argumento en el constructor de B o en algún \textit{setter} asignado al atributo. En adelante, cualquier función o procedimiento que precise información de A puede ser invocado a través de B aunque la responsabilidad de ejecución recaen en el objeto A.
     

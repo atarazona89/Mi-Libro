@@ -1,64 +1,68 @@
-\BOOKMARK [0][-]{chapter*.3}{Introducción}{}% 1
+\BOOKMARK [0][-]{chapter*.6}{Introducción}{}% 1
 \BOOKMARK [0][-]{chapter.1}{Entorno\040Empresarial}{}% 2
 \BOOKMARK [1][-]{section.1.1}{Antecedentes}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.2}{Misión}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.3}{Visión}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.4}{Estructura\040organizacional}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.5}{Cargo\040ocupado\040por\040el\040pasante}{chapter.1}% 7
-\BOOKMARK [0][-]{chapter.2}{Marco Teórico}{}% 8
-\BOOKMARK [1][-]{section.2.1}{Modelo\040Vista\040Controlador\040\(MVC\)}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.2}{Arquitectura Orientada a Servicios\(SOA por sus siglas en inglés, Service Oriented Architecture\)}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.3}{Autenticación Basada en Tokens}{chapter.2}% 11
-\BOOKMARK [0][-]{chapter.3}{Marco Tecnológico}{}% 12
-\BOOKMARK [1][-]{section.3.1}{Herramientas para el desarrollo de la aplicación}{chapter.3}% 13
-\BOOKMARK [2][-]{subsection.3.1.1}{Eclipse}{section.3.1}% 14
-\BOOKMARK [2][-]{subsection.3.1.2}{Java}{section.3.1}% 15
-\BOOKMARK [2][-]{subsection.3.1.3}{JSON}{section.3.1}% 16
-\BOOKMARK [2][-]{subsection.3.1.4}{JPA}{section.3.1}% 17
-\BOOKMARK [2][-]{subsection.3.1.5}{Angular\040JS}{section.3.1}% 18
-\BOOKMARK [2][-]{subsection.3.1.6}{JavaScript}{section.3.1}% 19
-\BOOKMARK [2][-]{subsection.3.1.7}{MySQL}{section.3.1}% 20
-\BOOKMARK [2][-]{subsection.3.1.8}{SPRING}{section.3.1}% 21
-\BOOKMARK [2][-]{subsection.3.1.9}{Maven}{section.3.1}% 22
-\BOOKMARK [2][-]{subsection.3.1.10}{Hibernate}{section.3.1}% 23
-\BOOKMARK [2][-]{subsection.3.1.11}{Liquibase}{section.3.1}% 24
-\BOOKMARK [2][-]{subsection.3.1.12}{iText}{section.3.1}% 25
-\BOOKMARK [1][-]{section.3.2}{Herramientas para el control de versiones y planificación}{chapter.3}% 26
-\BOOKMARK [2][-]{subsection.3.2.1}{Git}{section.3.2}% 27
-\BOOKMARK [2][-]{subsection.3.2.2}{GitHub}{section.3.2}% 28
-\BOOKMARK [2][-]{subsection.3.2.3}{Trello}{section.3.2}% 29
-\BOOKMARK [0][-]{chapter.4}{Marco Metodológico}{}% 30
-\BOOKMARK [1][-]{section.4.1}{Roles}{chapter.4}% 31
-\BOOKMARK [2][-]{subsection.4.1.1}{Scrum\040Master}{section.4.1}% 32
-\BOOKMARK [2][-]{subsection.4.1.2}{Product\040Owner}{section.4.1}% 33
-\BOOKMARK [2][-]{subsection.4.1.3}{Development\040Team}{section.4.1}% 34
-\BOOKMARK [1][-]{section.4.2}{Eventos}{chapter.4}% 35
-\BOOKMARK [2][-]{subsection.4.2.1}{Sprint}{section.4.2}% 36
-\BOOKMARK [2][-]{subsection.4.2.2}{Sprint\040Planning}{section.4.2}% 37
-\BOOKMARK [2][-]{subsection.4.2.3}{Daily\040Sprint\040Meeting}{section.4.2}% 38
-\BOOKMARK [2][-]{subsection.4.2.4}{Sprint\040Review}{section.4.2}% 39
-\BOOKMARK [2][-]{subsection.4.2.5}{Sprint\040Retrospective}{section.4.2}% 40
-\BOOKMARK [1][-]{section.4.3}{Artefactos}{chapter.4}% 41
-\BOOKMARK [2][-]{subsection.4.3.1}{Sprint\040Backlog}{section.4.3}% 42
-\BOOKMARK [2][-]{subsection.4.3.2}{Product\040Backlog}{section.4.3}% 43
-\BOOKMARK [0][-]{chapter.5}{Desarrollo de la Aplicación}{}% 44
-\BOOKMARK [1][-]{section.5.1}{Fase de Preparación}{chapter.5}% 45
-\BOOKMARK [2][-]{subsection.5.1.1}{Primer\040Sprint}{section.5.1}% 46
-\BOOKMARK [1][-]{section.5.2}{Fase\040de\040Desarrollo}{chapter.5}% 47
-\BOOKMARK [2][-]{subsection.5.2.1}{Primer Sprint: Configuración de la aplicación}{section.5.2}% 48
-\BOOKMARK [2][-]{subsection.5.2.2}{Segundo Sprint: Configuración de la aplicación}{section.5.2}% 49
-\BOOKMARK [2][-]{subsection.5.2.3}{Tercer Sprint: Autenticación y gestión de Usuarios}{section.5.2}% 50
-\BOOKMARK [2][-]{subsection.5.2.4}{Cuarto\040Sprint:\040Consultas\040de\040Usuarios\040y\040Vista\040del\040doctor}{section.5.2}% 51
-\BOOKMARK [2][-]{subsection.5.2.5}{Quinto\040Sprint:\040Consulta\040del\040Paciente}{section.5.2}% 52
-\BOOKMARK [2][-]{subsection.5.2.6}{Sexto\040Sprint:\040Generar\040informes}{section.5.2}% 53
-\BOOKMARK [2][-]{subsection.5.2.7}{Septimo\040Sprint:\040Generar\040informes}{section.5.2}% 54
-\BOOKMARK [2][-]{subsection.5.2.8}{Octavo\040Sprint:\040Generar\040informes}{section.5.2}% 55
-\BOOKMARK [1][-]{section.5.3}{Fase\040de\040Cierre}{chapter.5}% 56
-\BOOKMARK [2][-]{subsection.5.3.1}{Décimo Sprint}{section.5.3}% 57
-\BOOKMARK [2][-]{subsection.5.3.2}{Sprint}{section.5.3}% 58
-\BOOKMARK [2][-]{subsection.5.3.3}{Dificultades\040generales\040encontradas}{section.5.3}% 59
-\BOOKMARK [2][-]{subsection.5.3.4}{Resultados}{section.5.3}% 60
-\BOOKMARK [0][-]{chapter*.5}{Conclusiones\040y\040Recomendaciones}{}% 61
-\BOOKMARK [0][-]{chapter*.5}{Bibliografía}{}% 62
-\BOOKMARK [0][-]{chapter*.6}{Anexos}{}% 63
-\BOOKMARK [1][-]{chapter*.7}{Anexo A: Diagrama ER-E y Glosario de términos}{chapter*.6}% 64
+\BOOKMARK [0][-]{chapter.2}{Marco Teórico}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Modelo\040Vista\040Controlador\040\(MVC\)}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Arquitectura\040Orientada\040a\040Servicios}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Autenticación Basada en Tokens}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{Inversión de Control}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.5}{Inyección de Dependencias}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{Marco Metodológico}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Roles}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.1.1}{Product\040Owner}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.2}{Scrum\040Master}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.3}{Development\040Team}{section.3.1}% 17
+\BOOKMARK [1][-]{section.3.2}{Eventos}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Sprint}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{Sprint\040Planning}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.3}{Daily\040Sprint\040Meeting}{section.3.2}% 21
+\BOOKMARK [2][-]{subsection.3.2.4}{Sprint\040Review}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.5}{Sprint\040Retrospective}{section.3.2}% 23
+\BOOKMARK [1][-]{section.3.3}{Artefactos}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.1}{Product\040Backlog}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.2}{Sprint\040Backlog}{section.3.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Marco Tecnológico}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Herramientas para el desarrollo de la aplicación}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.1.1}{Eclipse}{section.4.1}% 29
+\BOOKMARK [2][-]{subsection.4.1.2}{Apache}{section.4.1}% 30
+\BOOKMARK [2][-]{subsection.4.1.3}{Tomcat}{section.4.1}% 31
+\BOOKMARK [2][-]{subsection.4.1.4}{Java}{section.4.1}% 32
+\BOOKMARK [2][-]{subsection.4.1.5}{JSON}{section.4.1}% 33
+\BOOKMARK [2][-]{subsection.4.1.6}{JPA}{section.4.1}% 34
+\BOOKMARK [2][-]{subsection.4.1.7}{Angular\040JS}{section.4.1}% 35
+\BOOKMARK [2][-]{subsection.4.1.8}{JavaScript}{section.4.1}% 36
+\BOOKMARK [2][-]{subsection.4.1.9}{MySQL}{section.4.1}% 37
+\BOOKMARK [2][-]{subsection.4.1.10}{SPRING}{section.4.1}% 38
+\BOOKMARK [2][-]{subsection.4.1.11}{Maven}{section.4.1}% 39
+\BOOKMARK [2][-]{subsection.4.1.12}{Hibernate}{section.4.1}% 40
+\BOOKMARK [2][-]{subsection.4.1.13}{iText}{section.4.1}% 41
+\BOOKMARK [1][-]{section.4.2}{Herramientas para el control de versiones y planificación}{chapter.4}% 42
+\BOOKMARK [2][-]{subsection.4.2.1}{Git}{section.4.2}% 43
+\BOOKMARK [2][-]{subsection.4.2.2}{GitHub}{section.4.2}% 44
+\BOOKMARK [2][-]{subsection.4.2.3}{Trello}{section.4.2}% 45
+\BOOKMARK [0][-]{chapter.5}{Desarrollo de la Aplicación}{}% 46
+\BOOKMARK [1][-]{section.5.1}{Fase\040de\040Inicio}{chapter.5}% 47
+\BOOKMARK [2][-]{subsection.5.1.1}{Requerimientos\040Generales}{section.5.1}% 48
+\BOOKMARK [2][-]{subsection.5.1.2}{Requerimientos Específicos}{section.5.1}% 49
+\BOOKMARK [1][-]{section.5.2}{Fase de Implementación}{chapter.5}% 50
+\BOOKMARK [2][-]{subsection.5.2.1}{Primer Sprint: Vista de Autenticación de Usuarios}{section.5.2}% 51
+\BOOKMARK [2][-]{subsection.5.2.2}{Segundo\040Sprint:\040Vista\040de\040Lista\040de\040Usuarios}{section.5.2}% 52
+\BOOKMARK [2][-]{subsection.5.2.3}{Tercer\040Sprint:\040Vista\040de\040Detalles\040de\040Usuario}{section.5.2}% 53
+\BOOKMARK [2][-]{subsection.5.2.4}{Cuarto Sprint: Vista de Edición de Usuario}{section.5.2}% 54
+\BOOKMARK [2][-]{subsection.5.2.5}{Quinto Sprint: Vista de Añadir Nuevo Paciente y Revisón de la Edición de Usuario}{section.5.2}% 55
+\BOOKMARK [2][-]{subsection.5.2.6}{Sexto\040Sprint:\040Vista\040de\040Lista\040de\040Pacientes\040Atendidos}{section.5.2}% 56
+\BOOKMARK [2][-]{subsection.5.2.7}{Septimo Sprint: Vista de Creación de Historia Médica}{section.5.2}% 57
+\BOOKMARK [2][-]{subsection.5.2.8}{Octavo Sprint: Vista de Agregar Consulta Médica}{section.5.2}% 58
+\BOOKMARK [2][-]{subsection.5.2.9}{Noveno Sprint: Vista de Historial de Consultas Médicas del Paciente}{section.5.2}% 59
+\BOOKMARK [2][-]{subsection.5.2.10}{Décimo Sprint: Vista de Revisión de Consulta Médica}{section.5.2}% 60
+\BOOKMARK [2][-]{subsection.5.2.11}{Décimo Primer Sprint: Vista de Generación de Reportes Médicos}{section.5.2}% 61
+\BOOKMARK [1][-]{section.5.3}{Fase\040de\040Cierre}{chapter.5}% 62
+\BOOKMARK [2][-]{subsection.5.3.1}{Dificultades\040generales\040encontradas}{section.5.3}% 63
+\BOOKMARK [2][-]{subsection.5.3.2}{Resultados\040Generales}{section.5.3}% 64
+\BOOKMARK [0][-]{chapter.6}{Conclusiones\040y\040Recomendaciones}{}% 65
+\BOOKMARK [0][-]{chapter.6}{Bibliografía}{}% 66
+\BOOKMARK [0][-]{appendix.A}{Diagrama ER-E y Glosario de términos}{}% 67
+\BOOKMARK [0][-]{appendix.B}{Diagrama\040de\040Casos\040de\040Uso}{}% 68

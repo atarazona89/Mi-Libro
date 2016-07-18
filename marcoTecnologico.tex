@@ -17,7 +17,7 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
         
         En el desarrollo de ``HxPlus Ocupacional" se utilizó \textit{Eclipse Kepler} en su versión de 64 bits para Linux - Debian 9.
         
-        \subsection{apache}
+        \subsection{Apache}
         \label{tecno-apache}
         
         Es un servidor web multiplataforma. Utiliza el protocolo http para la transferencia de información con los clientes y posee soporte de seguridad para SSLy TLS\cite{APACHE-culturacion}. Posee licencia GPL y una comunidad de desarrolladores que mantiene el servidor actualizado continuamente.
@@ -94,7 +94,7 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
         \subsection{Angular JS}
         \label{tecno-angular}
         
-        Es un \textit{framework}orientada a facilitar el desarrollo web de aplicaciones dinámicas del lado del cilente. ``AngularJS le permite extender el vocabulario HTML para su aplicación"\cite{ANGULARJS-angularjs}. Utiliza lo que llama ``directivas" que son bloques de código en javascript que ayudan a estructurar las acciones del \textit{front-end}. También maneja ``atributos" y ``elementos" que pueden ser programados separadamente del código HTML y luego insertados en dicho archivo para su utilización.
+        Es un \textit{framework} orientado a facilitar el desarrollo web de aplicaciones dinámicas del lado del cilente. ``AngularJS le permite extender el vocabulario HTML para su aplicación"\cite{ANGULARJS-angularjs}. Utiliza lo que llama ``directivas" que son bloques de código en javascript que ayudan a estructurar las acciones del \textit{front-end}. También maneja ``atributos" y ``elementos" que pueden ser programados separadamente del código HTML y luego insertados en dicho archivo para su utilización.
         
         Provee asociación birireccional de variables del DOM lo cual simplifica drásticamente las pruebas del lado del cliente y mantiene, como se mencionó anteriormente, la estructura organizada del código. La asociación bidireccional a través de ``expresiones" se utiliza para mantener actualizado al cliente en cuanto a cambios que se realizen en las variables internas y mejora la respuesta visual sin realizar una recarga de la página.
         
@@ -105,35 +105,35 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
         \subsection{JavaScript}
         \label{tecno-javascript}
         
-        JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico\cites{JAVASCRIPT-wiki}{JAVASCRIPT-manual}. También posee soporte en casi todos los navegadores utilizados actualmente.
+        JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico \cites{JAVASCRIPT-wiki}{JAVASCRIPT-manual}. También posee soporte en casi todos los navegadores utilizados actualmente.
         
         Es un lenguaje de programación orientado a crear contenidos dinámicos para páginas web del lado del cliente. AngularJS, previamente mencionado, usa JavaScript como lenguaje de programación para su implementación.
         
         \subsection{MySQL}
         \label{tecno-mysql}
         
-        Manejador de bases de datos, posee licencia GPL y licencia comercial de Oracle\cite{MYSQL-referencemanual}. Ofrece alto rendimiento, eficiencia y seguridad en el almacenamiento y recuperación de datos\cite{MYSQL-oracle}. Comúnmente utilizado en entornos de desarrollo LAMP para desarrollo web.
+        Gestor de bases de datos, posee licencia GPL y licencia comercial de Oracle\cite{MYSQL-referencemanual}. Ofrece alto rendimiento, eficiencia y seguridad en el almacenamiento y recuperación de datos\cite{MYSQL-oracle}. Comúnmente utilizado en entornos de desarrollo LAMP para desarrollo web.
         
-        Es un manejador multi-hilo, multi-usuario y robusto, está diseñado para soportar altos niveles de carga y ser utilizado en entornos de producción con fuerte afluencia de datos. Además de poseer librerías ampliamente usadas para Java las cuales ayudan al desarrollo debilmente acoplado del \textit{back-end}.
+        Es un gestor multi-hilo, multi-usuario y robusto, está diseñado para soportar altos niveles de carga y ser utilizado en entornos de producción con fuerte afluencia de datos. Además de poseer librerías ampliamente usadas para Java las cuales ayudan al desarrollo debilmente acoplado del \textit{back-end}.
         
-        Para ``HxPlus Ocupacional" se eliegió este manejador, haciendo uso de su licencia GPL, para el desarrollo del sistema.
+        Para ``HxPlus Ocupacional" se eligió este gestor, haciendo uso de su licencia GPL, para el desarrollo del sistema.
         
         \subsection{SPRING}
         \label{tecno-spring}
         
         Framework para el desarrollo de aplicaciones que provee inversión de control; es de código abierto y está diseñado sobre Java. Permite integración con Hibernate, JPA y JSON\cite{SPRING-essential}.
         
-        SPRING fue diseñado para facilitar el desacoplamiento de los compomentes del sistema utilizanco IOC. Esto permite que los componentes sean desarrollados una y sólo una vez y que puedan ser reutilizados en diferentes contextos\cite{SPRING-referencedoc}.
+        SPRING fue diseñado para facilitar el desacoplamiento de los compomentes del sistema utilizando inversión de control. Esto permite que los componentes sean desarrollados una y sólo una vez y que puedan ser reutilizados en diferentes contextos\cite{SPRING-referencedoc}.
         
-        Su fácil integración con Hibernate y, por consecuencia, con JPA permite que la interacción con la base de datos sea transparente al desarrollador y evita que tenga que reescribirse el código en caso de cambios en el manejador (de bases de datos) utilizados.
+        Su fácil integración con Hibernate y, por consecuencia, con JPA permite que la interacción con la base de datos sea transparente al desarrollador y evita que tenga que reescribirse el código en caso de cambios en el gestor (de bases de datos) utilizados.
         
         
         \subsection{Maven}
         \label{tecno-maven}
         
-        Es una herramienta de gestión y manejo de librerías, parecida a ``Apache Ant". Utiliza el concepto del ``Modelo del Objeto de Proyecto" (del inglés \textit{Project Object Model}, o POM) para gestiónar la construcción del proyecto dónde se utilice. Esto es, gestiona las librerías, dependencias y versiones (de las librerías) de forma centralizada y limpia.
+        Es una herramienta de gestión y manejo de librerías, parecida a ``Apache Ant". Utiliza el concepto del ``Modelo del Objeto de Proyecto" (del inglés \textit{Project Object Model}, o POM) para gestionar la construcción del proyecto dónde se utilice. Esto es, gestiona las librerías, dependencias y versiones (de las librerías) de forma centralizada y limpia.
         
-        El POM es un archivo en formato XML dónde se registran las librerías que serán usadas por el proyecto  para que el manejador de Maven se encargue de la descarga de las mismas. Se gestiona a través de artefactos que registran la información de una librería de acuerdo con la figura \ref{pom-artifact}.
+        El POM es un archivo en formato XML dónde se registran las librerías que serán usadas por el proyecto  para que el gestor de Maven se encargue de la descarga de las mismas. Se gestiona a través de artefactos que registran la información de una librería de acuerdo con la figura \ref{pom-artifact}.
         
         \begin{figure}[htbp!]
             \begin{center}
@@ -154,7 +154,7 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
         
         Esta correlación que crea Hibernate permite ciertas facilidades al momento de manejar las distintas interacciones con la base de datos que devienen en un código mantenible en el tiempo.
         
-        El framework es integrado al desarrollo a través de Maven y tiene soporte para los siguientes manejadores de bases de datos\cite{HIBERNATE-tutorial}: 
+        El framework es integrado al desarrollo a través de Maven y tiene soporte para los siguientes gestores de bases de datos\cite{HIBERNATE-tutorial}: 
         \begin{itemize}
             \item MySQL
             \item PostgreSQL
@@ -197,7 +197,7 @@ En este capítulo se presentarán las herramientas y protocolos utilizados duran
         
         Servidores online de repositorios remotos para Git. Puede ser usado de manera gratuita y pública. Permite el acceso a los repositorios de manera ininterrumpida y global.
         
-        Los repositorios fueron almacenados en la cuenta personal de Alejandro Tarazona, en el url: \textit{http://www.github.com/atarazona89} con los nombres descritos con anterioridad, para su almacenamiento en la web.
+        Los repositorios fueron almacenados en la cuenta personal de Alejandro Tarazona, en el url:\\ \textit{http://www.github.com/atarazona89} con los nombres descritos con anterioridad, para su almacenamiento en la web.
         
         \subsection{Trello}
         \label{tecno-trello}
